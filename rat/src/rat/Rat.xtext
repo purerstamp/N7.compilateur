@@ -1,0 +1,116 @@
+grammar rat.Rat with org.eclipse.xtext.common.Terminals
+
+generate rat "http://www.Rat.rat"
+
+Prog :
+	(fun+=Fun)* ID bloc=Bloc; /* Prog : Fun* ID Bloc */
+	
+Fun :
+	type=Type nom=ID '(' (param+=DP)* ')' '{' (is+=I)* 'return' e=E ';' '}';
+
+Bloc :
+	{Bloc} '{' (is+=I)* '}'; /* { I* } */
+
+I :
+	Declaration
+	| Affectation
+	| Constante
+	| Print
+	| Conditionnelle
+	| Tantque
+;
+
+Declaration :
+	type=Type nom=ID '=' e=E ';' /* Type ID = E */
+;
+
+Affectation :
+	nom=ID '=' e=E ';' /* ID = E */
+;
+
+Constante :
+	'const' nom=ID '=' e=INT ';' /* const ID = INT */
+;
+
+Print :
+	'print' e=E ';' /* print E */
+;
+
+Conditionnelle :
+	'if' e=E  bloc1=Bloc 'else' bloc2=Bloc
+;
+
+Tantque :
+	'while' e=E bloc=Bloc
+;
+
+DP :
+	type=Type id=ID 	
+;
+
+Type :
+	t=('bool'
+		| 'int'
+		| 'rat'
+	)
+;
+
+CP :
+	{CP}(e+=E)* 
+;
+
+E :
+	Appel
+	| Rationnel
+	| Numerateur
+	| Denominateur
+	| Identificateur
+	| Boolean
+	| Entier
+	| OpBin
+;
+
+Appel :
+	'call' nom=ID '(' param+=CP ')'
+;
+
+Rationnel :
+	'[' e1=E '/' e2=E ']' 
+;
+
+Numerateur :
+	'num' e=E
+;
+
+Denominateur :
+	'denom' e=E
+;
+
+Identificateur :
+	id=ID
+;
+
+Boolean :
+	b=(
+		'false'
+		| 'true'
+	)
+;
+
+Entier:
+	int=INT
+;
+
+OpBin :
+	'(' e1=E op=Operande e2=E ')'
+;
+
+Operande :
+	op=(
+		'+'
+		|'='
+		|'*'
+		|'<'
+	)
+;
+
