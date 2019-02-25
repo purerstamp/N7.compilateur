@@ -1,11 +1,9 @@
 import java.beans.Expression;
-import java.rmi.server.Operation;
 import java.util.Collections;
 import java.util.Vector;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.swt.program.Program;
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 
 import com.google.common.base.Function;
@@ -29,12 +27,14 @@ import rat.rat.Appel;
 import rat.rat.Constante;
 import rat.rat.Declaration;
 import rat.rat.Denominateur;
+import rat.rat.Entier;
 import rat.rat.Fun;
 import rat.rat.Rationnel;
 import rat.rat.Identificateur;
 import rat.rat.Conditionnelle;
 import rat.rat.I;
 import rat.rat.Numerateur;
+import rat.rat.OpBin;
 import rat.rat.Print;
 import rat.rat.Prog;
 import rat.rat.Type;
@@ -152,9 +152,9 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 	
 	@Override
-	public ReturnType caseFunction(Function func) {
+	public ReturnType caseFun(Fun func) {
 		// Test doublons
-		String name = func.getNameFun();
+		String name = func.getNom();
 		if(tds.chercherLocalement(name) != null) {
 			throw new DoubleDeclarationException(getLine(func),name);
 		}
@@ -197,7 +197,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		return new ReturnType(tFunction, tReturn.getTaille(), code);
 }
 	@Override
-	public ReturnType caseArgument(Argument arg) {
+	public ReturnType caseDP(DP arg) {
 		// Test doublons
 		String name = arg.getNameArg();
 		if(tds.chercherLocalement(name) != null) {
@@ -225,7 +225,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 	
 	@Override
-	public ReturnType caseConstant(Constant cons) {
+	public ReturnType caseConstante(Constante cons) {
 		String name = cons.getNameConst();
 		if(tds.chercherLocalement(name) != null) {
 			throw new DoubleDeclarationException(getLine(cons),name);
@@ -274,7 +274,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 
 	@Override
-	public ReturnType caseIf(If obj) {
+	public ReturnType caseConditionnelle(Conditionnelle obj) {
 		// TEST
 		Visiteur.ifCounter ++;
 		String label = "else" + Visiteur.ifCounter;
@@ -313,7 +313,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 	
 	@Override
-	public ReturnType caseWhile(While whi) {
+	public ReturnType caseTantque(Tantque whi) {
 		// Test
 		Visiteur.whileCounter ++;
 		String label = "while"+ Visiteur.whileCounter;
@@ -337,7 +337,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 
 	@Override
-	public ReturnType caseOperation(Operation op) {
+	public ReturnType caseOpBin(OpBin op) {
 		// Membre 1
 		ReturnType rOp1 = this.doSwitch(op.getMembre1());
 		TypeDeBase tOp1 = (TypeDeBase) rOp1.getType();
@@ -401,7 +401,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 
 	@Override
-	public ReturnType caseIdent(Ident id) {
+	public ReturnType caseIdentificateur(Identificateur id) {
 		String name = id.getId();
 		Info resultat = tds.chercherGlobalement(name);
 		if(resultat == null) {
@@ -429,13 +429,13 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 
 	@Override
-	public ReturnType caseInteger(Integer integer) {
+	public ReturnType caseEntier(Entier integer) {
 		String val = "LOADL " + integer.getValIntg() + "\n";
 		return new ReturnType(TypeDeBase.ENTIER,val);
 	}
 
 	@Override
-	public ReturnType caseCall(Call call) {
+	public ReturnType caseAppel(Appel call) {
 		String name = call.getNameCall();
 		Info resultat = tds.chercherGlobalement(name);
 		if(resultat == null) {
@@ -462,7 +462,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 
 	@Override
-	public ReturnType caseFraction(Fraction frac) {
+	public ReturnType caseRationnel(Rationnel frac) {
 		// Numérateur
 		ReturnType rNum = this.doSwitch(frac.getNum());
 		TypeDeBase tNum = (TypeDeBase) rNum.getType();
@@ -479,7 +479,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 
 	@Override
-	public ReturnType caseNumerator(Numerator num) {
+	public ReturnType caseNumerateur(Numerateur num) {
 		ReturnType rFrac = this.doSwitch(num.getVarNum());
 		TypeDeBase tFrac = (TypeDeBase) rFrac.getType();
 		if(!(TypeDeBase.RATIONEL.estCompatible(tFrac))) {
@@ -491,7 +491,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 
 	@Override
-	public ReturnType caseDenominator(Denominator denom) {
+	public ReturnType caseDenominateur(Denominateur denom) {
 		ReturnType rFrac = this.doSwitch(denom.getVarDenom());
 		TypeDeBase tFrac = (TypeDeBase) rFrac.getType();
 		if(!(TypeDeBase.RATIONEL.estCompatible(tFrac))) {

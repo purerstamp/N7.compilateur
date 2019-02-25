@@ -1,22 +1,29 @@
+noms des marqueurs :
 Eux -> Nous
-	Program Prog
-	Function Fun
-	Bloc Bloc
-	Type Type
-	Print Print
-	Declaration Declaration
+
+
+
+
+noms des règles :
+Eux -> Nous
 	Affectation Affectation
 	Argument DP
-	Instruction I
-	If Conditionnelle
-	Constant Constante
-	While Tantque
-	Expression E
-	Ident Identificateur
+	Bloc Bloc
 	Boolean Boolean
-	Integer Entier
 	Call Appel
-	Fraction Rationnel
-	Numerator Numerateur
+	Constant Constante
+	Declaration Declaration
 	Denominator Denominateur
+	Expression E
+	Fraction Rationnel
+	Function Fun
+	Ident Identificateur
+	If Conditionnelle
+	Instruction I
+	Integer Entier
+	Numerator Numerateur
 	Operation Op_bin
+	Print Print
+	Program Prog
+	Type Type
+	While Tantque
