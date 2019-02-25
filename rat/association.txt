@@ -1,3 +1,22 @@
 Eux -> Nous
 	Program Prog
 	Function Fun
+	Bloc Bloc
+	Type Type
+	Print Print
+	Declaration Declaration
+	Affectation Affectation
+	Argument DP
+	Instruction I
+	If Conditionnelle
+	Constant Constante
+	While Tantque
+	Expression E
+	Ident Identificateur
+	Boolean Boolean
+	Integer Entier
+	Call Appel
+	Fraction Rationnel
+	Numerator Numerateur
+	Denominator Denominateur
+	Operation Op_bin
