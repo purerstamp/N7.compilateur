@@ -43,7 +43,7 @@ public class InfoConst implements Info {
     }
 	
 	/**
-	 * Surchage de la mthode toString, pour l'affichage
+	 * Surchage de la methode toString, pour l'affichage
 	 */
     public String toString() {
         return "CONST(type=" + type + ",val=" + valeur + ")";

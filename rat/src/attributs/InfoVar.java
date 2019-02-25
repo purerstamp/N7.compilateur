@@ -12,9 +12,9 @@ public class InfoVar implements Info {
     
     private String base;
 	
-	/** Creer une information associ  une variable
+	/** Creer une information associe a une variable
 	 *@param t, son type
-	 *@param dep, son placement mmoire
+	 *@param dep, son placement memoire
 	 */
     public InfoVar(TypeDeBase t, int dep, String b) {
         this.type = t;
@@ -32,12 +32,12 @@ public class InfoVar implements Info {
         return deplacement;
     }
 	
-    /** Renvoie la base par rapport  laquelle le dplacement est calcul */
+    /** Renvoie la base par rapport a laquelle le deplacement est calcule */
     public String getBase(){
 	return base;
     }
 	
-	/** Surchage de la mthode toString() pour l'affichae */
+	/** Surchage de la methode toString() pour l'affichage */
     public String toString() {
         return "VAR(type=" + type + ",dep=" + deplacement +"["+base+"])";
     }

@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.eclipse.emf.ecore.impl.BasicEObjectImpl;
-
 /** Hierarchical symbol table.
  * This implantation reuses HashMap but the only useable methods are:
  * <ul>
@@ -18,15 +16,18 @@ import org.eclipse.emf.ecore.impl.BasicEObjectImpl;
 public class TDS extends HashMap<String, Info> {
 	
 	
+	private static final long serialVersionUID = -4477033649182910560L;
+	
+	
 	/** Table parente de la table courante */
     private TDS parente;
 	
-	/** Creation d'une TDS sans table mÃ¨re */
+	/** Creation d'une TDS sans table mere */
     public TDS() {
         this(null);
     }
 	
-	/** CrÃ©artion d'une TDS avec table parente */
+	/** Creation d'une TDS avec table parente */
     public TDS(TDS p) {
     	super();
         parente = p;
@@ -57,7 +58,7 @@ public class TDS extends HashMap<String, Info> {
         put(name, info);
     }
 	
-	/** Surcharge de la mÃ©thode d'affichage */
+	/** Surcharge de la methode d'affichage */
     public String toString() {
         StringBuffer sb = new StringBuffer();
         Set<Map.Entry<String, Info>> s = entrySet();

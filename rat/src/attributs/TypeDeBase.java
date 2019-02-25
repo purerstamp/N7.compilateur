@@ -8,7 +8,7 @@ public class TypeDeBase implements IType{
 
 	/** Nom du type */
     private String nom;
-	/** Taille ncessaire en mmoire pour stocker les donnes de ce type */
+	/** Taille necessaire en memoire pour stocker les donnees de ce type */
     private int taille;
     
     public static TypeDeBase ENTIER = new TypeDeBase("entier",1);
@@ -16,7 +16,7 @@ public class TypeDeBase implements IType{
     public static TypeDeBase RATIONEL = new TypeDeBase("rationel",2);
     public static TypeDeBase VOID =  new TypeDeBase("void",0);
     
-	/** Construction d'un type  partir de son nom et sa taille */
+	/** Construction d'un type a partir de son nom et sa taille */
     public TypeDeBase(String n, int t) {
         nom = n;
         taille = t;
@@ -37,7 +37,7 @@ public class TypeDeBase implements IType{
         return (this.toString().equals(autre.toString()));
     }
 	
-	/** Surcharge de la mthode pour l'affichage */
+	/** Surcharge de la methode pour l'affichage */
     public String toString() {
         return "Type(" + nom + "," + taille + ")";
     }

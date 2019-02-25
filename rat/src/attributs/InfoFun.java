@@ -9,20 +9,20 @@ public class InfoFun implements Info,IType {
 	
     /** Le type de la fonction. */
     private TypeDeBase type;
-	/** Types (et nombre) des paramtres de la fonction */
+	/** Types (et nombre) des parametres de la fonction */
 	private Vector<TypeDeBase> typesParam;
 	
-	/** Construit une information associ  une fonction
+	/** Construit une information associee a une fonction
 	 *@param t, le type de retour de la fonction
-	 *@param tp, le type des paramtres de la fonction
+	 *@param tp, le type des parametres de la fonction
 	 */
     public InfoFun(TypeDeBase t, Vector<TypeDeBase> tp) {
         this.type = t;
         this.typesParam = tp;
     }
 	
-	/** Construit une information associ  une fonction
-	 *@param tp, le type des paramtres de la fonction
+	/** Construit une information associee a une fonction
+	 *@param tp, le type des parametres de la fonction
 	 *@param t, le type de retour de la fonction
 	 */
     public InfoFun(Vector<TypeDeBase> tp,TypeDeBase t) {
@@ -39,7 +39,7 @@ public class InfoFun implements Info,IType {
         this.type = t;
     }
 	
-	/** Renvoie le type des paramtres de la fonction */
+	/** Renvoie le type des parametres de la fonction */
 	public Vector<TypeDeBase> getTypesParametres(){
 		return typesParam;
 	}
@@ -48,12 +48,12 @@ public class InfoFun implements Info,IType {
 		this.typesParam=p;
 	}
 	
-	/** Renvoie la taille ncessaire en mmoire pour stocker le retour */
+	/** Renvoie la taille necessaire en memoire pour stocker le retour */
 	public int getTailleRetour(){
 		return this.type.getTaille();
 	}
 	
-	/** Renvoie la taille ncessaire en mmoire pour stocker les paramtres */
+	/** Renvoie la taille necessaire en memoire pour stocker les parametres */
 	public int getTailleParam(){
 		int taille = 0;
 		for(int i = 0 ; i <this.typesParam.size(); i ++){
@@ -75,7 +75,7 @@ public class InfoFun implements Info,IType {
 		return ok;
     }
 	
-	/** Surcharge de la mthode toString, pour l'affichage */
+	/** Surcharge de la methode toString, pour l'affichage */
     public String toString() {
 		String tp = "";
 		for(TypeDeBase t : this.typesParam){

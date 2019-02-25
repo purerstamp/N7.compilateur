@@ -14,7 +14,7 @@ public class AnalyseSyntaxique {
 
 		RatStandaloneSetup.doSetup();
 		ResourceSet rs = new ResourceSetImpl();
-		Resource resource = rs.getResource(URI.createURI("./src-rat/test.rat"), true);
+		Resource resource = rs.getResource(URI.createURI("./src-rat/testAffectation1.rat"), true);
 		
 		if(!resource.getErrors().isEmpty()){
 			//Analyse syntaxique
