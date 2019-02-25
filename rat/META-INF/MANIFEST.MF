@@ -26,4 +26,6 @@ Export-Package: rat.serializer,
  rat.parser.antlr,
  rat.generator,
  rat.rat.util
-Import-Package: org.apache.log4j
+Import-Package: com.google.common.base;version="15.0.0",
+ org.apache.log4j,
+ org.eclipse.swt.program
