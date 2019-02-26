@@ -1,12 +1,2 @@
 bin
 /rat/doc
-rat.ide/bin/
-rat.ide/xtend-gen/rat/ide/
-rat.tests/bin/rat/tests/
-rat.tests/xtend-gen/rat/tests/
-rat.ui/bin/rat/ui/
-rat.ui/xtend-gen/rat/ui/
-rat/xtend-gen/rat/
-rat/xtend-gen/rat/generator/
-rat/xtend-gen/rat/scoping/
-rat/xtend-gen/rat/validation/
