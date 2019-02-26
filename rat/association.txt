@@ -1,7 +1,34 @@
 noms des marqueurs :
 Eux -> Nous
-
-
+	functions fun
+	nameProg nomProg
+	main bloc
+	type type
+	nameFun nomFun
+	args param
+	insts is
+	return retour
+	nameArg id
+	nameDecl nom
+	expr e
+	nameConst nom
+	val valeur
+	nameAfc nom
+	val e
+	test e
+	if bloc1
+	else bloc2
+	loop bloc
+	membre1 e1
+	membre2 e2
+	id id
+	valIntg int
+	nameCall nom
+	params param
+	num e1
+	denom e2
+	varNum e
+	varDenom e
 
 
 noms des règles :
