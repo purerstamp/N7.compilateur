@@ -3,10 +3,10 @@ grammar rat.Rat with org.eclipse.xtext.common.Terminals
 generate rat "http://www.Rat.rat"
 
 Prog :
-	(fun+=Fun)* ID bloc=Bloc; /* Prog : Fun* ID Bloc */
+	(fun+=Fun)* nomProg=ID bloc=Bloc; /* Prog : Fun* ID Bloc */
 	
 Fun :
-	type=Type nom=ID '(' (param+=DP)* ')' '{' (is+=I)* 'return' e=E ';' '}';
+	type=Type nomFun=ID '(' (param+=DP)* ')' '{' (is+=I)* 'return' retour=E ';' '}';
 
 Bloc :
 	{Bloc} '{' (is+=I)* '}'; /* { I* } */
@@ -29,7 +29,7 @@ Affectation :
 ;
 
 Constante :
-	'const' nom=ID '=' e=INT ';' /* const ID = INT */
+	'const' nom=ID '=' valeur=INT ';' /* const ID = INT */
 ;
 
 Print :
@@ -91,7 +91,7 @@ Identificateur :
 ;
 
 Boolean :
-	b=(
+	valeur=(
 		'false'
 		| 'true'
 	)
