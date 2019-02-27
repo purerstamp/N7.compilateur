@@ -144,7 +144,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		// Main
 		code += "LABEL main\n";
 		Visiteur vMain = new Visiteur(new TDS(this.tds), this.base, this.deplacement);
-		ReturnType rMain = vMain.doSwitch(prog.getMain());
+		ReturnType rMain = vMain.doSwitch(prog.getBloc());
 		code += rMain.getCode();
 		code += "POP (0) " + vMain.tds.getTailleBlocLocal() + "\n";
 		code += "HALT\n";
@@ -164,7 +164,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		// Switch arguments
 		TDS fTds = new TDS(this.tds);
 		Visiteur vFunc = new Visiteur(fTds,"LB",0);
-		EList<Argument> args = func.getArgs();
+		EList<DP> args = func.getParam();
 		int tailleParams = 0;
 		for(int i = args.size(); i > 0; i--) {
 			ReturnType rt = vFunc.doSwitch(args.get(i-1));
@@ -183,12 +183,12 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		
 		tds.inserer(name, new InfoFun(tFunction,vArgType));
 		// Switch instructions
-		for(Instruction ins : func.getInsts()) {
+		for(I ins : func.getIs()) {
 			ReturnType rt = vFunc.doSwitch(ins);
 			vFunc.deplacement += rt.getSize();
 			code += rt.getCode();
 		}
-		ReturnType rReturn = vFunc.doSwitch(func.getReturn());
+		ReturnType rReturn = vFunc.doSwitch(func.getRetour());
 		TypeDeBase tReturn = (TypeDeBase) rReturn.getType();
 		code += rReturn.getCode()
 				+ "RETURN (" + tReturn.getTaille() + ") " + tailleParams + "\n\n";
@@ -199,7 +199,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	@Override
 	public ReturnType caseDP(DP arg) {
 		// Test doublons
-		String name = arg.getNameArg();
+		String name = arg.getId();
 		if(tds.chercherLocalement(name) != null) {
 			throw new DoubleDeclarationException(getLine(arg),name);
 		}
@@ -211,11 +211,11 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	
 	@Override
 	public ReturnType caseDeclaration(Declaration decl) {
-		String name = decl.getNameDecl();
+		String name = decl.getNom();
 		if(tds.chercherLocalement(name) != null) {
 			throw new DoubleDeclarationException(getLine(decl),name);
 		}
-		ReturnType valeur = this.doSwitch(decl.getExpr());
+		ReturnType valeur = this.doSwitch(decl.getE());
 		TypeDeBase tDecl = (TypeDeBase) valeur.getType();
 		if (!tDecl.estCompatible((TypeDeBase) doSwitch(decl.getType()).getType())) {
 			throw new TypeException(getLine(decl),"Le type de l'expression de " + name + " n'est pas compatible avec son type déclaré!");
@@ -226,7 +226,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	
 	@Override
 	public ReturnType caseConstante(Constante cons) {
-		String name = cons.getNameConst();
+		String name = cons.getNomConst();
 		if(tds.chercherLocalement(name) != null) {
 			throw new DoubleDeclarationException(getLine(cons),name);
 		}
@@ -236,7 +236,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 	@Override
 	public ReturnType caseAffectation(Affectation afc) {
-		String name = afc.getNameAfc();
+		String name = afc.getNomAff();
 		Info resultat = tds.chercherGlobalement(name);
 		if(resultat == null) {
 			throw new NoDeclarationException(getLine(afc),name);
@@ -247,7 +247,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		if(resultat instanceof InfoFun){
 			throw new OperationInterditeException(getLine(afc),"Affectation de la function "+name+"!");
 		}
-		ReturnType rExpr = this.doSwitch(afc.getExpr());
+		ReturnType rExpr = this.doSwitch(afc.getE());
 		TypeDeBase tAfc = (TypeDeBase) rExpr.getType();
 		if(!tAfc.estCompatible(((InfoVar) resultat).getType())){
 			throw new TypeException(getLine(afc),"Le type de " + name + " n'est pas compatible avec son expression!");
@@ -278,23 +278,23 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		// TEST
 		Visiteur.ifCounter ++;
 		String label = "else" + Visiteur.ifCounter;
-		ReturnType rExpr = this.doSwitch(obj.getTest());
+		ReturnType rExpr = this.doSwitch(obj.getCond());
 		TypeDeBase tExpr = (TypeDeBase) rExpr.getType();
 		if(!tExpr.equals(TypeDeBase.BOOLEEN)) {
-			throw new TypeException(getLine(obj.getTest()),"Le test n'est pas un booléen!");
+			throw new TypeException(getLine(obj.getCond()),"Le test n'est pas un booléen!");
 		}
 		String code = rExpr.getCode();
 		code += "JUMPIF (0) " + label + "\n";
 		// IF
 		Visiteur vIf = new Visiteur(new TDS(this.tds),"",0);
-		ReturnType rIf = vIf.doSwitch(obj.getIf());
+		ReturnType rIf = vIf.doSwitch(obj.getBloc1());
 		code += rIf.getCode();
 		code += "JUMP end"+label+"\n"
 				+ "LABEL " + label + "\n"
 				+ "POP (0) " +vIf.tds.getTailleBlocLocal() + "\n";
 		// ELSE
 		Visiteur vElse = new Visiteur(new TDS(this.tds),"",0);
-		ReturnType rElse = vElse.doSwitch(obj.getElse());
+		ReturnType rElse = vElse.doSwitch(obj.getBloc2());
 		code += rElse.getCode();
 		code += "POP (0) " + vElse.tds.getTailleBlocLocal() + "\n"
 				+ "LABEL end"+label+"\n";
@@ -304,7 +304,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	@Override
 	public ReturnType caseBloc(Bloc bloc) {
 		String code = "";
-		for(Instruction inst : bloc.getInsts()) {
+		for(I inst : bloc.getIs()) {
 			ReturnType ret = this.doSwitch(inst);
 			this.deplacement += ret.getSize();
 			code += ret.getCode();
@@ -318,17 +318,17 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		Visiteur.whileCounter ++;
 		String label = "while"+ Visiteur.whileCounter;
 		String code = "LABEL " + label + "\n";
-		ReturnType rTest = this.doSwitch(whi.getTest());
+		ReturnType rTest = this.doSwitch(whi.getCond());
 		TypeDeBase tExpr = (TypeDeBase) rTest.getType();
 		if(!tExpr.equals(TypeDeBase.BOOLEEN)) {
-			throw new TypeException(getLine(whi.getTest()),"Le test n'est pas un booléen!");
+			throw new TypeException(getLine(whi.getCond()),"Le test n'est pas un booléen!");
 		}
 		code += rTest.getCode();
 		code += "JUMPIF (0) end" + label + "\n";
 		
 		// Blocs
 		Visiteur vWhile = new Visiteur(new TDS(this.tds),this.base,this.deplacement);
-		ReturnType rBloc = vWhile.doSwitch(whi.getLoop());
+		ReturnType rBloc = vWhile.doSwitch(whi.getBoucle());
 		code += rBloc.getCode();
 		code += "POP (0) " + vWhile.tds.getTailleBlocLocal() + "\n";
 		code += "JUMP " + label + "\n"
@@ -339,15 +339,15 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	@Override
 	public ReturnType caseOpBin(OpBin op) {
 		// Membre 1
-		ReturnType rOp1 = this.doSwitch(op.getMembre1());
+		ReturnType rOp1 = this.doSwitch(op.getE1());
 		TypeDeBase tOp1 = (TypeDeBase) rOp1.getType();
 		
 		// Membre 2
-		ReturnType rOp2 = this.doSwitch(op.getMembre2());
+		ReturnType rOp2 = this.doSwitch(op.getE2());
 		TypeDeBase tOp2 = (TypeDeBase) rOp2.getType();
 		
 		if(!tOp1.estCompatible(tOp2)) {
-			throw new TypeException(getLine(op.getMembre1()),"Le type du premier opérateur n'est pas compatible avec celui du second!");
+			throw new TypeException(getLine(op.getE1()),"Le type du premier opérateur n'est pas compatible avec celui du second!");
 		}
 		ReturnType retour;
 		String code = rOp1.getCode() + rOp2.getCode();
@@ -358,7 +358,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 				} else if(tOp1.estCompatible(TypeDeBase.RATIONEL)) {
 					retour = new ReturnType(tOp1, code + "CALL (SB) RAdd\n");
 				} else {
-					throw new TypeException(getLine(op.getMembre1()),"On ne peut pas additionner des " + tOp1.getNom() + "!");
+					throw new TypeException(getLine(op.getE1()),"On ne peut pas additionner des " + tOp1.getNom() + "!");
 				}
 				break;
 			case "*":
@@ -369,28 +369,28 @@ public class Visiteur extends RatSwitch<ReturnType> {
 					retour = new ReturnType(tOp1, code + "CALL (SB) RMul\n");
 
 				} else {
-					throw new TypeException(getLine(op.getMembre1()),"On ne peut pas multiplier des " + tOp1.getNom() + "!");
+					throw new TypeException(getLine(op.getE1()),"On ne peut pas multiplier des " + tOp1.getNom() + "!");
 				}
 				break;
 			case "=":
 				if(tOp1.estCompatible(TypeDeBase.ENTIER) || tOp1.estCompatible(TypeDeBase.BOOLEEN)) {
 					retour = new ReturnType(TypeDeBase.BOOLEEN, code + "SUBR IEq\n");
 				} else {
-					throw new TypeException(getLine(op.getMembre1()),"On ne peut pas comparer des " + tOp1.getNom() + "!");
+					throw new TypeException(getLine(op.getE1()),"On ne peut pas comparer des " + tOp1.getNom() + "!");
 				}
 				break;
 			case "<":
 				if(tOp1.estCompatible(TypeDeBase.ENTIER)) {
 					retour = new ReturnType(TypeDeBase.BOOLEEN, code + "SUBR ILss\n");
 				} else {
-					throw new TypeException(getLine(op.getMembre1()),"On ne peut pas comparer les valeurs des " + tOp1.getNom() + "!");
+					throw new TypeException(getLine(op.getE1()),"On ne peut pas comparer les valeurs des " + tOp1.getNom() + "!");
 				}
 				break;
 			case ">":
 				if(tOp1.estCompatible(TypeDeBase.ENTIER)) {
 					retour = new ReturnType(TypeDeBase.BOOLEEN, code + "SUBR IGtr\n");
 				} else {
-					throw new TypeException(getLine(op.getMembre1()),"On ne peut pas comparer les valeurs des " + tOp1.getNom() + "!");
+					throw new TypeException(getLine(op.getE1()),"On ne peut pas comparer les valeurs des " + tOp1.getNom() + "!");
 				}
 				break;
 			default:
@@ -430,13 +430,13 @@ public class Visiteur extends RatSwitch<ReturnType> {
 
 	@Override
 	public ReturnType caseEntier(Entier integer) {
-		String val = "LOADL " + integer.getValIntg() + "\n";
+		String val = "LOADL " + integer.getIntg() + "\n";
 		return new ReturnType(TypeDeBase.ENTIER,val);
 	}
 
 	@Override
 	public ReturnType caseAppel(Appel call) {
-		String name = call.getNameCall();
+		String name = call.getNomAppel();
 		Info resultat = tds.chercherGlobalement(name);
 		if(resultat == null) {
 			throw new NoDeclarationException(getLine(call),name);
@@ -446,7 +446,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		}
 		Vector<TypeDeBase> vArgs = new Vector<TypeDeBase>();
 		String code = "";
-		for(Expression param : call.getParams()) {
+		for(Expression param : call.getParam()) {
 			ReturnType rArg = this.doSwitch(param);
 			TypeDeBase tArg = (TypeDeBase) rArg.getType();
 			vArgs.add(tArg);
@@ -464,13 +464,13 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	@Override
 	public ReturnType caseRationnel(Rationnel frac) {
 		// Numérateur
-		ReturnType rNum = this.doSwitch(frac.getNum());
+		ReturnType rNum = this.doSwitch(frac.getE1());
 		TypeDeBase tNum = (TypeDeBase) rNum.getType();
 		if(!(TypeDeBase.ENTIER.estCompatible(tNum))) {
 			throw new TypeException(getLine(frac),"Le numérateur n'est pas un entier!");
 		}
 		// Dénominateur
-		ReturnType rDenom =  this.doSwitch(frac.getDenom());
+		ReturnType rDenom =  this.doSwitch(frac.getE2());
 		TypeDeBase tDenom = (TypeDeBase) rDenom.getType();
 		if(!(TypeDeBase.ENTIER.estCompatible(tDenom))) {
 			throw new TypeException(getLine(frac),"Le dénominateur n'est pas un entier!");
@@ -480,7 +480,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 
 	@Override
 	public ReturnType caseNumerateur(Numerateur num) {
-		ReturnType rFrac = this.doSwitch(num.getVarNum());
+		ReturnType rFrac = this.doSwitch(num.getValNum());
 		TypeDeBase tFrac = (TypeDeBase) rFrac.getType();
 		if(!(TypeDeBase.RATIONEL.estCompatible(tFrac))) {
 			throw new TypeException(getLine(num),"Le type " + tFrac.getNom() + " n'as pas de numérateur!");
@@ -492,7 +492,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 
 	@Override
 	public ReturnType caseDenominateur(Denominateur denom) {
-		ReturnType rFrac = this.doSwitch(denom.getVarDenom());
+		ReturnType rFrac = this.doSwitch(denom.getValDenum());
 		TypeDeBase tFrac = (TypeDeBase) rFrac.getType();
 		if(!(TypeDeBase.RATIONEL.estCompatible(tFrac))) {
 			throw new TypeException(getLine(denom),"Le type " + tFrac.getNom() + " n'as pas de dénominateur!");
