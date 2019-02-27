@@ -1,35 +1,65 @@
 noms des marqueurs :
 Eux -> Nous
-	functions fun
-	nameProg nomProg
-	main bloc
-	type type
-	nameFun nomFun
 	args param
-	insts is
-	return retour
-	nameArg id
-	nameDecl nom
-	expr e
-	nameConst nom
-	val valeur
-	nameAfc nom
-	val e
-	test e
-	if bloc1
+	denom e2
 	else bloc2
-	loop bloc
+	expr e
+	functions fun
+	id id
+	if bloc1
+	insts is
+	loop boucle
+	main bloc
 	membre1 e1
 	membre2 e2
-	id id
-	valIntg int
-	nameCall nom
-	params param
+	nameAfc nomAff
+	nameArg id
+	nameCall nomAppel
+	nameConst nomConst
+	nameDecl nomDecl
+	nameFun nomFun
+	nameProg nomProg
 	num e1
-	denom e2
-	varNum e
-	varDenom e
+	params param
+	return retour
+	test cond
+	type type
+	val val
+	val valeur
+	valIntg int
+	varDenom valDenum
+	varNum valNum
 
+-- anciens noms
+	args param
+	denom e2
+	else bloc2
+	expr e
+	functions fun
+	id id
+	if bloc1
+	insts is
+	loop bloc
+	main bloc
+	membre1 e1
+	membre2 e2
+	nameAfc nom
+	nameArg id
+	nameCall nom
+	nameConst nom
+	nameDecl nom
+	nameFun nomFun
+	nameProg nomProg
+	num e1
+	params param
+	return retour
+	test e
+	type type
+	val e
+	val valeur
+	valIntg int
+	varDenom e
+	varNum e
 
 noms des règles :
 Eux -> Nous
