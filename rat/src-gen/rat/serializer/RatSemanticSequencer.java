@@ -125,17 +125,17 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Affectation returns Affectation
 	 *
 	 * Constraint:
-	 *     (nom=ID e=E)
+	 *     (nomAff=ID e=E)
 	 */
 	protected void sequence_Affectation(ISerializationContext context, Affectation semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.AFFECTATION__NOM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.AFFECTATION__NOM));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.AFFECTATION__NOM_AFF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.AFFECTATION__NOM_AFF));
 			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.AFFECTATION__E) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.AFFECTATION__E));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAffectationAccess().getNomIDTerminalRuleCall_0_0(), semanticObject.getNom());
+		feeder.accept(grammarAccess.getAffectationAccess().getNomAffIDTerminalRuleCall_0_0(), semanticObject.getNomAff());
 		feeder.accept(grammarAccess.getAffectationAccess().getEEParserRuleCall_2_0(), semanticObject.getE());
 		feeder.finish();
 	}
@@ -147,7 +147,7 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Appel returns Appel
 	 *
 	 * Constraint:
-	 *     (nom=ID param+=CP)
+	 *     (nomAppel=ID param+=CP)
 	 */
 	protected void sequence_Appel(ISerializationContext context, Appel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -172,7 +172,7 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Boolean returns Boolean
 	 *
 	 * Constraint:
-	 *     (b='false' | b='true')
+	 *     (val='false' | val='true')
 	 */
 	protected void sequence_Boolean(ISerializationContext context, rat.rat.Boolean semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -197,21 +197,21 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Conditionnelle returns Conditionnelle
 	 *
 	 * Constraint:
-	 *     (e=E bloc1=Bloc bloc2=Bloc)
+	 *     (condc=E bloc1cond=Bloc bloc2cond=Bloc)
 	 */
 	protected void sequence_Conditionnelle(ISerializationContext context, Conditionnelle semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONDITIONNELLE__E) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONDITIONNELLE__E));
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONDITIONNELLE__BLOC1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONDITIONNELLE__BLOC1));
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONDITIONNELLE__BLOC2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONDITIONNELLE__BLOC2));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONDITIONNELLE__CONDC) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONDITIONNELLE__CONDC));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONDITIONNELLE__BLOC1COND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONDITIONNELLE__BLOC1COND));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONDITIONNELLE__BLOC2COND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONDITIONNELLE__BLOC2COND));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getConditionnelleAccess().getEEParserRuleCall_1_0(), semanticObject.getE());
-		feeder.accept(grammarAccess.getConditionnelleAccess().getBloc1BlocParserRuleCall_2_0(), semanticObject.getBloc1());
-		feeder.accept(grammarAccess.getConditionnelleAccess().getBloc2BlocParserRuleCall_4_0(), semanticObject.getBloc2());
+		feeder.accept(grammarAccess.getConditionnelleAccess().getCondcEParserRuleCall_1_0(), semanticObject.getCondc());
+		feeder.accept(grammarAccess.getConditionnelleAccess().getBloc1condBlocParserRuleCall_2_0(), semanticObject.getBloc1cond());
+		feeder.accept(grammarAccess.getConditionnelleAccess().getBloc2condBlocParserRuleCall_4_0(), semanticObject.getBloc2cond());
 		feeder.finish();
 	}
 	
@@ -222,18 +222,18 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Constante returns Constante
 	 *
 	 * Constraint:
-	 *     (nom=ID e=INT)
+	 *     (nomConst=ID val=INT)
 	 */
 	protected void sequence_Constante(ISerializationContext context, Constante semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONSTANTE__NOM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONSTANTE__NOM));
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONSTANTE__E) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONSTANTE__E));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONSTANTE__NOM_CONST) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONSTANTE__NOM_CONST));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.CONSTANTE__VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.CONSTANTE__VAL));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getConstanteAccess().getNomIDTerminalRuleCall_1_0(), semanticObject.getNom());
-		feeder.accept(grammarAccess.getConstanteAccess().getEINTTerminalRuleCall_3_0(), semanticObject.getE());
+		feeder.accept(grammarAccess.getConstanteAccess().getNomConstIDTerminalRuleCall_1_0(), semanticObject.getNomConst());
+		feeder.accept(grammarAccess.getConstanteAccess().getValINTTerminalRuleCall_3_0(), semanticObject.getVal());
 		feeder.finish();
 	}
 	
@@ -265,20 +265,20 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Declaration returns Declaration
 	 *
 	 * Constraint:
-	 *     (type=Type nom=ID e=E)
+	 *     (type=Type nomDecl=ID e=E)
 	 */
 	protected void sequence_Declaration(ISerializationContext context, Declaration semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.DECLARATION__TYPE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.DECLARATION__TYPE));
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.DECLARATION__NOM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.DECLARATION__NOM));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.DECLARATION__NOM_DECL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.DECLARATION__NOM_DECL));
 			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.DECLARATION__E) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.DECLARATION__E));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDeclarationAccess().getTypeTypeParserRuleCall_0_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getDeclarationAccess().getNomIDTerminalRuleCall_1_0(), semanticObject.getNom());
+		feeder.accept(grammarAccess.getDeclarationAccess().getNomDeclIDTerminalRuleCall_1_0(), semanticObject.getNomDecl());
 		feeder.accept(grammarAccess.getDeclarationAccess().getEEParserRuleCall_3_0(), semanticObject.getE());
 		feeder.finish();
 	}
@@ -290,15 +290,15 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Denominateur returns Denominateur
 	 *
 	 * Constraint:
-	 *     e=E
+	 *     valDenum=E
 	 */
 	protected void sequence_Denominateur(ISerializationContext context, Denominateur semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.DENOMINATEUR__E) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.DENOMINATEUR__E));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.DENOMINATEUR__VAL_DENUM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.DENOMINATEUR__VAL_DENUM));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDenominateurAccess().getEEParserRuleCall_1_0(), semanticObject.getE());
+		feeder.accept(grammarAccess.getDenominateurAccess().getValDenumEParserRuleCall_1_0(), semanticObject.getValDenum());
 		feeder.finish();
 	}
 	
@@ -327,7 +327,7 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Fun returns Fun
 	 *
 	 * Constraint:
-	 *     (type=Type nom=ID param+=DP* is+=I* e=E)
+	 *     (type=Type nomFun=ID param+=DP* is+=I* retour=E)
 	 */
 	protected void sequence_Fun(ISerializationContext context, Fun semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -359,15 +359,15 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Numerateur returns Numerateur
 	 *
 	 * Constraint:
-	 *     e=E
+	 *     valNum=E
 	 */
 	protected void sequence_Numerateur(ISerializationContext context, Numerateur semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.NUMERATEUR__E) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.NUMERATEUR__E));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.NUMERATEUR__VAL_NUM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.NUMERATEUR__VAL_NUM));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNumerateurAccess().getEEParserRuleCall_1_0(), semanticObject.getE());
+		feeder.accept(grammarAccess.getNumerateurAccess().getValNumEParserRuleCall_1_0(), semanticObject.getValNum());
 		feeder.finish();
 	}
 	
@@ -415,15 +415,15 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Print returns Print
 	 *
 	 * Constraint:
-	 *     e=E
+	 *     val=E
 	 */
 	protected void sequence_Print(ISerializationContext context, Print semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.PRINT__E) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.PRINT__E));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.PRINT__VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.PRINT__VAL));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPrintAccess().getEEParserRuleCall_1_0(), semanticObject.getE());
+		feeder.accept(grammarAccess.getPrintAccess().getValEParserRuleCall_1_0(), semanticObject.getVal());
 		feeder.finish();
 	}
 	
@@ -433,7 +433,7 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Prog returns Prog
 	 *
 	 * Constraint:
-	 *     (fun+=Fun* bloc=Bloc)
+	 *     (fun+=Fun* nomProg=ID bloc=Bloc)
 	 */
 	protected void sequence_Prog(ISerializationContext context, Prog semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -468,18 +468,18 @@ public class RatSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Tantque returns Tantque
 	 *
 	 * Constraint:
-	 *     (e=E bloc=Bloc)
+	 *     (condt=E boucle=Bloc)
 	 */
 	protected void sequence_Tantque(ISerializationContext context, Tantque semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.TANTQUE__E) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.TANTQUE__E));
-			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.TANTQUE__BLOC) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.TANTQUE__BLOC));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.TANTQUE__CONDT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.TANTQUE__CONDT));
+			if (transientValues.isValueTransient(semanticObject, RatPackage.Literals.TANTQUE__BOUCLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RatPackage.Literals.TANTQUE__BOUCLE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTantqueAccess().getEEParserRuleCall_1_0(), semanticObject.getE());
-		feeder.accept(grammarAccess.getTantqueAccess().getBlocBlocParserRuleCall_2_0(), semanticObject.getBloc());
+		feeder.accept(grammarAccess.getTantqueAccess().getCondtEParserRuleCall_1_0(), semanticObject.getCondt());
+		feeder.accept(grammarAccess.getTantqueAccess().getBoucleBlocParserRuleCall_2_0(), semanticObject.getBoucle());
 		feeder.finish();
 	}
 	

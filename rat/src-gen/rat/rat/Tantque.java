@@ -13,8 +13,8 @@ package rat.rat;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.Tantque#getE <em>E</em>}</li>
- *   <li>{@link rat.rat.Tantque#getBloc <em>Bloc</em>}</li>
+ *   <li>{@link rat.rat.Tantque#getCondt <em>Condt</em>}</li>
+ *   <li>{@link rat.rat.Tantque#getBoucle <em>Boucle</em>}</li>
  * </ul>
  *
  * @see rat.rat.RatPackage#getTantque()
@@ -24,55 +24,55 @@ package rat.rat;
 public interface Tantque extends I
 {
   /**
-   * Returns the value of the '<em><b>E</b></em>' containment reference.
+   * Returns the value of the '<em><b>Condt</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>E</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Condt</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>E</em>' containment reference.
-   * @see #setE(E)
-   * @see rat.rat.RatPackage#getTantque_E()
+   * @return the value of the '<em>Condt</em>' containment reference.
+   * @see #setCondt(E)
+   * @see rat.rat.RatPackage#getTantque_Condt()
    * @model containment="true"
    * @generated
    */
-  E getE();
+  E getCondt();
 
   /**
-   * Sets the value of the '{@link rat.rat.Tantque#getE <em>E</em>}' containment reference.
+   * Sets the value of the '{@link rat.rat.Tantque#getCondt <em>Condt</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>E</em>' containment reference.
-   * @see #getE()
+   * @param value the new value of the '<em>Condt</em>' containment reference.
+   * @see #getCondt()
    * @generated
    */
-  void setE(E value);
+  void setCondt(E value);
 
   /**
-   * Returns the value of the '<em><b>Bloc</b></em>' containment reference.
+   * Returns the value of the '<em><b>Boucle</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Bloc</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Boucle</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Bloc</em>' containment reference.
-   * @see #setBloc(Bloc)
-   * @see rat.rat.RatPackage#getTantque_Bloc()
+   * @return the value of the '<em>Boucle</em>' containment reference.
+   * @see #setBoucle(Bloc)
+   * @see rat.rat.RatPackage#getTantque_Boucle()
    * @model containment="true"
    * @generated
    */
-  Bloc getBloc();
+  Bloc getBoucle();
 
   /**
-   * Sets the value of the '{@link rat.rat.Tantque#getBloc <em>Bloc</em>}' containment reference.
+   * Sets the value of the '{@link rat.rat.Tantque#getBoucle <em>Boucle</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Bloc</em>' containment reference.
-   * @see #getBloc()
+   * @param value the new value of the '<em>Boucle</em>' containment reference.
+   * @see #getBoucle()
    * @generated
    */
-  void setBloc(Bloc value);
+  void setBoucle(Bloc value);
 
 } // Tantque

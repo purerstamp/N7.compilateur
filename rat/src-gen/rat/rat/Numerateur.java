@@ -13,7 +13,7 @@ package rat.rat;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.Numerateur#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.Numerateur#getValNum <em>Val Num</em>}</li>
  * </ul>
  *
  * @see rat.rat.RatPackage#getNumerateur()
@@ -23,29 +23,29 @@ package rat.rat;
 public interface Numerateur extends E
 {
   /**
-   * Returns the value of the '<em><b>E</b></em>' containment reference.
+   * Returns the value of the '<em><b>Val Num</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>E</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Val Num</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>E</em>' containment reference.
-   * @see #setE(E)
-   * @see rat.rat.RatPackage#getNumerateur_E()
+   * @return the value of the '<em>Val Num</em>' containment reference.
+   * @see #setValNum(E)
+   * @see rat.rat.RatPackage#getNumerateur_ValNum()
    * @model containment="true"
    * @generated
    */
-  E getE();
+  E getValNum();
 
   /**
-   * Sets the value of the '{@link rat.rat.Numerateur#getE <em>E</em>}' containment reference.
+   * Sets the value of the '{@link rat.rat.Numerateur#getValNum <em>Val Num</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>E</em>' containment reference.
-   * @see #getE()
+   * @param value the new value of the '<em>Val Num</em>' containment reference.
+   * @see #getValNum()
    * @generated
    */
-  void setE(E value);
+  void setValNum(E value);
 
 } // Numerateur

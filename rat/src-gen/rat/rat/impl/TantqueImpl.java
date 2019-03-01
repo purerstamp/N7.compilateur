@@ -24,8 +24,8 @@ import rat.rat.Tantque;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.impl.TantqueImpl#getE <em>E</em>}</li>
- *   <li>{@link rat.rat.impl.TantqueImpl#getBloc <em>Bloc</em>}</li>
+ *   <li>{@link rat.rat.impl.TantqueImpl#getCondt <em>Condt</em>}</li>
+ *   <li>{@link rat.rat.impl.TantqueImpl#getBoucle <em>Boucle</em>}</li>
  * </ul>
  *
  * @generated
@@ -33,24 +33,24 @@ import rat.rat.Tantque;
 public class TantqueImpl extends IImpl implements Tantque
 {
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
+   * The cached value of the '{@link #getCondt() <em>Condt</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getCondt()
    * @generated
    * @ordered
    */
-  protected E e;
+  protected E condt;
 
   /**
-   * The cached value of the '{@link #getBloc() <em>Bloc</em>}' containment reference.
+   * The cached value of the '{@link #getBoucle() <em>Boucle</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBloc()
+   * @see #getBoucle()
    * @generated
    * @ordered
    */
-  protected Bloc bloc;
+  protected Bloc boucle;
 
   /**
    * <!-- begin-user-doc -->
@@ -78,9 +78,9 @@ public class TantqueImpl extends IImpl implements Tantque
    * <!-- end-user-doc -->
    * @generated
    */
-  public E getE()
+  public E getCondt()
   {
-    return e;
+    return condt;
   }
 
   /**
@@ -88,13 +88,13 @@ public class TantqueImpl extends IImpl implements Tantque
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE(E newE, NotificationChain msgs)
+  public NotificationChain basicSetCondt(E newCondt, NotificationChain msgs)
   {
-    E oldE = e;
-    e = newE;
+    E oldCondt = condt;
+    condt = newCondt;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.TANTQUE__E, oldE, newE);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.TANTQUE__CONDT, oldCondt, newCondt);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -105,20 +105,20 @@ public class TantqueImpl extends IImpl implements Tantque
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE(E newE)
+  public void setCondt(E newCondt)
   {
-    if (newE != e)
+    if (newCondt != condt)
     {
       NotificationChain msgs = null;
-      if (e != null)
-        msgs = ((InternalEObject)e).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.TANTQUE__E, null, msgs);
-      if (newE != null)
-        msgs = ((InternalEObject)newE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.TANTQUE__E, null, msgs);
-      msgs = basicSetE(newE, msgs);
+      if (condt != null)
+        msgs = ((InternalEObject)condt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.TANTQUE__CONDT, null, msgs);
+      if (newCondt != null)
+        msgs = ((InternalEObject)newCondt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.TANTQUE__CONDT, null, msgs);
+      msgs = basicSetCondt(newCondt, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.TANTQUE__E, newE, newE));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.TANTQUE__CONDT, newCondt, newCondt));
   }
 
   /**
@@ -126,9 +126,9 @@ public class TantqueImpl extends IImpl implements Tantque
    * <!-- end-user-doc -->
    * @generated
    */
-  public Bloc getBloc()
+  public Bloc getBoucle()
   {
-    return bloc;
+    return boucle;
   }
 
   /**
@@ -136,13 +136,13 @@ public class TantqueImpl extends IImpl implements Tantque
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBloc(Bloc newBloc, NotificationChain msgs)
+  public NotificationChain basicSetBoucle(Bloc newBoucle, NotificationChain msgs)
   {
-    Bloc oldBloc = bloc;
-    bloc = newBloc;
+    Bloc oldBoucle = boucle;
+    boucle = newBoucle;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.TANTQUE__BLOC, oldBloc, newBloc);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.TANTQUE__BOUCLE, oldBoucle, newBoucle);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -153,20 +153,20 @@ public class TantqueImpl extends IImpl implements Tantque
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBloc(Bloc newBloc)
+  public void setBoucle(Bloc newBoucle)
   {
-    if (newBloc != bloc)
+    if (newBoucle != boucle)
     {
       NotificationChain msgs = null;
-      if (bloc != null)
-        msgs = ((InternalEObject)bloc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.TANTQUE__BLOC, null, msgs);
-      if (newBloc != null)
-        msgs = ((InternalEObject)newBloc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.TANTQUE__BLOC, null, msgs);
-      msgs = basicSetBloc(newBloc, msgs);
+      if (boucle != null)
+        msgs = ((InternalEObject)boucle).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.TANTQUE__BOUCLE, null, msgs);
+      if (newBoucle != null)
+        msgs = ((InternalEObject)newBoucle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.TANTQUE__BOUCLE, null, msgs);
+      msgs = basicSetBoucle(newBoucle, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.TANTQUE__BLOC, newBloc, newBloc));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.TANTQUE__BOUCLE, newBoucle, newBoucle));
   }
 
   /**
@@ -179,10 +179,10 @@ public class TantqueImpl extends IImpl implements Tantque
   {
     switch (featureID)
     {
-      case RatPackage.TANTQUE__E:
-        return basicSetE(null, msgs);
-      case RatPackage.TANTQUE__BLOC:
-        return basicSetBloc(null, msgs);
+      case RatPackage.TANTQUE__CONDT:
+        return basicSetCondt(null, msgs);
+      case RatPackage.TANTQUE__BOUCLE:
+        return basicSetBoucle(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -197,10 +197,10 @@ public class TantqueImpl extends IImpl implements Tantque
   {
     switch (featureID)
     {
-      case RatPackage.TANTQUE__E:
-        return getE();
-      case RatPackage.TANTQUE__BLOC:
-        return getBloc();
+      case RatPackage.TANTQUE__CONDT:
+        return getCondt();
+      case RatPackage.TANTQUE__BOUCLE:
+        return getBoucle();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -215,11 +215,11 @@ public class TantqueImpl extends IImpl implements Tantque
   {
     switch (featureID)
     {
-      case RatPackage.TANTQUE__E:
-        setE((E)newValue);
+      case RatPackage.TANTQUE__CONDT:
+        setCondt((E)newValue);
         return;
-      case RatPackage.TANTQUE__BLOC:
-        setBloc((Bloc)newValue);
+      case RatPackage.TANTQUE__BOUCLE:
+        setBoucle((Bloc)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -235,11 +235,11 @@ public class TantqueImpl extends IImpl implements Tantque
   {
     switch (featureID)
     {
-      case RatPackage.TANTQUE__E:
-        setE((E)null);
+      case RatPackage.TANTQUE__CONDT:
+        setCondt((E)null);
         return;
-      case RatPackage.TANTQUE__BLOC:
-        setBloc((Bloc)null);
+      case RatPackage.TANTQUE__BOUCLE:
+        setBoucle((Bloc)null);
         return;
     }
     super.eUnset(featureID);
@@ -255,10 +255,10 @@ public class TantqueImpl extends IImpl implements Tantque
   {
     switch (featureID)
     {
-      case RatPackage.TANTQUE__E:
-        return e != null;
-      case RatPackage.TANTQUE__BLOC:
-        return bloc != null;
+      case RatPackage.TANTQUE__CONDT:
+        return condt != null;
+      case RatPackage.TANTQUE__BOUCLE:
+        return boucle != null;
     }
     return super.eIsSet(featureID);
   }

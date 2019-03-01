@@ -13,7 +13,7 @@ package rat.rat;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.Print#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.Print#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @see rat.rat.RatPackage#getPrint()
@@ -23,29 +23,29 @@ package rat.rat;
 public interface Print extends I
 {
   /**
-   * Returns the value of the '<em><b>E</b></em>' containment reference.
+   * Returns the value of the '<em><b>Val</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>E</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Val</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>E</em>' containment reference.
-   * @see #setE(E)
-   * @see rat.rat.RatPackage#getPrint_E()
+   * @return the value of the '<em>Val</em>' containment reference.
+   * @see #setVal(E)
+   * @see rat.rat.RatPackage#getPrint_Val()
    * @model containment="true"
    * @generated
    */
-  E getE();
+  E getVal();
 
   /**
-   * Sets the value of the '{@link rat.rat.Print#getE <em>E</em>}' containment reference.
+   * Sets the value of the '{@link rat.rat.Print#getVal <em>Val</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>E</em>' containment reference.
-   * @see #getE()
+   * @param value the new value of the '<em>Val</em>' containment reference.
+   * @see #getVal()
    * @generated
    */
-  void setE(E value);
+  void setVal(E value);
 
 } // Print

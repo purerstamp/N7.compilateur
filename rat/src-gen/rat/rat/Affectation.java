@@ -13,7 +13,7 @@ package rat.rat;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.Affectation#getNom <em>Nom</em>}</li>
+ *   <li>{@link rat.rat.Affectation#getNomAff <em>Nom Aff</em>}</li>
  *   <li>{@link rat.rat.Affectation#getE <em>E</em>}</li>
  * </ul>
  *
@@ -24,30 +24,30 @@ package rat.rat;
 public interface Affectation extends I
 {
   /**
-   * Returns the value of the '<em><b>Nom</b></em>' attribute.
+   * Returns the value of the '<em><b>Nom Aff</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nom</em>' attribute isn't clear,
+   * If the meaning of the '<em>Nom Aff</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nom</em>' attribute.
-   * @see #setNom(String)
-   * @see rat.rat.RatPackage#getAffectation_Nom()
+   * @return the value of the '<em>Nom Aff</em>' attribute.
+   * @see #setNomAff(String)
+   * @see rat.rat.RatPackage#getAffectation_NomAff()
    * @model
    * @generated
    */
-  String getNom();
+  String getNomAff();
 
   /**
-   * Sets the value of the '{@link rat.rat.Affectation#getNom <em>Nom</em>}' attribute.
+   * Sets the value of the '{@link rat.rat.Affectation#getNomAff <em>Nom Aff</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nom</em>' attribute.
-   * @see #getNom()
+   * @param value the new value of the '<em>Nom Aff</em>' attribute.
+   * @see #getNomAff()
    * @generated
    */
-  void setNom(String value);
+  void setNomAff(String value);
 
   /**
    * Returns the value of the '<em><b>E</b></em>' containment reference.

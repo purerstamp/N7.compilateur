@@ -30,7 +30,7 @@ import rat.rat.RatPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.impl.AppelImpl#getNom <em>Nom</em>}</li>
+ *   <li>{@link rat.rat.impl.AppelImpl#getNomAppel <em>Nom Appel</em>}</li>
  *   <li>{@link rat.rat.impl.AppelImpl#getParam <em>Param</em>}</li>
  * </ul>
  *
@@ -39,24 +39,24 @@ import rat.rat.RatPackage;
 public class AppelImpl extends EImpl implements Appel
 {
   /**
-   * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The default value of the '{@link #getNomAppel() <em>Nom Appel</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomAppel()
    * @generated
    * @ordered
    */
-  protected static final String NOM_EDEFAULT = null;
+  protected static final String NOM_APPEL_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The cached value of the '{@link #getNomAppel() <em>Nom Appel</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomAppel()
    * @generated
    * @ordered
    */
-  protected String nom = NOM_EDEFAULT;
+  protected String nomAppel = NOM_APPEL_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getParam() <em>Param</em>}' containment reference list.
@@ -94,9 +94,9 @@ public class AppelImpl extends EImpl implements Appel
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNom()
+  public String getNomAppel()
   {
-    return nom;
+    return nomAppel;
   }
 
   /**
@@ -104,12 +104,12 @@ public class AppelImpl extends EImpl implements Appel
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNom(String newNom)
+  public void setNomAppel(String newNomAppel)
   {
-    String oldNom = nom;
-    nom = newNom;
+    String oldNomAppel = nomAppel;
+    nomAppel = newNomAppel;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.APPEL__NOM, oldNom, nom));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.APPEL__NOM_APPEL, oldNomAppel, nomAppel));
   }
 
   /**
@@ -152,8 +152,8 @@ public class AppelImpl extends EImpl implements Appel
   {
     switch (featureID)
     {
-      case RatPackage.APPEL__NOM:
-        return getNom();
+      case RatPackage.APPEL__NOM_APPEL:
+        return getNomAppel();
       case RatPackage.APPEL__PARAM:
         return getParam();
     }
@@ -171,8 +171,8 @@ public class AppelImpl extends EImpl implements Appel
   {
     switch (featureID)
     {
-      case RatPackage.APPEL__NOM:
-        setNom((String)newValue);
+      case RatPackage.APPEL__NOM_APPEL:
+        setNomAppel((String)newValue);
         return;
       case RatPackage.APPEL__PARAM:
         getParam().clear();
@@ -192,8 +192,8 @@ public class AppelImpl extends EImpl implements Appel
   {
     switch (featureID)
     {
-      case RatPackage.APPEL__NOM:
-        setNom(NOM_EDEFAULT);
+      case RatPackage.APPEL__NOM_APPEL:
+        setNomAppel(NOM_APPEL_EDEFAULT);
         return;
       case RatPackage.APPEL__PARAM:
         getParam().clear();
@@ -212,8 +212,8 @@ public class AppelImpl extends EImpl implements Appel
   {
     switch (featureID)
     {
-      case RatPackage.APPEL__NOM:
-        return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
+      case RatPackage.APPEL__NOM_APPEL:
+        return NOM_APPEL_EDEFAULT == null ? nomAppel != null : !NOM_APPEL_EDEFAULT.equals(nomAppel);
       case RatPackage.APPEL__PARAM:
         return param != null && !param.isEmpty();
     }
@@ -231,8 +231,8 @@ public class AppelImpl extends EImpl implements Appel
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nom: ");
-    result.append(nom);
+    result.append(" (nomAppel: ");
+    result.append(nomAppel);
     result.append(')');
     return result.toString();
   }

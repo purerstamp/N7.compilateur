@@ -20,8 +20,8 @@ import rat.rat.RatPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.impl.ConstanteImpl#getNom <em>Nom</em>}</li>
- *   <li>{@link rat.rat.impl.ConstanteImpl#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.impl.ConstanteImpl#getNomConst <em>Nom Const</em>}</li>
+ *   <li>{@link rat.rat.impl.ConstanteImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,44 +29,44 @@ import rat.rat.RatPackage;
 public class ConstanteImpl extends IImpl implements Constante
 {
   /**
-   * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The default value of the '{@link #getNomConst() <em>Nom Const</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomConst()
    * @generated
    * @ordered
    */
-  protected static final String NOM_EDEFAULT = null;
+  protected static final String NOM_CONST_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The cached value of the '{@link #getNomConst() <em>Nom Const</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomConst()
    * @generated
    * @ordered
    */
-  protected String nom = NOM_EDEFAULT;
+  protected String nomConst = NOM_CONST_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getE() <em>E</em>}' attribute.
+   * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected static final int E_EDEFAULT = 0;
+  protected static final int VAL_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' attribute.
+   * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected int e = E_EDEFAULT;
+  protected int val = VAL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -94,9 +94,9 @@ public class ConstanteImpl extends IImpl implements Constante
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNom()
+  public String getNomConst()
   {
-    return nom;
+    return nomConst;
   }
 
   /**
@@ -104,12 +104,12 @@ public class ConstanteImpl extends IImpl implements Constante
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNom(String newNom)
+  public void setNomConst(String newNomConst)
   {
-    String oldNom = nom;
-    nom = newNom;
+    String oldNomConst = nomConst;
+    nomConst = newNomConst;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONSTANTE__NOM, oldNom, nom));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONSTANTE__NOM_CONST, oldNomConst, nomConst));
   }
 
   /**
@@ -117,9 +117,9 @@ public class ConstanteImpl extends IImpl implements Constante
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getE()
+  public int getVal()
   {
-    return e;
+    return val;
   }
 
   /**
@@ -127,12 +127,12 @@ public class ConstanteImpl extends IImpl implements Constante
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE(int newE)
+  public void setVal(int newVal)
   {
-    int oldE = e;
-    e = newE;
+    int oldVal = val;
+    val = newVal;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONSTANTE__E, oldE, e));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONSTANTE__VAL, oldVal, val));
   }
 
   /**
@@ -145,10 +145,10 @@ public class ConstanteImpl extends IImpl implements Constante
   {
     switch (featureID)
     {
-      case RatPackage.CONSTANTE__NOM:
-        return getNom();
-      case RatPackage.CONSTANTE__E:
-        return getE();
+      case RatPackage.CONSTANTE__NOM_CONST:
+        return getNomConst();
+      case RatPackage.CONSTANTE__VAL:
+        return getVal();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -163,11 +163,11 @@ public class ConstanteImpl extends IImpl implements Constante
   {
     switch (featureID)
     {
-      case RatPackage.CONSTANTE__NOM:
-        setNom((String)newValue);
+      case RatPackage.CONSTANTE__NOM_CONST:
+        setNomConst((String)newValue);
         return;
-      case RatPackage.CONSTANTE__E:
-        setE((Integer)newValue);
+      case RatPackage.CONSTANTE__VAL:
+        setVal((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -183,11 +183,11 @@ public class ConstanteImpl extends IImpl implements Constante
   {
     switch (featureID)
     {
-      case RatPackage.CONSTANTE__NOM:
-        setNom(NOM_EDEFAULT);
+      case RatPackage.CONSTANTE__NOM_CONST:
+        setNomConst(NOM_CONST_EDEFAULT);
         return;
-      case RatPackage.CONSTANTE__E:
-        setE(E_EDEFAULT);
+      case RatPackage.CONSTANTE__VAL:
+        setVal(VAL_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -203,10 +203,10 @@ public class ConstanteImpl extends IImpl implements Constante
   {
     switch (featureID)
     {
-      case RatPackage.CONSTANTE__NOM:
-        return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
-      case RatPackage.CONSTANTE__E:
-        return e != E_EDEFAULT;
+      case RatPackage.CONSTANTE__NOM_CONST:
+        return NOM_CONST_EDEFAULT == null ? nomConst != null : !NOM_CONST_EDEFAULT.equals(nomConst);
+      case RatPackage.CONSTANTE__VAL:
+        return val != VAL_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -222,10 +222,10 @@ public class ConstanteImpl extends IImpl implements Constante
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nom: ");
-    result.append(nom);
-    result.append(", e: ");
-    result.append(e);
+    result.append(" (nomConst: ");
+    result.append(nomConst);
+    result.append(", val: ");
+    result.append(val);
     result.append(')');
     return result.toString();
   }

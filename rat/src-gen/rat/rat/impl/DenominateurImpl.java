@@ -23,7 +23,7 @@ import rat.rat.RatPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.impl.DenominateurImpl#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.impl.DenominateurImpl#getValDenum <em>Val Denum</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,14 +31,14 @@ import rat.rat.RatPackage;
 public class DenominateurImpl extends EImpl implements Denominateur
 {
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
+   * The cached value of the '{@link #getValDenum() <em>Val Denum</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getValDenum()
    * @generated
    * @ordered
    */
-  protected E e;
+  protected E valDenum;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,9 +66,9 @@ public class DenominateurImpl extends EImpl implements Denominateur
    * <!-- end-user-doc -->
    * @generated
    */
-  public E getE()
+  public E getValDenum()
   {
-    return e;
+    return valDenum;
   }
 
   /**
@@ -76,13 +76,13 @@ public class DenominateurImpl extends EImpl implements Denominateur
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE(E newE, NotificationChain msgs)
+  public NotificationChain basicSetValDenum(E newValDenum, NotificationChain msgs)
   {
-    E oldE = e;
-    e = newE;
+    E oldValDenum = valDenum;
+    valDenum = newValDenum;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.DENOMINATEUR__E, oldE, newE);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.DENOMINATEUR__VAL_DENUM, oldValDenum, newValDenum);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -93,20 +93,20 @@ public class DenominateurImpl extends EImpl implements Denominateur
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE(E newE)
+  public void setValDenum(E newValDenum)
   {
-    if (newE != e)
+    if (newValDenum != valDenum)
     {
       NotificationChain msgs = null;
-      if (e != null)
-        msgs = ((InternalEObject)e).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.DENOMINATEUR__E, null, msgs);
-      if (newE != null)
-        msgs = ((InternalEObject)newE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.DENOMINATEUR__E, null, msgs);
-      msgs = basicSetE(newE, msgs);
+      if (valDenum != null)
+        msgs = ((InternalEObject)valDenum).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.DENOMINATEUR__VAL_DENUM, null, msgs);
+      if (newValDenum != null)
+        msgs = ((InternalEObject)newValDenum).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.DENOMINATEUR__VAL_DENUM, null, msgs);
+      msgs = basicSetValDenum(newValDenum, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.DENOMINATEUR__E, newE, newE));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.DENOMINATEUR__VAL_DENUM, newValDenum, newValDenum));
   }
 
   /**
@@ -119,8 +119,8 @@ public class DenominateurImpl extends EImpl implements Denominateur
   {
     switch (featureID)
     {
-      case RatPackage.DENOMINATEUR__E:
-        return basicSetE(null, msgs);
+      case RatPackage.DENOMINATEUR__VAL_DENUM:
+        return basicSetValDenum(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,8 +135,8 @@ public class DenominateurImpl extends EImpl implements Denominateur
   {
     switch (featureID)
     {
-      case RatPackage.DENOMINATEUR__E:
-        return getE();
+      case RatPackage.DENOMINATEUR__VAL_DENUM:
+        return getValDenum();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,8 +151,8 @@ public class DenominateurImpl extends EImpl implements Denominateur
   {
     switch (featureID)
     {
-      case RatPackage.DENOMINATEUR__E:
-        setE((E)newValue);
+      case RatPackage.DENOMINATEUR__VAL_DENUM:
+        setValDenum((E)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +168,8 @@ public class DenominateurImpl extends EImpl implements Denominateur
   {
     switch (featureID)
     {
-      case RatPackage.DENOMINATEUR__E:
-        setE((E)null);
+      case RatPackage.DENOMINATEUR__VAL_DENUM:
+        setValDenum((E)null);
         return;
     }
     super.eUnset(featureID);
@@ -185,8 +185,8 @@ public class DenominateurImpl extends EImpl implements Denominateur
   {
     switch (featureID)
     {
-      case RatPackage.DENOMINATEUR__E:
-        return e != null;
+      case RatPackage.DENOMINATEUR__VAL_DENUM:
+        return valDenum != null;
     }
     return super.eIsSet(featureID);
   }

@@ -25,7 +25,7 @@ import rat.rat.Type;
  * </p>
  * <ul>
  *   <li>{@link rat.rat.impl.DeclarationImpl#getType <em>Type</em>}</li>
- *   <li>{@link rat.rat.impl.DeclarationImpl#getNom <em>Nom</em>}</li>
+ *   <li>{@link rat.rat.impl.DeclarationImpl#getNomDecl <em>Nom Decl</em>}</li>
  *   <li>{@link rat.rat.impl.DeclarationImpl#getE <em>E</em>}</li>
  * </ul>
  *
@@ -44,24 +44,24 @@ public class DeclarationImpl extends IImpl implements Declaration
   protected Type type;
 
   /**
-   * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The default value of the '{@link #getNomDecl() <em>Nom Decl</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomDecl()
    * @generated
    * @ordered
    */
-  protected static final String NOM_EDEFAULT = null;
+  protected static final String NOM_DECL_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The cached value of the '{@link #getNomDecl() <em>Nom Decl</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomDecl()
    * @generated
    * @ordered
    */
-  protected String nom = NOM_EDEFAULT;
+  protected String nomDecl = NOM_DECL_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
@@ -147,9 +147,9 @@ public class DeclarationImpl extends IImpl implements Declaration
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNom()
+  public String getNomDecl()
   {
-    return nom;
+    return nomDecl;
   }
 
   /**
@@ -157,12 +157,12 @@ public class DeclarationImpl extends IImpl implements Declaration
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNom(String newNom)
+  public void setNomDecl(String newNomDecl)
   {
-    String oldNom = nom;
-    nom = newNom;
+    String oldNomDecl = nomDecl;
+    nomDecl = newNomDecl;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.DECLARATION__NOM, oldNom, nom));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.DECLARATION__NOM_DECL, oldNomDecl, nomDecl));
   }
 
   /**
@@ -243,8 +243,8 @@ public class DeclarationImpl extends IImpl implements Declaration
     {
       case RatPackage.DECLARATION__TYPE:
         return getType();
-      case RatPackage.DECLARATION__NOM:
-        return getNom();
+      case RatPackage.DECLARATION__NOM_DECL:
+        return getNomDecl();
       case RatPackage.DECLARATION__E:
         return getE();
     }
@@ -264,8 +264,8 @@ public class DeclarationImpl extends IImpl implements Declaration
       case RatPackage.DECLARATION__TYPE:
         setType((Type)newValue);
         return;
-      case RatPackage.DECLARATION__NOM:
-        setNom((String)newValue);
+      case RatPackage.DECLARATION__NOM_DECL:
+        setNomDecl((String)newValue);
         return;
       case RatPackage.DECLARATION__E:
         setE((E)newValue);
@@ -287,8 +287,8 @@ public class DeclarationImpl extends IImpl implements Declaration
       case RatPackage.DECLARATION__TYPE:
         setType((Type)null);
         return;
-      case RatPackage.DECLARATION__NOM:
-        setNom(NOM_EDEFAULT);
+      case RatPackage.DECLARATION__NOM_DECL:
+        setNomDecl(NOM_DECL_EDEFAULT);
         return;
       case RatPackage.DECLARATION__E:
         setE((E)null);
@@ -309,8 +309,8 @@ public class DeclarationImpl extends IImpl implements Declaration
     {
       case RatPackage.DECLARATION__TYPE:
         return type != null;
-      case RatPackage.DECLARATION__NOM:
-        return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
+      case RatPackage.DECLARATION__NOM_DECL:
+        return NOM_DECL_EDEFAULT == null ? nomDecl != null : !NOM_DECL_EDEFAULT.equals(nomDecl);
       case RatPackage.DECLARATION__E:
         return e != null;
     }
@@ -328,8 +328,8 @@ public class DeclarationImpl extends IImpl implements Declaration
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nom: ");
-    result.append(nom);
+    result.append(" (nomDecl: ");
+    result.append(nomDecl);
     result.append(')');
     return result.toString();
   }

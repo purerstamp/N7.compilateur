@@ -77,13 +77,22 @@ public interface RatPackage extends EPackage
   int PROG__FUN = 0;
 
   /**
+   * The feature id for the '<em><b>Nom Prog</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROG__NOM_PROG = 1;
+
+  /**
    * The feature id for the '<em><b>Bloc</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROG__BLOC = 1;
+  int PROG__BLOC = 2;
 
   /**
    * The number of structural features of the '<em>Prog</em>' class.
@@ -92,7 +101,7 @@ public interface RatPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROG_FEATURE_COUNT = 2;
+  int PROG_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link rat.rat.impl.FunImpl <em>Fun</em>}' class.
@@ -114,13 +123,13 @@ public interface RatPackage extends EPackage
   int FUN__TYPE = 0;
 
   /**
-   * The feature id for the '<em><b>Nom</b></em>' attribute.
+   * The feature id for the '<em><b>Nom Fun</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUN__NOM = 1;
+  int FUN__NOM_FUN = 1;
 
   /**
    * The feature id for the '<em><b>Param</b></em>' containment reference list.
@@ -141,13 +150,13 @@ public interface RatPackage extends EPackage
   int FUN__IS = 3;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * The feature id for the '<em><b>Retour</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUN__E = 4;
+  int FUN__RETOUR = 4;
 
   /**
    * The number of structural features of the '<em>Fun</em>' class.
@@ -225,13 +234,13 @@ public interface RatPackage extends EPackage
   int DECLARATION__TYPE = I_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Nom</b></em>' attribute.
+   * The feature id for the '<em><b>Nom Decl</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DECLARATION__NOM = I_FEATURE_COUNT + 1;
+  int DECLARATION__NOM_DECL = I_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>E</b></em>' containment reference.
@@ -262,13 +271,13 @@ public interface RatPackage extends EPackage
   int AFFECTATION = 5;
 
   /**
-   * The feature id for the '<em><b>Nom</b></em>' attribute.
+   * The feature id for the '<em><b>Nom Aff</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AFFECTATION__NOM = I_FEATURE_COUNT + 0;
+  int AFFECTATION__NOM_AFF = I_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>E</b></em>' containment reference.
@@ -299,22 +308,22 @@ public interface RatPackage extends EPackage
   int CONSTANTE = 6;
 
   /**
-   * The feature id for the '<em><b>Nom</b></em>' attribute.
+   * The feature id for the '<em><b>Nom Const</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONSTANTE__NOM = I_FEATURE_COUNT + 0;
+  int CONSTANTE__NOM_CONST = I_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' attribute.
+   * The feature id for the '<em><b>Val</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONSTANTE__E = I_FEATURE_COUNT + 1;
+  int CONSTANTE__VAL = I_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Constante</em>' class.
@@ -336,13 +345,13 @@ public interface RatPackage extends EPackage
   int PRINT = 7;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * The feature id for the '<em><b>Val</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRINT__E = I_FEATURE_COUNT + 0;
+  int PRINT__VAL = I_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Print</em>' class.
@@ -364,31 +373,31 @@ public interface RatPackage extends EPackage
   int CONDITIONNELLE = 8;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * The feature id for the '<em><b>Condc</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITIONNELLE__E = I_FEATURE_COUNT + 0;
+  int CONDITIONNELLE__CONDC = I_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Bloc1</b></em>' containment reference.
+   * The feature id for the '<em><b>Bloc1cond</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITIONNELLE__BLOC1 = I_FEATURE_COUNT + 1;
+  int CONDITIONNELLE__BLOC1COND = I_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Bloc2</b></em>' containment reference.
+   * The feature id for the '<em><b>Bloc2cond</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITIONNELLE__BLOC2 = I_FEATURE_COUNT + 2;
+  int CONDITIONNELLE__BLOC2COND = I_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Conditionnelle</em>' class.
@@ -410,22 +419,22 @@ public interface RatPackage extends EPackage
   int TANTQUE = 9;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * The feature id for the '<em><b>Condt</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TANTQUE__E = I_FEATURE_COUNT + 0;
+  int TANTQUE__CONDT = I_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Bloc</b></em>' containment reference.
+   * The feature id for the '<em><b>Boucle</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TANTQUE__BLOC = I_FEATURE_COUNT + 1;
+  int TANTQUE__BOUCLE = I_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Tantque</em>' class.
@@ -559,13 +568,13 @@ public interface RatPackage extends EPackage
   int APPEL = 14;
 
   /**
-   * The feature id for the '<em><b>Nom</b></em>' attribute.
+   * The feature id for the '<em><b>Nom Appel</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int APPEL__NOM = E_FEATURE_COUNT + 0;
+  int APPEL__NOM_APPEL = E_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Param</b></em>' containment reference list.
@@ -633,13 +642,13 @@ public interface RatPackage extends EPackage
   int NUMERATEUR = 16;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * The feature id for the '<em><b>Val Num</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NUMERATEUR__E = E_FEATURE_COUNT + 0;
+  int NUMERATEUR__VAL_NUM = E_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Numerateur</em>' class.
@@ -661,13 +670,13 @@ public interface RatPackage extends EPackage
   int DENOMINATEUR = 17;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * The feature id for the '<em><b>Val Denum</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DENOMINATEUR__E = E_FEATURE_COUNT + 0;
+  int DENOMINATEUR__VAL_DENUM = E_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Denominateur</em>' class.
@@ -717,13 +726,13 @@ public interface RatPackage extends EPackage
   int BOOLEAN = 19;
 
   /**
-   * The feature id for the '<em><b>B</b></em>' attribute.
+   * The feature id for the '<em><b>Val</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOLEAN__B = E_FEATURE_COUNT + 0;
+  int BOOLEAN__VAL = E_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Boolean</em>' class.
@@ -859,6 +868,17 @@ public interface RatPackage extends EPackage
   EReference getProg_Fun();
 
   /**
+   * Returns the meta object for the attribute '{@link rat.rat.Prog#getNomProg <em>Nom Prog</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Nom Prog</em>'.
+   * @see rat.rat.Prog#getNomProg()
+   * @see #getProg()
+   * @generated
+   */
+  EAttribute getProg_NomProg();
+
+  /**
    * Returns the meta object for the containment reference '{@link rat.rat.Prog#getBloc <em>Bloc</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -891,15 +911,15 @@ public interface RatPackage extends EPackage
   EReference getFun_Type();
 
   /**
-   * Returns the meta object for the attribute '{@link rat.rat.Fun#getNom <em>Nom</em>}'.
+   * Returns the meta object for the attribute '{@link rat.rat.Fun#getNomFun <em>Nom Fun</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nom</em>'.
-   * @see rat.rat.Fun#getNom()
+   * @return the meta object for the attribute '<em>Nom Fun</em>'.
+   * @see rat.rat.Fun#getNomFun()
    * @see #getFun()
    * @generated
    */
-  EAttribute getFun_Nom();
+  EAttribute getFun_NomFun();
 
   /**
    * Returns the meta object for the containment reference list '{@link rat.rat.Fun#getParam <em>Param</em>}'.
@@ -924,15 +944,15 @@ public interface RatPackage extends EPackage
   EReference getFun_Is();
 
   /**
-   * Returns the meta object for the containment reference '{@link rat.rat.Fun#getE <em>E</em>}'.
+   * Returns the meta object for the containment reference '{@link rat.rat.Fun#getRetour <em>Retour</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>E</em>'.
-   * @see rat.rat.Fun#getE()
+   * @return the meta object for the containment reference '<em>Retour</em>'.
+   * @see rat.rat.Fun#getRetour()
    * @see #getFun()
    * @generated
    */
-  EReference getFun_E();
+  EReference getFun_Retour();
 
   /**
    * Returns the meta object for class '{@link rat.rat.Bloc <em>Bloc</em>}'.
@@ -987,15 +1007,15 @@ public interface RatPackage extends EPackage
   EReference getDeclaration_Type();
 
   /**
-   * Returns the meta object for the attribute '{@link rat.rat.Declaration#getNom <em>Nom</em>}'.
+   * Returns the meta object for the attribute '{@link rat.rat.Declaration#getNomDecl <em>Nom Decl</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nom</em>'.
-   * @see rat.rat.Declaration#getNom()
+   * @return the meta object for the attribute '<em>Nom Decl</em>'.
+   * @see rat.rat.Declaration#getNomDecl()
    * @see #getDeclaration()
    * @generated
    */
-  EAttribute getDeclaration_Nom();
+  EAttribute getDeclaration_NomDecl();
 
   /**
    * Returns the meta object for the containment reference '{@link rat.rat.Declaration#getE <em>E</em>}'.
@@ -1019,15 +1039,15 @@ public interface RatPackage extends EPackage
   EClass getAffectation();
 
   /**
-   * Returns the meta object for the attribute '{@link rat.rat.Affectation#getNom <em>Nom</em>}'.
+   * Returns the meta object for the attribute '{@link rat.rat.Affectation#getNomAff <em>Nom Aff</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nom</em>'.
-   * @see rat.rat.Affectation#getNom()
+   * @return the meta object for the attribute '<em>Nom Aff</em>'.
+   * @see rat.rat.Affectation#getNomAff()
    * @see #getAffectation()
    * @generated
    */
-  EAttribute getAffectation_Nom();
+  EAttribute getAffectation_NomAff();
 
   /**
    * Returns the meta object for the containment reference '{@link rat.rat.Affectation#getE <em>E</em>}'.
@@ -1051,26 +1071,26 @@ public interface RatPackage extends EPackage
   EClass getConstante();
 
   /**
-   * Returns the meta object for the attribute '{@link rat.rat.Constante#getNom <em>Nom</em>}'.
+   * Returns the meta object for the attribute '{@link rat.rat.Constante#getNomConst <em>Nom Const</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nom</em>'.
-   * @see rat.rat.Constante#getNom()
+   * @return the meta object for the attribute '<em>Nom Const</em>'.
+   * @see rat.rat.Constante#getNomConst()
    * @see #getConstante()
    * @generated
    */
-  EAttribute getConstante_Nom();
+  EAttribute getConstante_NomConst();
 
   /**
-   * Returns the meta object for the attribute '{@link rat.rat.Constante#getE <em>E</em>}'.
+   * Returns the meta object for the attribute '{@link rat.rat.Constante#getVal <em>Val</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>E</em>'.
-   * @see rat.rat.Constante#getE()
+   * @return the meta object for the attribute '<em>Val</em>'.
+   * @see rat.rat.Constante#getVal()
    * @see #getConstante()
    * @generated
    */
-  EAttribute getConstante_E();
+  EAttribute getConstante_Val();
 
   /**
    * Returns the meta object for class '{@link rat.rat.Print <em>Print</em>}'.
@@ -1083,15 +1103,15 @@ public interface RatPackage extends EPackage
   EClass getPrint();
 
   /**
-   * Returns the meta object for the containment reference '{@link rat.rat.Print#getE <em>E</em>}'.
+   * Returns the meta object for the containment reference '{@link rat.rat.Print#getVal <em>Val</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>E</em>'.
-   * @see rat.rat.Print#getE()
+   * @return the meta object for the containment reference '<em>Val</em>'.
+   * @see rat.rat.Print#getVal()
    * @see #getPrint()
    * @generated
    */
-  EReference getPrint_E();
+  EReference getPrint_Val();
 
   /**
    * Returns the meta object for class '{@link rat.rat.Conditionnelle <em>Conditionnelle</em>}'.
@@ -1104,37 +1124,37 @@ public interface RatPackage extends EPackage
   EClass getConditionnelle();
 
   /**
-   * Returns the meta object for the containment reference '{@link rat.rat.Conditionnelle#getE <em>E</em>}'.
+   * Returns the meta object for the containment reference '{@link rat.rat.Conditionnelle#getCondc <em>Condc</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>E</em>'.
-   * @see rat.rat.Conditionnelle#getE()
+   * @return the meta object for the containment reference '<em>Condc</em>'.
+   * @see rat.rat.Conditionnelle#getCondc()
    * @see #getConditionnelle()
    * @generated
    */
-  EReference getConditionnelle_E();
+  EReference getConditionnelle_Condc();
 
   /**
-   * Returns the meta object for the containment reference '{@link rat.rat.Conditionnelle#getBloc1 <em>Bloc1</em>}'.
+   * Returns the meta object for the containment reference '{@link rat.rat.Conditionnelle#getBloc1cond <em>Bloc1cond</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bloc1</em>'.
-   * @see rat.rat.Conditionnelle#getBloc1()
+   * @return the meta object for the containment reference '<em>Bloc1cond</em>'.
+   * @see rat.rat.Conditionnelle#getBloc1cond()
    * @see #getConditionnelle()
    * @generated
    */
-  EReference getConditionnelle_Bloc1();
+  EReference getConditionnelle_Bloc1cond();
 
   /**
-   * Returns the meta object for the containment reference '{@link rat.rat.Conditionnelle#getBloc2 <em>Bloc2</em>}'.
+   * Returns the meta object for the containment reference '{@link rat.rat.Conditionnelle#getBloc2cond <em>Bloc2cond</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bloc2</em>'.
-   * @see rat.rat.Conditionnelle#getBloc2()
+   * @return the meta object for the containment reference '<em>Bloc2cond</em>'.
+   * @see rat.rat.Conditionnelle#getBloc2cond()
    * @see #getConditionnelle()
    * @generated
    */
-  EReference getConditionnelle_Bloc2();
+  EReference getConditionnelle_Bloc2cond();
 
   /**
    * Returns the meta object for class '{@link rat.rat.Tantque <em>Tantque</em>}'.
@@ -1147,26 +1167,26 @@ public interface RatPackage extends EPackage
   EClass getTantque();
 
   /**
-   * Returns the meta object for the containment reference '{@link rat.rat.Tantque#getE <em>E</em>}'.
+   * Returns the meta object for the containment reference '{@link rat.rat.Tantque#getCondt <em>Condt</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>E</em>'.
-   * @see rat.rat.Tantque#getE()
+   * @return the meta object for the containment reference '<em>Condt</em>'.
+   * @see rat.rat.Tantque#getCondt()
    * @see #getTantque()
    * @generated
    */
-  EReference getTantque_E();
+  EReference getTantque_Condt();
 
   /**
-   * Returns the meta object for the containment reference '{@link rat.rat.Tantque#getBloc <em>Bloc</em>}'.
+   * Returns the meta object for the containment reference '{@link rat.rat.Tantque#getBoucle <em>Boucle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bloc</em>'.
-   * @see rat.rat.Tantque#getBloc()
+   * @return the meta object for the containment reference '<em>Boucle</em>'.
+   * @see rat.rat.Tantque#getBoucle()
    * @see #getTantque()
    * @generated
    */
-  EReference getTantque_Bloc();
+  EReference getTantque_Boucle();
 
   /**
    * Returns the meta object for class '{@link rat.rat.DP <em>DP</em>}'.
@@ -1263,15 +1283,15 @@ public interface RatPackage extends EPackage
   EClass getAppel();
 
   /**
-   * Returns the meta object for the attribute '{@link rat.rat.Appel#getNom <em>Nom</em>}'.
+   * Returns the meta object for the attribute '{@link rat.rat.Appel#getNomAppel <em>Nom Appel</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nom</em>'.
-   * @see rat.rat.Appel#getNom()
+   * @return the meta object for the attribute '<em>Nom Appel</em>'.
+   * @see rat.rat.Appel#getNomAppel()
    * @see #getAppel()
    * @generated
    */
-  EAttribute getAppel_Nom();
+  EAttribute getAppel_NomAppel();
 
   /**
    * Returns the meta object for the containment reference list '{@link rat.rat.Appel#getParam <em>Param</em>}'.
@@ -1327,15 +1347,15 @@ public interface RatPackage extends EPackage
   EClass getNumerateur();
 
   /**
-   * Returns the meta object for the containment reference '{@link rat.rat.Numerateur#getE <em>E</em>}'.
+   * Returns the meta object for the containment reference '{@link rat.rat.Numerateur#getValNum <em>Val Num</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>E</em>'.
-   * @see rat.rat.Numerateur#getE()
+   * @return the meta object for the containment reference '<em>Val Num</em>'.
+   * @see rat.rat.Numerateur#getValNum()
    * @see #getNumerateur()
    * @generated
    */
-  EReference getNumerateur_E();
+  EReference getNumerateur_ValNum();
 
   /**
    * Returns the meta object for class '{@link rat.rat.Denominateur <em>Denominateur</em>}'.
@@ -1348,15 +1368,15 @@ public interface RatPackage extends EPackage
   EClass getDenominateur();
 
   /**
-   * Returns the meta object for the containment reference '{@link rat.rat.Denominateur#getE <em>E</em>}'.
+   * Returns the meta object for the containment reference '{@link rat.rat.Denominateur#getValDenum <em>Val Denum</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>E</em>'.
-   * @see rat.rat.Denominateur#getE()
+   * @return the meta object for the containment reference '<em>Val Denum</em>'.
+   * @see rat.rat.Denominateur#getValDenum()
    * @see #getDenominateur()
    * @generated
    */
-  EReference getDenominateur_E();
+  EReference getDenominateur_ValDenum();
 
   /**
    * Returns the meta object for class '{@link rat.rat.Identificateur <em>Identificateur</em>}'.
@@ -1390,15 +1410,15 @@ public interface RatPackage extends EPackage
   EClass getBoolean();
 
   /**
-   * Returns the meta object for the attribute '{@link rat.rat.Boolean#getB <em>B</em>}'.
+   * Returns the meta object for the attribute '{@link rat.rat.Boolean#getVal <em>Val</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>B</em>'.
-   * @see rat.rat.Boolean#getB()
+   * @return the meta object for the attribute '<em>Val</em>'.
+   * @see rat.rat.Boolean#getVal()
    * @see #getBoolean()
    * @generated
    */
-  EAttribute getBoolean_B();
+  EAttribute getBoolean_Val();
 
   /**
    * Returns the meta object for class '{@link rat.rat.Entier <em>Entier</em>}'.
@@ -1527,6 +1547,14 @@ public interface RatPackage extends EPackage
     EReference PROG__FUN = eINSTANCE.getProg_Fun();
 
     /**
+     * The meta object literal for the '<em><b>Nom Prog</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROG__NOM_PROG = eINSTANCE.getProg_NomProg();
+
+    /**
      * The meta object literal for the '<em><b>Bloc</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1553,12 +1581,12 @@ public interface RatPackage extends EPackage
     EReference FUN__TYPE = eINSTANCE.getFun_Type();
 
     /**
-     * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Nom Fun</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FUN__NOM = eINSTANCE.getFun_Nom();
+    EAttribute FUN__NOM_FUN = eINSTANCE.getFun_NomFun();
 
     /**
      * The meta object literal for the '<em><b>Param</b></em>' containment reference list feature.
@@ -1577,12 +1605,12 @@ public interface RatPackage extends EPackage
     EReference FUN__IS = eINSTANCE.getFun_Is();
 
     /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Retour</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FUN__E = eINSTANCE.getFun_E();
+    EReference FUN__RETOUR = eINSTANCE.getFun_Retour();
 
     /**
      * The meta object literal for the '{@link rat.rat.impl.BlocImpl <em>Bloc</em>}' class.
@@ -1631,12 +1659,12 @@ public interface RatPackage extends EPackage
     EReference DECLARATION__TYPE = eINSTANCE.getDeclaration_Type();
 
     /**
-     * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Nom Decl</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DECLARATION__NOM = eINSTANCE.getDeclaration_Nom();
+    EAttribute DECLARATION__NOM_DECL = eINSTANCE.getDeclaration_NomDecl();
 
     /**
      * The meta object literal for the '<em><b>E</b></em>' containment reference feature.
@@ -1657,12 +1685,12 @@ public interface RatPackage extends EPackage
     EClass AFFECTATION = eINSTANCE.getAffectation();
 
     /**
-     * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Nom Aff</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute AFFECTATION__NOM = eINSTANCE.getAffectation_Nom();
+    EAttribute AFFECTATION__NOM_AFF = eINSTANCE.getAffectation_NomAff();
 
     /**
      * The meta object literal for the '<em><b>E</b></em>' containment reference feature.
@@ -1683,20 +1711,20 @@ public interface RatPackage extends EPackage
     EClass CONSTANTE = eINSTANCE.getConstante();
 
     /**
-     * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Nom Const</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CONSTANTE__NOM = eINSTANCE.getConstante_Nom();
+    EAttribute CONSTANTE__NOM_CONST = eINSTANCE.getConstante_NomConst();
 
     /**
-     * The meta object literal for the '<em><b>E</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CONSTANTE__E = eINSTANCE.getConstante_E();
+    EAttribute CONSTANTE__VAL = eINSTANCE.getConstante_Val();
 
     /**
      * The meta object literal for the '{@link rat.rat.impl.PrintImpl <em>Print</em>}' class.
@@ -1709,12 +1737,12 @@ public interface RatPackage extends EPackage
     EClass PRINT = eINSTANCE.getPrint();
 
     /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PRINT__E = eINSTANCE.getPrint_E();
+    EReference PRINT__VAL = eINSTANCE.getPrint_Val();
 
     /**
      * The meta object literal for the '{@link rat.rat.impl.ConditionnelleImpl <em>Conditionnelle</em>}' class.
@@ -1727,28 +1755,28 @@ public interface RatPackage extends EPackage
     EClass CONDITIONNELLE = eINSTANCE.getConditionnelle();
 
     /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Condc</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONDITIONNELLE__E = eINSTANCE.getConditionnelle_E();
+    EReference CONDITIONNELLE__CONDC = eINSTANCE.getConditionnelle_Condc();
 
     /**
-     * The meta object literal for the '<em><b>Bloc1</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Bloc1cond</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONDITIONNELLE__BLOC1 = eINSTANCE.getConditionnelle_Bloc1();
+    EReference CONDITIONNELLE__BLOC1COND = eINSTANCE.getConditionnelle_Bloc1cond();
 
     /**
-     * The meta object literal for the '<em><b>Bloc2</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Bloc2cond</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONDITIONNELLE__BLOC2 = eINSTANCE.getConditionnelle_Bloc2();
+    EReference CONDITIONNELLE__BLOC2COND = eINSTANCE.getConditionnelle_Bloc2cond();
 
     /**
      * The meta object literal for the '{@link rat.rat.impl.TantqueImpl <em>Tantque</em>}' class.
@@ -1761,20 +1789,20 @@ public interface RatPackage extends EPackage
     EClass TANTQUE = eINSTANCE.getTantque();
 
     /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Condt</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TANTQUE__E = eINSTANCE.getTantque_E();
+    EReference TANTQUE__CONDT = eINSTANCE.getTantque_Condt();
 
     /**
-     * The meta object literal for the '<em><b>Bloc</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Boucle</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TANTQUE__BLOC = eINSTANCE.getTantque_Bloc();
+    EReference TANTQUE__BOUCLE = eINSTANCE.getTantque_Boucle();
 
     /**
      * The meta object literal for the '{@link rat.rat.impl.DPImpl <em>DP</em>}' class.
@@ -1859,12 +1887,12 @@ public interface RatPackage extends EPackage
     EClass APPEL = eINSTANCE.getAppel();
 
     /**
-     * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Nom Appel</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute APPEL__NOM = eINSTANCE.getAppel_Nom();
+    EAttribute APPEL__NOM_APPEL = eINSTANCE.getAppel_NomAppel();
 
     /**
      * The meta object literal for the '<em><b>Param</b></em>' containment reference list feature.
@@ -1911,12 +1939,12 @@ public interface RatPackage extends EPackage
     EClass NUMERATEUR = eINSTANCE.getNumerateur();
 
     /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Val Num</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference NUMERATEUR__E = eINSTANCE.getNumerateur_E();
+    EReference NUMERATEUR__VAL_NUM = eINSTANCE.getNumerateur_ValNum();
 
     /**
      * The meta object literal for the '{@link rat.rat.impl.DenominateurImpl <em>Denominateur</em>}' class.
@@ -1929,12 +1957,12 @@ public interface RatPackage extends EPackage
     EClass DENOMINATEUR = eINSTANCE.getDenominateur();
 
     /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Val Denum</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DENOMINATEUR__E = eINSTANCE.getDenominateur_E();
+    EReference DENOMINATEUR__VAL_DENUM = eINSTANCE.getDenominateur_ValDenum();
 
     /**
      * The meta object literal for the '{@link rat.rat.impl.IdentificateurImpl <em>Identificateur</em>}' class.
@@ -1965,12 +1993,12 @@ public interface RatPackage extends EPackage
     EClass BOOLEAN = eINSTANCE.getBoolean();
 
     /**
-     * The meta object literal for the '<em><b>B</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BOOLEAN__B = eINSTANCE.getBoolean_B();
+    EAttribute BOOLEAN__VAL = eINSTANCE.getBoolean_Val();
 
     /**
      * The meta object literal for the '{@link rat.rat.impl.EntierImpl <em>Entier</em>}' class.

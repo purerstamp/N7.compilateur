@@ -28,15 +28,16 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cFunAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cFunFunParserRuleCall_0_0 = (RuleCall)cFunAssignment_0.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNomProgAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNomProgIDTerminalRuleCall_1_0 = (RuleCall)cNomProgAssignment_1.eContents().get(0);
 		private final Assignment cBlocAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cBlocBlocParserRuleCall_2_0 = (RuleCall)cBlocAssignment_2.eContents().get(0);
 		
 		//Prog:
-		//	fun+=Fun* ID bloc=Bloc;
+		//	fun+=Fun* nomProg=ID bloc=Bloc;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//fun+=Fun* ID bloc=Bloc
+		//fun+=Fun* nomProg=ID bloc=Bloc
 		public Group getGroup() { return cGroup; }
 		
 		//fun+=Fun*
@@ -45,8 +46,11 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		//Fun
 		public RuleCall getFunFunParserRuleCall_0_0() { return cFunFunParserRuleCall_0_0; }
 		
+		//nomProg=ID
+		public Assignment getNomProgAssignment_1() { return cNomProgAssignment_1; }
+		
 		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+		public RuleCall getNomProgIDTerminalRuleCall_1_0() { return cNomProgIDTerminalRuleCall_1_0; }
 		
 		//bloc=Bloc
 		public Assignment getBlocAssignment_2() { return cBlocAssignment_2; }
@@ -59,8 +63,8 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cTypeTypeParserRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
-		private final Assignment cNomAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNomIDTerminalRuleCall_1_0 = (RuleCall)cNomAssignment_1.eContents().get(0);
+		private final Assignment cNomFunAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNomFunIDTerminalRuleCall_1_0 = (RuleCall)cNomFunAssignment_1.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cParamAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cParamDPParserRuleCall_3_0 = (RuleCall)cParamAssignment_3.eContents().get(0);
@@ -69,16 +73,16 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cIsAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cIsIParserRuleCall_6_0 = (RuleCall)cIsAssignment_6.eContents().get(0);
 		private final Keyword cReturnKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cEAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cEEParserRuleCall_8_0 = (RuleCall)cEAssignment_8.eContents().get(0);
+		private final Assignment cRetourAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cRetourEParserRuleCall_8_0 = (RuleCall)cRetourAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		///* Prog : Fun* ID Bloc */ Fun:
-		//	type=Type nom=ID '(' param+=DP* ')' '{' is+=I* 'return' e=E ';' '}';
+		//	type=Type nomFun=ID '(' param+=DP* ')' '{' is+=I* 'return' retour=E ';' '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//type=Type nom=ID '(' param+=DP* ')' '{' is+=I* 'return' e=E ';' '}'
+		//type=Type nomFun=ID '(' param+=DP* ')' '{' is+=I* 'return' retour=E ';' '}'
 		public Group getGroup() { return cGroup; }
 		
 		//type=Type
@@ -87,11 +91,11 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		//Type
 		public RuleCall getTypeTypeParserRuleCall_0_0() { return cTypeTypeParserRuleCall_0_0; }
 		
-		//nom=ID
-		public Assignment getNomAssignment_1() { return cNomAssignment_1; }
+		//nomFun=ID
+		public Assignment getNomFunAssignment_1() { return cNomFunAssignment_1; }
 		
 		//ID
-		public RuleCall getNomIDTerminalRuleCall_1_0() { return cNomIDTerminalRuleCall_1_0; }
+		public RuleCall getNomFunIDTerminalRuleCall_1_0() { return cNomFunIDTerminalRuleCall_1_0; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
@@ -117,11 +121,11 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		//'return'
 		public Keyword getReturnKeyword_7() { return cReturnKeyword_7; }
 		
-		//e=E
-		public Assignment getEAssignment_8() { return cEAssignment_8; }
+		//retour=E
+		public Assignment getRetourAssignment_8() { return cRetourAssignment_8; }
 		
 		//E
-		public RuleCall getEEParserRuleCall_8_0() { return cEEParserRuleCall_8_0; }
+		public RuleCall getRetourEParserRuleCall_8_0() { return cRetourEParserRuleCall_8_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
@@ -205,18 +209,18 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cTypeTypeParserRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
-		private final Assignment cNomAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNomIDTerminalRuleCall_1_0 = (RuleCall)cNomAssignment_1.eContents().get(0);
+		private final Assignment cNomDeclAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNomDeclIDTerminalRuleCall_1_0 = (RuleCall)cNomDeclAssignment_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cEAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cEEParserRuleCall_3_0 = (RuleCall)cEAssignment_3.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Declaration:
-		//	type=Type nom=ID '=' e=E ';' /* Type ID = E */;
+		//	type=Type nomDecl=ID '=' e=E ';' /* Type ID = E */;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//type=Type nom=ID '=' e=E ';'
+		//type=Type nomDecl=ID '=' e=E ';'
 		public Group getGroup() { return cGroup; }
 		
 		//type=Type
@@ -225,11 +229,11 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		//Type
 		public RuleCall getTypeTypeParserRuleCall_0_0() { return cTypeTypeParserRuleCall_0_0; }
 		
-		//nom=ID
-		public Assignment getNomAssignment_1() { return cNomAssignment_1; }
+		//nomDecl=ID
+		public Assignment getNomDeclAssignment_1() { return cNomDeclAssignment_1; }
 		
 		//ID
-		public RuleCall getNomIDTerminalRuleCall_1_0() { return cNomIDTerminalRuleCall_1_0; }
+		public RuleCall getNomDeclIDTerminalRuleCall_1_0() { return cNomDeclIDTerminalRuleCall_1_0; }
 		
 		//'='
 		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
@@ -246,25 +250,25 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	public class AffectationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Affectation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNomAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNomIDTerminalRuleCall_0_0 = (RuleCall)cNomAssignment_0.eContents().get(0);
+		private final Assignment cNomAffAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNomAffIDTerminalRuleCall_0_0 = (RuleCall)cNomAffAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cEAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cEEParserRuleCall_2_0 = (RuleCall)cEAssignment_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Affectation:
-		//	nom=ID '=' e=E ';' /* ID = E */;
+		//	nomAff=ID '=' e=E ';' /* ID = E */;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//nom=ID '=' e=E ';'
+		//nomAff=ID '=' e=E ';'
 		public Group getGroup() { return cGroup; }
 		
-		//nom=ID
-		public Assignment getNomAssignment_0() { return cNomAssignment_0; }
+		//nomAff=ID
+		public Assignment getNomAffAssignment_0() { return cNomAffAssignment_0; }
 		
 		//ID
-		public RuleCall getNomIDTerminalRuleCall_0_0() { return cNomIDTerminalRuleCall_0_0; }
+		public RuleCall getNomAffIDTerminalRuleCall_0_0() { return cNomAffIDTerminalRuleCall_0_0; }
 		
 		//'='
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
@@ -282,37 +286,37 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Constante");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cConstKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNomAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNomIDTerminalRuleCall_1_0 = (RuleCall)cNomAssignment_1.eContents().get(0);
+		private final Assignment cNomConstAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNomConstIDTerminalRuleCall_1_0 = (RuleCall)cNomConstAssignment_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cEAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cEINTTerminalRuleCall_3_0 = (RuleCall)cEAssignment_3.eContents().get(0);
+		private final Assignment cValAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValINTTerminalRuleCall_3_0 = (RuleCall)cValAssignment_3.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Constante:
-		//	'const' nom=ID '=' e=INT ';' /* const ID = INT */;
+		//	'const' nomConst=ID '=' val=INT ';' /* const ID = INT */;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'const' nom=ID '=' e=INT ';'
+		//'const' nomConst=ID '=' val=INT ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'const'
 		public Keyword getConstKeyword_0() { return cConstKeyword_0; }
 		
-		//nom=ID
-		public Assignment getNomAssignment_1() { return cNomAssignment_1; }
+		//nomConst=ID
+		public Assignment getNomConstAssignment_1() { return cNomConstAssignment_1; }
 		
 		//ID
-		public RuleCall getNomIDTerminalRuleCall_1_0() { return cNomIDTerminalRuleCall_1_0; }
+		public RuleCall getNomConstIDTerminalRuleCall_1_0() { return cNomConstIDTerminalRuleCall_1_0; }
 		
 		//'='
 		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
 		
-		//e=INT
-		public Assignment getEAssignment_3() { return cEAssignment_3; }
+		//val=INT
+		public Assignment getValAssignment_3() { return cValAssignment_3; }
 		
 		//INT
-		public RuleCall getEINTTerminalRuleCall_3_0() { return cEINTTerminalRuleCall_3_0; }
+		public RuleCall getValINTTerminalRuleCall_3_0() { return cValINTTerminalRuleCall_3_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
@@ -321,25 +325,25 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Print");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPrintKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cEAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEEParserRuleCall_1_0 = (RuleCall)cEAssignment_1.eContents().get(0);
+		private final Assignment cValAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cValEParserRuleCall_1_0 = (RuleCall)cValAssignment_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Print:
-		//	'print' e=E ';' /* print E */;
+		//	'print' val=E ';' /* print E */;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'print' e=E ';'
+		//'print' val=E ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'print'
 		public Keyword getPrintKeyword_0() { return cPrintKeyword_0; }
 		
-		//e=E
-		public Assignment getEAssignment_1() { return cEAssignment_1; }
+		//val=E
+		public Assignment getValAssignment_1() { return cValAssignment_1; }
 		
 		//E
-		public RuleCall getEEParserRuleCall_1_0() { return cEEParserRuleCall_1_0; }
+		public RuleCall getValEParserRuleCall_1_0() { return cValEParserRuleCall_1_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
@@ -348,75 +352,75 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Conditionnelle");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIfKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cEAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEEParserRuleCall_1_0 = (RuleCall)cEAssignment_1.eContents().get(0);
-		private final Assignment cBloc1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cBloc1BlocParserRuleCall_2_0 = (RuleCall)cBloc1Assignment_2.eContents().get(0);
+		private final Assignment cCondcAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cCondcEParserRuleCall_1_0 = (RuleCall)cCondcAssignment_1.eContents().get(0);
+		private final Assignment cBloc1condAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cBloc1condBlocParserRuleCall_2_0 = (RuleCall)cBloc1condAssignment_2.eContents().get(0);
 		private final Keyword cElseKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cBloc2Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cBloc2BlocParserRuleCall_4_0 = (RuleCall)cBloc2Assignment_4.eContents().get(0);
+		private final Assignment cBloc2condAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cBloc2condBlocParserRuleCall_4_0 = (RuleCall)cBloc2condAssignment_4.eContents().get(0);
 		
 		//Conditionnelle:
-		//	'if' e=E bloc1=Bloc 'else' bloc2=Bloc;
+		//	'if' condc=E bloc1cond=Bloc 'else' bloc2cond=Bloc;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'if' e=E bloc1=Bloc 'else' bloc2=Bloc
+		//'if' condc=E bloc1cond=Bloc 'else' bloc2cond=Bloc
 		public Group getGroup() { return cGroup; }
 		
 		//'if'
 		public Keyword getIfKeyword_0() { return cIfKeyword_0; }
 		
-		//e=E
-		public Assignment getEAssignment_1() { return cEAssignment_1; }
+		//condc=E
+		public Assignment getCondcAssignment_1() { return cCondcAssignment_1; }
 		
 		//E
-		public RuleCall getEEParserRuleCall_1_0() { return cEEParserRuleCall_1_0; }
+		public RuleCall getCondcEParserRuleCall_1_0() { return cCondcEParserRuleCall_1_0; }
 		
-		//bloc1=Bloc
-		public Assignment getBloc1Assignment_2() { return cBloc1Assignment_2; }
+		//bloc1cond=Bloc
+		public Assignment getBloc1condAssignment_2() { return cBloc1condAssignment_2; }
 		
 		//Bloc
-		public RuleCall getBloc1BlocParserRuleCall_2_0() { return cBloc1BlocParserRuleCall_2_0; }
+		public RuleCall getBloc1condBlocParserRuleCall_2_0() { return cBloc1condBlocParserRuleCall_2_0; }
 		
 		//'else'
 		public Keyword getElseKeyword_3() { return cElseKeyword_3; }
 		
-		//bloc2=Bloc
-		public Assignment getBloc2Assignment_4() { return cBloc2Assignment_4; }
+		//bloc2cond=Bloc
+		public Assignment getBloc2condAssignment_4() { return cBloc2condAssignment_4; }
 		
 		//Bloc
-		public RuleCall getBloc2BlocParserRuleCall_4_0() { return cBloc2BlocParserRuleCall_4_0; }
+		public RuleCall getBloc2condBlocParserRuleCall_4_0() { return cBloc2condBlocParserRuleCall_4_0; }
 	}
 	public class TantqueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Tantque");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWhileKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cEAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEEParserRuleCall_1_0 = (RuleCall)cEAssignment_1.eContents().get(0);
-		private final Assignment cBlocAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cBlocBlocParserRuleCall_2_0 = (RuleCall)cBlocAssignment_2.eContents().get(0);
+		private final Assignment cCondtAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cCondtEParserRuleCall_1_0 = (RuleCall)cCondtAssignment_1.eContents().get(0);
+		private final Assignment cBoucleAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cBoucleBlocParserRuleCall_2_0 = (RuleCall)cBoucleAssignment_2.eContents().get(0);
 		
 		//Tantque:
-		//	'while' e=E bloc=Bloc;
+		//	'while' condt=E boucle=Bloc;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'while' e=E bloc=Bloc
+		//'while' condt=E boucle=Bloc
 		public Group getGroup() { return cGroup; }
 		
 		//'while'
 		public Keyword getWhileKeyword_0() { return cWhileKeyword_0; }
 		
-		//e=E
-		public Assignment getEAssignment_1() { return cEAssignment_1; }
+		//condt=E
+		public Assignment getCondtAssignment_1() { return cCondtAssignment_1; }
 		
 		//E
-		public RuleCall getEEParserRuleCall_1_0() { return cEEParserRuleCall_1_0; }
+		public RuleCall getCondtEParserRuleCall_1_0() { return cCondtEParserRuleCall_1_0; }
 		
-		//bloc=Bloc
-		public Assignment getBlocAssignment_2() { return cBlocAssignment_2; }
+		//boucle=Bloc
+		public Assignment getBoucleAssignment_2() { return cBoucleAssignment_2; }
 		
 		//Bloc
-		public RuleCall getBlocBlocParserRuleCall_2_0() { return cBlocBlocParserRuleCall_2_0; }
+		public RuleCall getBoucleBlocParserRuleCall_2_0() { return cBoucleBlocParserRuleCall_2_0; }
 	}
 	public class DPElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.DP");
@@ -551,28 +555,28 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Appel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCallKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNomAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNomIDTerminalRuleCall_1_0 = (RuleCall)cNomAssignment_1.eContents().get(0);
+		private final Assignment cNomAppelAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNomAppelIDTerminalRuleCall_1_0 = (RuleCall)cNomAppelAssignment_1.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cParamAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cParamCPParserRuleCall_3_0 = (RuleCall)cParamAssignment_3.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Appel:
-		//	'call' nom=ID '(' param+=CP ')';
+		//	'call' nomAppel=ID '(' param+=CP ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'call' nom=ID '(' param+=CP ')'
+		//'call' nomAppel=ID '(' param+=CP ')'
 		public Group getGroup() { return cGroup; }
 		
 		//'call'
 		public Keyword getCallKeyword_0() { return cCallKeyword_0; }
 		
-		//nom=ID
-		public Assignment getNomAssignment_1() { return cNomAssignment_1; }
+		//nomAppel=ID
+		public Assignment getNomAppelAssignment_1() { return cNomAppelAssignment_1; }
 		
 		//ID
-		public RuleCall getNomIDTerminalRuleCall_1_0() { return cNomIDTerminalRuleCall_1_0; }
+		public RuleCall getNomAppelIDTerminalRuleCall_1_0() { return cNomAppelIDTerminalRuleCall_1_0; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
@@ -629,47 +633,47 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Numerateur");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cNumKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cEAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEEParserRuleCall_1_0 = (RuleCall)cEAssignment_1.eContents().get(0);
+		private final Assignment cValNumAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cValNumEParserRuleCall_1_0 = (RuleCall)cValNumAssignment_1.eContents().get(0);
 		
 		//Numerateur:
-		//	'num' e=E;
+		//	'num' valNum=E;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'num' e=E
+		//'num' valNum=E
 		public Group getGroup() { return cGroup; }
 		
 		//'num'
 		public Keyword getNumKeyword_0() { return cNumKeyword_0; }
 		
-		//e=E
-		public Assignment getEAssignment_1() { return cEAssignment_1; }
+		//valNum=E
+		public Assignment getValNumAssignment_1() { return cValNumAssignment_1; }
 		
 		//E
-		public RuleCall getEEParserRuleCall_1_0() { return cEEParserRuleCall_1_0; }
+		public RuleCall getValNumEParserRuleCall_1_0() { return cValNumEParserRuleCall_1_0; }
 	}
 	public class DenominateurElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Denominateur");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDenomKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cEAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEEParserRuleCall_1_0 = (RuleCall)cEAssignment_1.eContents().get(0);
+		private final Assignment cValDenumAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cValDenumEParserRuleCall_1_0 = (RuleCall)cValDenumAssignment_1.eContents().get(0);
 		
 		//Denominateur:
-		//	'denom' e=E;
+		//	'denom' valDenum=E;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'denom' e=E
+		//'denom' valDenum=E
 		public Group getGroup() { return cGroup; }
 		
 		//'denom'
 		public Keyword getDenomKeyword_0() { return cDenomKeyword_0; }
 		
-		//e=E
-		public Assignment getEAssignment_1() { return cEAssignment_1; }
+		//valDenum=E
+		public Assignment getValDenumAssignment_1() { return cValDenumAssignment_1; }
 		
 		//E
-		public RuleCall getEEParserRuleCall_1_0() { return cEEParserRuleCall_1_0; }
+		public RuleCall getValDenumEParserRuleCall_1_0() { return cValDenumEParserRuleCall_1_0; }
 	}
 	public class IdentificateurElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Identificateur");
@@ -688,27 +692,27 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class BooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Boolean");
-		private final Assignment cBAssignment = (Assignment)rule.eContents().get(1);
-		private final Alternatives cBAlternatives_0 = (Alternatives)cBAssignment.eContents().get(0);
-		private final Keyword cBFalseKeyword_0_0 = (Keyword)cBAlternatives_0.eContents().get(0);
-		private final Keyword cBTrueKeyword_0_1 = (Keyword)cBAlternatives_0.eContents().get(1);
+		private final Assignment cValAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cValAlternatives_0 = (Alternatives)cValAssignment.eContents().get(0);
+		private final Keyword cValFalseKeyword_0_0 = (Keyword)cValAlternatives_0.eContents().get(0);
+		private final Keyword cValTrueKeyword_0_1 = (Keyword)cValAlternatives_0.eContents().get(1);
 		
 		//Boolean:
-		//	b=('false'
+		//	val=('false'
 		//	| 'true');
 		@Override public ParserRule getRule() { return rule; }
 		
-		//b=('false' | 'true')
-		public Assignment getBAssignment() { return cBAssignment; }
+		//val=('false' | 'true')
+		public Assignment getValAssignment() { return cValAssignment; }
 		
 		//('false' | 'true')
-		public Alternatives getBAlternatives_0() { return cBAlternatives_0; }
+		public Alternatives getValAlternatives_0() { return cValAlternatives_0; }
 		
 		//'false'
-		public Keyword getBFalseKeyword_0_0() { return cBFalseKeyword_0_0; }
+		public Keyword getValFalseKeyword_0_0() { return cValFalseKeyword_0_0; }
 		
 		//'true'
-		public Keyword getBTrueKeyword_0_1() { return cBTrueKeyword_0_1; }
+		public Keyword getValTrueKeyword_0_1() { return cValTrueKeyword_0_1; }
 	}
 	public class EntierElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "rat.Rat.Entier");
@@ -890,7 +894,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Prog:
-	//	fun+=Fun* ID bloc=Bloc;
+	//	fun+=Fun* nomProg=ID bloc=Bloc;
 	public ProgElements getProgAccess() {
 		return pProg;
 	}
@@ -900,7 +904,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	///* Prog : Fun* ID Bloc */ Fun:
-	//	type=Type nom=ID '(' param+=DP* ')' '{' is+=I* 'return' e=E ';' '}';
+	//	type=Type nomFun=ID '(' param+=DP* ')' '{' is+=I* 'return' retour=E ';' '}';
 	public FunElements getFunAccess() {
 		return pFun;
 	}
@@ -935,7 +939,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Declaration:
-	//	type=Type nom=ID '=' e=E ';' /* Type ID = E */;
+	//	type=Type nomDecl=ID '=' e=E ';' /* Type ID = E */;
 	public DeclarationElements getDeclarationAccess() {
 		return pDeclaration;
 	}
@@ -945,7 +949,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Affectation:
-	//	nom=ID '=' e=E ';' /* ID = E */;
+	//	nomAff=ID '=' e=E ';' /* ID = E */;
 	public AffectationElements getAffectationAccess() {
 		return pAffectation;
 	}
@@ -955,7 +959,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Constante:
-	//	'const' nom=ID '=' e=INT ';' /* const ID = INT */;
+	//	'const' nomConst=ID '=' val=INT ';' /* const ID = INT */;
 	public ConstanteElements getConstanteAccess() {
 		return pConstante;
 	}
@@ -965,7 +969,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Print:
-	//	'print' e=E ';' /* print E */;
+	//	'print' val=E ';' /* print E */;
 	public PrintElements getPrintAccess() {
 		return pPrint;
 	}
@@ -975,7 +979,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Conditionnelle:
-	//	'if' e=E bloc1=Bloc 'else' bloc2=Bloc;
+	//	'if' condc=E bloc1cond=Bloc 'else' bloc2cond=Bloc;
 	public ConditionnelleElements getConditionnelleAccess() {
 		return pConditionnelle;
 	}
@@ -985,7 +989,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Tantque:
-	//	'while' e=E bloc=Bloc;
+	//	'while' condt=E boucle=Bloc;
 	public TantqueElements getTantqueAccess() {
 		return pTantque;
 	}
@@ -1044,7 +1048,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Appel:
-	//	'call' nom=ID '(' param+=CP ')';
+	//	'call' nomAppel=ID '(' param+=CP ')';
 	public AppelElements getAppelAccess() {
 		return pAppel;
 	}
@@ -1064,7 +1068,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Numerateur:
-	//	'num' e=E;
+	//	'num' valNum=E;
 	public NumerateurElements getNumerateurAccess() {
 		return pNumerateur;
 	}
@@ -1074,7 +1078,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Denominateur:
-	//	'denom' e=E;
+	//	'denom' valDenum=E;
 	public DenominateurElements getDenominateurAccess() {
 		return pDenominateur;
 	}
@@ -1094,7 +1098,7 @@ public class RatGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Boolean:
-	//	b=('false'
+	//	val=('false'
 	//	| 'true');
 	public BooleanElements getBooleanAccess() {
 		return pBoolean;

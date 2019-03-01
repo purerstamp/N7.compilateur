@@ -35,10 +35,10 @@ import rat.rat.Type;
  * </p>
  * <ul>
  *   <li>{@link rat.rat.impl.FunImpl#getType <em>Type</em>}</li>
- *   <li>{@link rat.rat.impl.FunImpl#getNom <em>Nom</em>}</li>
+ *   <li>{@link rat.rat.impl.FunImpl#getNomFun <em>Nom Fun</em>}</li>
  *   <li>{@link rat.rat.impl.FunImpl#getParam <em>Param</em>}</li>
  *   <li>{@link rat.rat.impl.FunImpl#getIs <em>Is</em>}</li>
- *   <li>{@link rat.rat.impl.FunImpl#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.impl.FunImpl#getRetour <em>Retour</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,24 +56,24 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
   protected Type type;
 
   /**
-   * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The default value of the '{@link #getNomFun() <em>Nom Fun</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomFun()
    * @generated
    * @ordered
    */
-  protected static final String NOM_EDEFAULT = null;
+  protected static final String NOM_FUN_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The cached value of the '{@link #getNomFun() <em>Nom Fun</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomFun()
    * @generated
    * @ordered
    */
-  protected String nom = NOM_EDEFAULT;
+  protected String nomFun = NOM_FUN_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getParam() <em>Param</em>}' containment reference list.
@@ -96,14 +96,14 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
   protected EList<I> is;
 
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
+   * The cached value of the '{@link #getRetour() <em>Retour</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getRetour()
    * @generated
    * @ordered
    */
-  protected E e;
+  protected E retour;
 
   /**
    * <!-- begin-user-doc -->
@@ -179,9 +179,9 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNom()
+  public String getNomFun()
   {
-    return nom;
+    return nomFun;
   }
 
   /**
@@ -189,12 +189,12 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNom(String newNom)
+  public void setNomFun(String newNomFun)
   {
-    String oldNom = nom;
-    nom = newNom;
+    String oldNomFun = nomFun;
+    nomFun = newNomFun;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.FUN__NOM, oldNom, nom));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.FUN__NOM_FUN, oldNomFun, nomFun));
   }
 
   /**
@@ -230,9 +230,9 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
    * <!-- end-user-doc -->
    * @generated
    */
-  public E getE()
+  public E getRetour()
   {
-    return e;
+    return retour;
   }
 
   /**
@@ -240,13 +240,13 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE(E newE, NotificationChain msgs)
+  public NotificationChain basicSetRetour(E newRetour, NotificationChain msgs)
   {
-    E oldE = e;
-    e = newE;
+    E oldRetour = retour;
+    retour = newRetour;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.FUN__E, oldE, newE);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.FUN__RETOUR, oldRetour, newRetour);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -257,20 +257,20 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE(E newE)
+  public void setRetour(E newRetour)
   {
-    if (newE != e)
+    if (newRetour != retour)
     {
       NotificationChain msgs = null;
-      if (e != null)
-        msgs = ((InternalEObject)e).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.FUN__E, null, msgs);
-      if (newE != null)
-        msgs = ((InternalEObject)newE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.FUN__E, null, msgs);
-      msgs = basicSetE(newE, msgs);
+      if (retour != null)
+        msgs = ((InternalEObject)retour).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.FUN__RETOUR, null, msgs);
+      if (newRetour != null)
+        msgs = ((InternalEObject)newRetour).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.FUN__RETOUR, null, msgs);
+      msgs = basicSetRetour(newRetour, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.FUN__E, newE, newE));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.FUN__RETOUR, newRetour, newRetour));
   }
 
   /**
@@ -289,8 +289,8 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
         return ((InternalEList<?>)getParam()).basicRemove(otherEnd, msgs);
       case RatPackage.FUN__IS:
         return ((InternalEList<?>)getIs()).basicRemove(otherEnd, msgs);
-      case RatPackage.FUN__E:
-        return basicSetE(null, msgs);
+      case RatPackage.FUN__RETOUR:
+        return basicSetRetour(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -307,14 +307,14 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
     {
       case RatPackage.FUN__TYPE:
         return getType();
-      case RatPackage.FUN__NOM:
-        return getNom();
+      case RatPackage.FUN__NOM_FUN:
+        return getNomFun();
       case RatPackage.FUN__PARAM:
         return getParam();
       case RatPackage.FUN__IS:
         return getIs();
-      case RatPackage.FUN__E:
-        return getE();
+      case RatPackage.FUN__RETOUR:
+        return getRetour();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -333,8 +333,8 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
       case RatPackage.FUN__TYPE:
         setType((Type)newValue);
         return;
-      case RatPackage.FUN__NOM:
-        setNom((String)newValue);
+      case RatPackage.FUN__NOM_FUN:
+        setNomFun((String)newValue);
         return;
       case RatPackage.FUN__PARAM:
         getParam().clear();
@@ -344,8 +344,8 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
         getIs().clear();
         getIs().addAll((Collection<? extends I>)newValue);
         return;
-      case RatPackage.FUN__E:
-        setE((E)newValue);
+      case RatPackage.FUN__RETOUR:
+        setRetour((E)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -364,8 +364,8 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
       case RatPackage.FUN__TYPE:
         setType((Type)null);
         return;
-      case RatPackage.FUN__NOM:
-        setNom(NOM_EDEFAULT);
+      case RatPackage.FUN__NOM_FUN:
+        setNomFun(NOM_FUN_EDEFAULT);
         return;
       case RatPackage.FUN__PARAM:
         getParam().clear();
@@ -373,8 +373,8 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
       case RatPackage.FUN__IS:
         getIs().clear();
         return;
-      case RatPackage.FUN__E:
-        setE((E)null);
+      case RatPackage.FUN__RETOUR:
+        setRetour((E)null);
         return;
     }
     super.eUnset(featureID);
@@ -392,14 +392,14 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
     {
       case RatPackage.FUN__TYPE:
         return type != null;
-      case RatPackage.FUN__NOM:
-        return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
+      case RatPackage.FUN__NOM_FUN:
+        return NOM_FUN_EDEFAULT == null ? nomFun != null : !NOM_FUN_EDEFAULT.equals(nomFun);
       case RatPackage.FUN__PARAM:
         return param != null && !param.isEmpty();
       case RatPackage.FUN__IS:
         return is != null && !is.isEmpty();
-      case RatPackage.FUN__E:
-        return e != null;
+      case RatPackage.FUN__RETOUR:
+        return retour != null;
     }
     return super.eIsSet(featureID);
   }
@@ -415,8 +415,8 @@ public class FunImpl extends MinimalEObjectImpl.Container implements Fun
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nom: ");
-    result.append(nom);
+    result.append(" (nomFun: ");
+    result.append(nomFun);
     result.append(')');
     return result.toString();
   }

@@ -13,8 +13,8 @@ package rat.rat;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.Constante#getNom <em>Nom</em>}</li>
- *   <li>{@link rat.rat.Constante#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.Constante#getNomConst <em>Nom Const</em>}</li>
+ *   <li>{@link rat.rat.Constante#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @see rat.rat.RatPackage#getConstante()
@@ -24,55 +24,55 @@ package rat.rat;
 public interface Constante extends I
 {
   /**
-   * Returns the value of the '<em><b>Nom</b></em>' attribute.
+   * Returns the value of the '<em><b>Nom Const</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nom</em>' attribute isn't clear,
+   * If the meaning of the '<em>Nom Const</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nom</em>' attribute.
-   * @see #setNom(String)
-   * @see rat.rat.RatPackage#getConstante_Nom()
+   * @return the value of the '<em>Nom Const</em>' attribute.
+   * @see #setNomConst(String)
+   * @see rat.rat.RatPackage#getConstante_NomConst()
    * @model
    * @generated
    */
-  String getNom();
+  String getNomConst();
 
   /**
-   * Sets the value of the '{@link rat.rat.Constante#getNom <em>Nom</em>}' attribute.
+   * Sets the value of the '{@link rat.rat.Constante#getNomConst <em>Nom Const</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nom</em>' attribute.
-   * @see #getNom()
+   * @param value the new value of the '<em>Nom Const</em>' attribute.
+   * @see #getNomConst()
    * @generated
    */
-  void setNom(String value);
+  void setNomConst(String value);
 
   /**
-   * Returns the value of the '<em><b>E</b></em>' attribute.
+   * Returns the value of the '<em><b>Val</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>E</em>' attribute isn't clear,
+   * If the meaning of the '<em>Val</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>E</em>' attribute.
-   * @see #setE(int)
-   * @see rat.rat.RatPackage#getConstante_E()
+   * @return the value of the '<em>Val</em>' attribute.
+   * @see #setVal(int)
+   * @see rat.rat.RatPackage#getConstante_Val()
    * @model
    * @generated
    */
-  int getE();
+  int getVal();
 
   /**
-   * Sets the value of the '{@link rat.rat.Constante#getE <em>E</em>}' attribute.
+   * Sets the value of the '{@link rat.rat.Constante#getVal <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>E</em>' attribute.
-   * @see #getE()
+   * @param value the new value of the '<em>Val</em>' attribute.
+   * @see #getVal()
    * @generated
    */
-  void setE(int value);
+  void setVal(int value);
 
 } // Constante

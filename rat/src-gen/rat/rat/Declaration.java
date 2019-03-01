@@ -14,7 +14,7 @@ package rat.rat;
  * </p>
  * <ul>
  *   <li>{@link rat.rat.Declaration#getType <em>Type</em>}</li>
- *   <li>{@link rat.rat.Declaration#getNom <em>Nom</em>}</li>
+ *   <li>{@link rat.rat.Declaration#getNomDecl <em>Nom Decl</em>}</li>
  *   <li>{@link rat.rat.Declaration#getE <em>E</em>}</li>
  * </ul>
  *
@@ -51,30 +51,30 @@ public interface Declaration extends I
   void setType(Type value);
 
   /**
-   * Returns the value of the '<em><b>Nom</b></em>' attribute.
+   * Returns the value of the '<em><b>Nom Decl</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nom</em>' attribute isn't clear,
+   * If the meaning of the '<em>Nom Decl</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nom</em>' attribute.
-   * @see #setNom(String)
-   * @see rat.rat.RatPackage#getDeclaration_Nom()
+   * @return the value of the '<em>Nom Decl</em>' attribute.
+   * @see #setNomDecl(String)
+   * @see rat.rat.RatPackage#getDeclaration_NomDecl()
    * @model
    * @generated
    */
-  String getNom();
+  String getNomDecl();
 
   /**
-   * Sets the value of the '{@link rat.rat.Declaration#getNom <em>Nom</em>}' attribute.
+   * Sets the value of the '{@link rat.rat.Declaration#getNomDecl <em>Nom Decl</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nom</em>' attribute.
-   * @see #getNom()
+   * @param value the new value of the '<em>Nom Decl</em>' attribute.
+   * @see #getNomDecl()
    * @generated
    */
-  void setNom(String value);
+  void setNomDecl(String value);
 
   /**
    * Returns the value of the '<em><b>E</b></em>' containment reference.

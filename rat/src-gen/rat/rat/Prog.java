@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link rat.rat.Prog#getFun <em>Fun</em>}</li>
+ *   <li>{@link rat.rat.Prog#getNomProg <em>Nom Prog</em>}</li>
  *   <li>{@link rat.rat.Prog#getBloc <em>Bloc</em>}</li>
  * </ul>
  *
@@ -41,6 +42,32 @@ public interface Prog extends EObject
    * @generated
    */
   EList<Fun> getFun();
+
+  /**
+   * Returns the value of the '<em><b>Nom Prog</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Nom Prog</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Nom Prog</em>' attribute.
+   * @see #setNomProg(String)
+   * @see rat.rat.RatPackage#getProg_NomProg()
+   * @model
+   * @generated
+   */
+  String getNomProg();
+
+  /**
+   * Sets the value of the '{@link rat.rat.Prog#getNomProg <em>Nom Prog</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Nom Prog</em>' attribute.
+   * @see #getNomProg()
+   * @generated
+   */
+  void setNomProg(String value);
 
   /**
    * Returns the value of the '<em><b>Bloc</b></em>' containment reference.

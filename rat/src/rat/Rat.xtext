@@ -21,27 +21,27 @@ I :
 ;
 
 Declaration :
-	type=Type nom=ID '=' e=E ';' /* Type ID = E */
+	type=Type nomDecl=ID '=' e=E ';' /* Type ID = E */
 ;
 
 Affectation :
-	nom=ID '=' e=E ';' /* ID = E */
+	nomAff=ID '=' e=E ';' /* ID = E */
 ;
 
 Constante :
-	'const' nom=ID '=' valeur=INT ';' /* const ID = INT */
+	'const' nomConst=ID '=' val=INT ';' /* const ID = INT */
 ;
 
 Print :
-	'print' e=E ';' /* print E */
+	'print' val=E ';' /* print E */
 ;
 
 Conditionnelle :
-	'if' e=E  bloc1=Bloc 'else' bloc2=Bloc
+	'if' condc=E  bloc1cond=Bloc 'else' bloc2cond=Bloc
 ;
 
 Tantque :
-	'while' e=E bloc=Bloc
+	'while' condt=E boucle=Bloc
 ;
 
 DP :
@@ -71,7 +71,7 @@ E :
 ;
 
 Appel :
-	'call' nom=ID '(' param+=CP ')'
+	'call' nomAppel=ID '(' param+=CP ')'
 ;
 
 Rationnel :
@@ -79,11 +79,11 @@ Rationnel :
 ;
 
 Numerateur :
-	'num' e=E
+	'num' valNum=E
 ;
 
 Denominateur :
-	'denom' e=E
+	'denom' valDenum=E
 ;
 
 Identificateur :
@@ -91,7 +91,7 @@ Identificateur :
 ;
 
 Boolean :
-	valeur=(
+	val=(
 		'false'
 		| 'true'
 	)

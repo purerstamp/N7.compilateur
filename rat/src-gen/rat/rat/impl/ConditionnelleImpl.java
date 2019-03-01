@@ -24,9 +24,9 @@ import rat.rat.RatPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.impl.ConditionnelleImpl#getE <em>E</em>}</li>
- *   <li>{@link rat.rat.impl.ConditionnelleImpl#getBloc1 <em>Bloc1</em>}</li>
- *   <li>{@link rat.rat.impl.ConditionnelleImpl#getBloc2 <em>Bloc2</em>}</li>
+ *   <li>{@link rat.rat.impl.ConditionnelleImpl#getCondc <em>Condc</em>}</li>
+ *   <li>{@link rat.rat.impl.ConditionnelleImpl#getBloc1cond <em>Bloc1cond</em>}</li>
+ *   <li>{@link rat.rat.impl.ConditionnelleImpl#getBloc2cond <em>Bloc2cond</em>}</li>
  * </ul>
  *
  * @generated
@@ -34,34 +34,34 @@ import rat.rat.RatPackage;
 public class ConditionnelleImpl extends IImpl implements Conditionnelle
 {
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
+   * The cached value of the '{@link #getCondc() <em>Condc</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getCondc()
    * @generated
    * @ordered
    */
-  protected E e;
+  protected E condc;
 
   /**
-   * The cached value of the '{@link #getBloc1() <em>Bloc1</em>}' containment reference.
+   * The cached value of the '{@link #getBloc1cond() <em>Bloc1cond</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBloc1()
+   * @see #getBloc1cond()
    * @generated
    * @ordered
    */
-  protected Bloc bloc1;
+  protected Bloc bloc1cond;
 
   /**
-   * The cached value of the '{@link #getBloc2() <em>Bloc2</em>}' containment reference.
+   * The cached value of the '{@link #getBloc2cond() <em>Bloc2cond</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBloc2()
+   * @see #getBloc2cond()
    * @generated
    * @ordered
    */
-  protected Bloc bloc2;
+  protected Bloc bloc2cond;
 
   /**
    * <!-- begin-user-doc -->
@@ -89,9 +89,9 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
    * <!-- end-user-doc -->
    * @generated
    */
-  public E getE()
+  public E getCondc()
   {
-    return e;
+    return condc;
   }
 
   /**
@@ -99,13 +99,13 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE(E newE, NotificationChain msgs)
+  public NotificationChain basicSetCondc(E newCondc, NotificationChain msgs)
   {
-    E oldE = e;
-    e = newE;
+    E oldCondc = condc;
+    condc = newCondc;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__E, oldE, newE);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__CONDC, oldCondc, newCondc);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -116,20 +116,20 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE(E newE)
+  public void setCondc(E newCondc)
   {
-    if (newE != e)
+    if (newCondc != condc)
     {
       NotificationChain msgs = null;
-      if (e != null)
-        msgs = ((InternalEObject)e).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__E, null, msgs);
-      if (newE != null)
-        msgs = ((InternalEObject)newE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__E, null, msgs);
-      msgs = basicSetE(newE, msgs);
+      if (condc != null)
+        msgs = ((InternalEObject)condc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__CONDC, null, msgs);
+      if (newCondc != null)
+        msgs = ((InternalEObject)newCondc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__CONDC, null, msgs);
+      msgs = basicSetCondc(newCondc, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__E, newE, newE));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__CONDC, newCondc, newCondc));
   }
 
   /**
@@ -137,9 +137,9 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
    * <!-- end-user-doc -->
    * @generated
    */
-  public Bloc getBloc1()
+  public Bloc getBloc1cond()
   {
-    return bloc1;
+    return bloc1cond;
   }
 
   /**
@@ -147,13 +147,13 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBloc1(Bloc newBloc1, NotificationChain msgs)
+  public NotificationChain basicSetBloc1cond(Bloc newBloc1cond, NotificationChain msgs)
   {
-    Bloc oldBloc1 = bloc1;
-    bloc1 = newBloc1;
+    Bloc oldBloc1cond = bloc1cond;
+    bloc1cond = newBloc1cond;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__BLOC1, oldBloc1, newBloc1);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__BLOC1COND, oldBloc1cond, newBloc1cond);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -164,20 +164,20 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBloc1(Bloc newBloc1)
+  public void setBloc1cond(Bloc newBloc1cond)
   {
-    if (newBloc1 != bloc1)
+    if (newBloc1cond != bloc1cond)
     {
       NotificationChain msgs = null;
-      if (bloc1 != null)
-        msgs = ((InternalEObject)bloc1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__BLOC1, null, msgs);
-      if (newBloc1 != null)
-        msgs = ((InternalEObject)newBloc1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__BLOC1, null, msgs);
-      msgs = basicSetBloc1(newBloc1, msgs);
+      if (bloc1cond != null)
+        msgs = ((InternalEObject)bloc1cond).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__BLOC1COND, null, msgs);
+      if (newBloc1cond != null)
+        msgs = ((InternalEObject)newBloc1cond).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__BLOC1COND, null, msgs);
+      msgs = basicSetBloc1cond(newBloc1cond, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__BLOC1, newBloc1, newBloc1));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__BLOC1COND, newBloc1cond, newBloc1cond));
   }
 
   /**
@@ -185,9 +185,9 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
    * <!-- end-user-doc -->
    * @generated
    */
-  public Bloc getBloc2()
+  public Bloc getBloc2cond()
   {
-    return bloc2;
+    return bloc2cond;
   }
 
   /**
@@ -195,13 +195,13 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBloc2(Bloc newBloc2, NotificationChain msgs)
+  public NotificationChain basicSetBloc2cond(Bloc newBloc2cond, NotificationChain msgs)
   {
-    Bloc oldBloc2 = bloc2;
-    bloc2 = newBloc2;
+    Bloc oldBloc2cond = bloc2cond;
+    bloc2cond = newBloc2cond;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__BLOC2, oldBloc2, newBloc2);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__BLOC2COND, oldBloc2cond, newBloc2cond);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -212,20 +212,20 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBloc2(Bloc newBloc2)
+  public void setBloc2cond(Bloc newBloc2cond)
   {
-    if (newBloc2 != bloc2)
+    if (newBloc2cond != bloc2cond)
     {
       NotificationChain msgs = null;
-      if (bloc2 != null)
-        msgs = ((InternalEObject)bloc2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__BLOC2, null, msgs);
-      if (newBloc2 != null)
-        msgs = ((InternalEObject)newBloc2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__BLOC2, null, msgs);
-      msgs = basicSetBloc2(newBloc2, msgs);
+      if (bloc2cond != null)
+        msgs = ((InternalEObject)bloc2cond).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__BLOC2COND, null, msgs);
+      if (newBloc2cond != null)
+        msgs = ((InternalEObject)newBloc2cond).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.CONDITIONNELLE__BLOC2COND, null, msgs);
+      msgs = basicSetBloc2cond(newBloc2cond, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__BLOC2, newBloc2, newBloc2));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.CONDITIONNELLE__BLOC2COND, newBloc2cond, newBloc2cond));
   }
 
   /**
@@ -238,12 +238,12 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
   {
     switch (featureID)
     {
-      case RatPackage.CONDITIONNELLE__E:
-        return basicSetE(null, msgs);
-      case RatPackage.CONDITIONNELLE__BLOC1:
-        return basicSetBloc1(null, msgs);
-      case RatPackage.CONDITIONNELLE__BLOC2:
-        return basicSetBloc2(null, msgs);
+      case RatPackage.CONDITIONNELLE__CONDC:
+        return basicSetCondc(null, msgs);
+      case RatPackage.CONDITIONNELLE__BLOC1COND:
+        return basicSetBloc1cond(null, msgs);
+      case RatPackage.CONDITIONNELLE__BLOC2COND:
+        return basicSetBloc2cond(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -258,12 +258,12 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
   {
     switch (featureID)
     {
-      case RatPackage.CONDITIONNELLE__E:
-        return getE();
-      case RatPackage.CONDITIONNELLE__BLOC1:
-        return getBloc1();
-      case RatPackage.CONDITIONNELLE__BLOC2:
-        return getBloc2();
+      case RatPackage.CONDITIONNELLE__CONDC:
+        return getCondc();
+      case RatPackage.CONDITIONNELLE__BLOC1COND:
+        return getBloc1cond();
+      case RatPackage.CONDITIONNELLE__BLOC2COND:
+        return getBloc2cond();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -278,14 +278,14 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
   {
     switch (featureID)
     {
-      case RatPackage.CONDITIONNELLE__E:
-        setE((E)newValue);
+      case RatPackage.CONDITIONNELLE__CONDC:
+        setCondc((E)newValue);
         return;
-      case RatPackage.CONDITIONNELLE__BLOC1:
-        setBloc1((Bloc)newValue);
+      case RatPackage.CONDITIONNELLE__BLOC1COND:
+        setBloc1cond((Bloc)newValue);
         return;
-      case RatPackage.CONDITIONNELLE__BLOC2:
-        setBloc2((Bloc)newValue);
+      case RatPackage.CONDITIONNELLE__BLOC2COND:
+        setBloc2cond((Bloc)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -301,14 +301,14 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
   {
     switch (featureID)
     {
-      case RatPackage.CONDITIONNELLE__E:
-        setE((E)null);
+      case RatPackage.CONDITIONNELLE__CONDC:
+        setCondc((E)null);
         return;
-      case RatPackage.CONDITIONNELLE__BLOC1:
-        setBloc1((Bloc)null);
+      case RatPackage.CONDITIONNELLE__BLOC1COND:
+        setBloc1cond((Bloc)null);
         return;
-      case RatPackage.CONDITIONNELLE__BLOC2:
-        setBloc2((Bloc)null);
+      case RatPackage.CONDITIONNELLE__BLOC2COND:
+        setBloc2cond((Bloc)null);
         return;
     }
     super.eUnset(featureID);
@@ -324,12 +324,12 @@ public class ConditionnelleImpl extends IImpl implements Conditionnelle
   {
     switch (featureID)
     {
-      case RatPackage.CONDITIONNELLE__E:
-        return e != null;
-      case RatPackage.CONDITIONNELLE__BLOC1:
-        return bloc1 != null;
-      case RatPackage.CONDITIONNELLE__BLOC2:
-        return bloc2 != null;
+      case RatPackage.CONDITIONNELLE__CONDC:
+        return condc != null;
+      case RatPackage.CONDITIONNELLE__BLOC1COND:
+        return bloc1cond != null;
+      case RatPackage.CONDITIONNELLE__BLOC2COND:
+        return bloc2cond != null;
     }
     return super.eIsSet(featureID);
   }

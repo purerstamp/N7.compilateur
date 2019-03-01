@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.Appel#getNom <em>Nom</em>}</li>
+ *   <li>{@link rat.rat.Appel#getNomAppel <em>Nom Appel</em>}</li>
  *   <li>{@link rat.rat.Appel#getParam <em>Param</em>}</li>
  * </ul>
  *
@@ -25,30 +25,30 @@ import org.eclipse.emf.common.util.EList;
 public interface Appel extends E
 {
   /**
-   * Returns the value of the '<em><b>Nom</b></em>' attribute.
+   * Returns the value of the '<em><b>Nom Appel</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nom</em>' attribute isn't clear,
+   * If the meaning of the '<em>Nom Appel</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nom</em>' attribute.
-   * @see #setNom(String)
-   * @see rat.rat.RatPackage#getAppel_Nom()
+   * @return the value of the '<em>Nom Appel</em>' attribute.
+   * @see #setNomAppel(String)
+   * @see rat.rat.RatPackage#getAppel_NomAppel()
    * @model
    * @generated
    */
-  String getNom();
+  String getNomAppel();
 
   /**
-   * Sets the value of the '{@link rat.rat.Appel#getNom <em>Nom</em>}' attribute.
+   * Sets the value of the '{@link rat.rat.Appel#getNomAppel <em>Nom Appel</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nom</em>' attribute.
-   * @see #getNom()
+   * @param value the new value of the '<em>Nom Appel</em>' attribute.
+   * @see #getNomAppel()
    * @generated
    */
-  void setNom(String value);
+  void setNomAppel(String value);
 
   /**
    * Returns the value of the '<em><b>Param</b></em>' containment reference list.

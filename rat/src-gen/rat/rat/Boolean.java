@@ -13,7 +13,7 @@ package rat.rat;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.Boolean#getB <em>B</em>}</li>
+ *   <li>{@link rat.rat.Boolean#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @see rat.rat.RatPackage#getBoolean()
@@ -23,29 +23,29 @@ package rat.rat;
 public interface Boolean extends E
 {
   /**
-   * Returns the value of the '<em><b>B</b></em>' attribute.
+   * Returns the value of the '<em><b>Val</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>B</em>' attribute isn't clear,
+   * If the meaning of the '<em>Val</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>B</em>' attribute.
-   * @see #setB(String)
-   * @see rat.rat.RatPackage#getBoolean_B()
+   * @return the value of the '<em>Val</em>' attribute.
+   * @see #setVal(String)
+   * @see rat.rat.RatPackage#getBoolean_Val()
    * @model
    * @generated
    */
-  String getB();
+  String getVal();
 
   /**
-   * Sets the value of the '{@link rat.rat.Boolean#getB <em>B</em>}' attribute.
+   * Sets the value of the '{@link rat.rat.Boolean#getVal <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>B</em>' attribute.
-   * @see #getB()
+   * @param value the new value of the '<em>Val</em>' attribute.
+   * @see #getVal()
    * @generated
    */
-  void setB(String value);
+  void setVal(String value);
 
 } // Boolean

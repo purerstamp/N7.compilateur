@@ -95,10 +95,24 @@ ruleProg returns [EObject current=null]
 				}
 			)
 		)*
-		this_ID_1=RULE_ID
-		{
-			newLeafNode(this_ID_1, grammarAccess.getProgAccess().getIDTerminalRuleCall_1());
-		}
+		(
+			(
+				lv_nomProg_1_0=RULE_ID
+				{
+					newLeafNode(lv_nomProg_1_0, grammarAccess.getProgAccess().getNomProgIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getProgRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"nomProg",
+						lv_nomProg_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
 		(
 			(
 				{
@@ -158,9 +172,9 @@ ruleFun returns [EObject current=null]
 		)
 		(
 			(
-				lv_nom_1_0=RULE_ID
+				lv_nomFun_1_0=RULE_ID
 				{
-					newLeafNode(lv_nom_1_0, grammarAccess.getFunAccess().getNomIDTerminalRuleCall_1_0());
+					newLeafNode(lv_nomFun_1_0, grammarAccess.getFunAccess().getNomFunIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -168,8 +182,8 @@ ruleFun returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"nom",
-						lv_nom_1_0,
+						"nomFun",
+						lv_nomFun_1_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
@@ -231,17 +245,17 @@ ruleFun returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFunAccess().getEEParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getFunAccess().getRetourEParserRuleCall_8_0());
 				}
-				lv_e_8_0=ruleE
+				lv_retour_8_0=ruleE
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFunRule());
 					}
 					set(
 						$current,
-						"e",
-						lv_e_8_0,
+						"retour",
+						lv_retour_8_0,
 						"rat.Rat.E");
 					afterParserOrEnumRuleCall();
 				}
@@ -420,9 +434,9 @@ ruleDeclaration returns [EObject current=null]
 		)
 		(
 			(
-				lv_nom_1_0=RULE_ID
+				lv_nomDecl_1_0=RULE_ID
 				{
-					newLeafNode(lv_nom_1_0, grammarAccess.getDeclarationAccess().getNomIDTerminalRuleCall_1_0());
+					newLeafNode(lv_nomDecl_1_0, grammarAccess.getDeclarationAccess().getNomDeclIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -430,8 +444,8 @@ ruleDeclaration returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"nom",
-						lv_nom_1_0,
+						"nomDecl",
+						lv_nomDecl_1_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
@@ -484,9 +498,9 @@ ruleAffectation returns [EObject current=null]
 	(
 		(
 			(
-				lv_nom_0_0=RULE_ID
+				lv_nomAff_0_0=RULE_ID
 				{
-					newLeafNode(lv_nom_0_0, grammarAccess.getAffectationAccess().getNomIDTerminalRuleCall_0_0());
+					newLeafNode(lv_nomAff_0_0, grammarAccess.getAffectationAccess().getNomAffIDTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -494,8 +508,8 @@ ruleAffectation returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"nom",
-						lv_nom_0_0,
+						"nomAff",
+						lv_nomAff_0_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
@@ -552,9 +566,9 @@ ruleConstante returns [EObject current=null]
 		}
 		(
 			(
-				lv_nom_1_0=RULE_ID
+				lv_nomConst_1_0=RULE_ID
 				{
-					newLeafNode(lv_nom_1_0, grammarAccess.getConstanteAccess().getNomIDTerminalRuleCall_1_0());
+					newLeafNode(lv_nomConst_1_0, grammarAccess.getConstanteAccess().getNomConstIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -562,8 +576,8 @@ ruleConstante returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"nom",
-						lv_nom_1_0,
+						"nomConst",
+						lv_nomConst_1_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
@@ -574,9 +588,9 @@ ruleConstante returns [EObject current=null]
 		}
 		(
 			(
-				lv_e_3_0=RULE_INT
+				lv_val_3_0=RULE_INT
 				{
-					newLeafNode(lv_e_3_0, grammarAccess.getConstanteAccess().getEINTTerminalRuleCall_3_0());
+					newLeafNode(lv_val_3_0, grammarAccess.getConstanteAccess().getValINTTerminalRuleCall_3_0());
 				}
 				{
 					if ($current==null) {
@@ -584,8 +598,8 @@ ruleConstante returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"e",
-						lv_e_3_0,
+						"val",
+						lv_val_3_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
@@ -620,17 +634,17 @@ rulePrint returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPrintAccess().getEEParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getPrintAccess().getValEParserRuleCall_1_0());
 				}
-				lv_e_1_0=ruleE
+				lv_val_1_0=ruleE
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPrintRule());
 					}
 					set(
 						$current,
-						"e",
-						lv_e_1_0,
+						"val",
+						lv_val_1_0,
 						"rat.Rat.E");
 					afterParserOrEnumRuleCall();
 				}
@@ -666,17 +680,17 @@ ruleConditionnelle returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConditionnelleAccess().getEEParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getConditionnelleAccess().getCondcEParserRuleCall_1_0());
 				}
-				lv_e_1_0=ruleE
+				lv_condc_1_0=ruleE
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConditionnelleRule());
 					}
 					set(
 						$current,
-						"e",
-						lv_e_1_0,
+						"condc",
+						lv_condc_1_0,
 						"rat.Rat.E");
 					afterParserOrEnumRuleCall();
 				}
@@ -685,17 +699,17 @@ ruleConditionnelle returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConditionnelleAccess().getBloc1BlocParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getConditionnelleAccess().getBloc1condBlocParserRuleCall_2_0());
 				}
-				lv_bloc1_2_0=ruleBloc
+				lv_bloc1cond_2_0=ruleBloc
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConditionnelleRule());
 					}
 					set(
 						$current,
-						"bloc1",
-						lv_bloc1_2_0,
+						"bloc1cond",
+						lv_bloc1cond_2_0,
 						"rat.Rat.Bloc");
 					afterParserOrEnumRuleCall();
 				}
@@ -708,17 +722,17 @@ ruleConditionnelle returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConditionnelleAccess().getBloc2BlocParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getConditionnelleAccess().getBloc2condBlocParserRuleCall_4_0());
 				}
-				lv_bloc2_4_0=ruleBloc
+				lv_bloc2cond_4_0=ruleBloc
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConditionnelleRule());
 					}
 					set(
 						$current,
-						"bloc2",
-						lv_bloc2_4_0,
+						"bloc2cond",
+						lv_bloc2cond_4_0,
 						"rat.Rat.Bloc");
 					afterParserOrEnumRuleCall();
 				}
@@ -750,17 +764,17 @@ ruleTantque returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTantqueAccess().getEEParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getTantqueAccess().getCondtEParserRuleCall_1_0());
 				}
-				lv_e_1_0=ruleE
+				lv_condt_1_0=ruleE
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTantqueRule());
 					}
 					set(
 						$current,
-						"e",
-						lv_e_1_0,
+						"condt",
+						lv_condt_1_0,
 						"rat.Rat.E");
 					afterParserOrEnumRuleCall();
 				}
@@ -769,17 +783,17 @@ ruleTantque returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTantqueAccess().getBlocBlocParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getTantqueAccess().getBoucleBlocParserRuleCall_2_0());
 				}
-				lv_bloc_2_0=ruleBloc
+				lv_boucle_2_0=ruleBloc
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTantqueRule());
 					}
 					set(
 						$current,
-						"bloc",
-						lv_bloc_2_0,
+						"boucle",
+						lv_boucle_2_0,
 						"rat.Rat.Bloc");
 					afterParserOrEnumRuleCall();
 				}
@@ -1056,9 +1070,9 @@ ruleAppel returns [EObject current=null]
 		}
 		(
 			(
-				lv_nom_1_0=RULE_ID
+				lv_nomAppel_1_0=RULE_ID
 				{
-					newLeafNode(lv_nom_1_0, grammarAccess.getAppelAccess().getNomIDTerminalRuleCall_1_0());
+					newLeafNode(lv_nomAppel_1_0, grammarAccess.getAppelAccess().getNomAppelIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -1066,8 +1080,8 @@ ruleAppel returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"nom",
-						lv_nom_1_0,
+						"nomAppel",
+						lv_nomAppel_1_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
@@ -1194,17 +1208,17 @@ ruleNumerateur returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getNumerateurAccess().getEEParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getNumerateurAccess().getValNumEParserRuleCall_1_0());
 				}
-				lv_e_1_0=ruleE
+				lv_valNum_1_0=ruleE
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getNumerateurRule());
 					}
 					set(
 						$current,
-						"e",
-						lv_e_1_0,
+						"valNum",
+						lv_valNum_1_0,
 						"rat.Rat.E");
 					afterParserOrEnumRuleCall();
 				}
@@ -1236,17 +1250,17 @@ ruleDenominateur returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDenominateurAccess().getEEParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDenominateurAccess().getValDenumEParserRuleCall_1_0());
 				}
-				lv_e_1_0=ruleE
+				lv_valDenum_1_0=ruleE
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDenominateurRule());
 					}
 					set(
 						$current,
-						"e",
-						lv_e_1_0,
+						"valDenum",
+						lv_valDenum_1_0,
 						"rat.Rat.E");
 					afterParserOrEnumRuleCall();
 				}
@@ -1308,26 +1322,26 @@ ruleBoolean returns [EObject current=null]
 	(
 		(
 			(
-				lv_b_0_1='false'
+				lv_val_0_1='false'
 				{
-					newLeafNode(lv_b_0_1, grammarAccess.getBooleanAccess().getBFalseKeyword_0_0());
+					newLeafNode(lv_val_0_1, grammarAccess.getBooleanAccess().getValFalseKeyword_0_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getBooleanRule());
 					}
-					setWithLastConsumed($current, "b", lv_b_0_1, null);
+					setWithLastConsumed($current, "val", lv_val_0_1, null);
 				}
 				    |
-				lv_b_0_2='true'
+				lv_val_0_2='true'
 				{
-					newLeafNode(lv_b_0_2, grammarAccess.getBooleanAccess().getBTrueKeyword_0_1());
+					newLeafNode(lv_val_0_2, grammarAccess.getBooleanAccess().getValTrueKeyword_0_1());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getBooleanRule());
 					}
-					setWithLastConsumed($current, "b", lv_b_0_2, null);
+					setWithLastConsumed($current, "val", lv_val_0_2, null);
 				}
 			)
 		)

@@ -33,6 +33,7 @@ import rat.rat.RatPackage;
  * </p>
  * <ul>
  *   <li>{@link rat.rat.impl.ProgImpl#getFun <em>Fun</em>}</li>
+ *   <li>{@link rat.rat.impl.ProgImpl#getNomProg <em>Nom Prog</em>}</li>
  *   <li>{@link rat.rat.impl.ProgImpl#getBloc <em>Bloc</em>}</li>
  * </ul>
  *
@@ -49,6 +50,26 @@ public class ProgImpl extends MinimalEObjectImpl.Container implements Prog
    * @ordered
    */
   protected EList<Fun> fun;
+
+  /**
+   * The default value of the '{@link #getNomProg() <em>Nom Prog</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNomProg()
+   * @generated
+   * @ordered
+   */
+  protected static final String NOM_PROG_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getNomProg() <em>Nom Prog</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNomProg()
+   * @generated
+   * @ordered
+   */
+  protected String nomProg = NOM_PROG_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getBloc() <em>Bloc</em>}' containment reference.
@@ -93,6 +114,29 @@ public class ProgImpl extends MinimalEObjectImpl.Container implements Prog
       fun = new EObjectContainmentEList<Fun>(Fun.class, this, RatPackage.PROG__FUN);
     }
     return fun;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getNomProg()
+  {
+    return nomProg;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNomProg(String newNomProg)
+  {
+    String oldNomProg = nomProg;
+    nomProg = newNomProg;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.PROG__NOM_PROG, oldNomProg, nomProg));
   }
 
   /**
@@ -173,6 +217,8 @@ public class ProgImpl extends MinimalEObjectImpl.Container implements Prog
     {
       case RatPackage.PROG__FUN:
         return getFun();
+      case RatPackage.PROG__NOM_PROG:
+        return getNomProg();
       case RatPackage.PROG__BLOC:
         return getBloc();
     }
@@ -194,6 +240,9 @@ public class ProgImpl extends MinimalEObjectImpl.Container implements Prog
         getFun().clear();
         getFun().addAll((Collection<? extends Fun>)newValue);
         return;
+      case RatPackage.PROG__NOM_PROG:
+        setNomProg((String)newValue);
+        return;
       case RatPackage.PROG__BLOC:
         setBloc((Bloc)newValue);
         return;
@@ -214,6 +263,9 @@ public class ProgImpl extends MinimalEObjectImpl.Container implements Prog
       case RatPackage.PROG__FUN:
         getFun().clear();
         return;
+      case RatPackage.PROG__NOM_PROG:
+        setNomProg(NOM_PROG_EDEFAULT);
+        return;
       case RatPackage.PROG__BLOC:
         setBloc((Bloc)null);
         return;
@@ -233,10 +285,29 @@ public class ProgImpl extends MinimalEObjectImpl.Container implements Prog
     {
       case RatPackage.PROG__FUN:
         return fun != null && !fun.isEmpty();
+      case RatPackage.PROG__NOM_PROG:
+        return NOM_PROG_EDEFAULT == null ? nomProg != null : !NOM_PROG_EDEFAULT.equals(nomProg);
       case RatPackage.PROG__BLOC:
         return bloc != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (nomProg: ");
+    result.append(nomProg);
+    result.append(')');
+    return result.toString();
   }
 
 } //ProgImpl

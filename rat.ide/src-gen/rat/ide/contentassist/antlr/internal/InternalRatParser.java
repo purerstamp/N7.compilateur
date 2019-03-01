@@ -1588,31 +1588,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleBoolean"
-    // InternalRat.g:537:1: ruleBoolean : ( ( rule__Boolean__BAssignment ) ) ;
+    // InternalRat.g:537:1: ruleBoolean : ( ( rule__Boolean__ValAssignment ) ) ;
     public final void ruleBoolean() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:541:2: ( ( ( rule__Boolean__BAssignment ) ) )
-            // InternalRat.g:542:2: ( ( rule__Boolean__BAssignment ) )
+            // InternalRat.g:541:2: ( ( ( rule__Boolean__ValAssignment ) ) )
+            // InternalRat.g:542:2: ( ( rule__Boolean__ValAssignment ) )
             {
-            // InternalRat.g:542:2: ( ( rule__Boolean__BAssignment ) )
-            // InternalRat.g:543:3: ( rule__Boolean__BAssignment )
+            // InternalRat.g:542:2: ( ( rule__Boolean__ValAssignment ) )
+            // InternalRat.g:543:3: ( rule__Boolean__ValAssignment )
             {
-             before(grammarAccess.getBooleanAccess().getBAssignment()); 
-            // InternalRat.g:544:3: ( rule__Boolean__BAssignment )
-            // InternalRat.g:544:4: rule__Boolean__BAssignment
+             before(grammarAccess.getBooleanAccess().getValAssignment()); 
+            // InternalRat.g:544:3: ( rule__Boolean__ValAssignment )
+            // InternalRat.g:544:4: rule__Boolean__ValAssignment
             {
             pushFollow(FOLLOW_2);
-            rule__Boolean__BAssignment();
+            rule__Boolean__ValAssignment();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBooleanAccess().getBAssignment()); 
+             after(grammarAccess.getBooleanAccess().getValAssignment()); 
 
             }
 
@@ -2369,9 +2369,9 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__E__Alternatives"
 
 
-    // $ANTLR start "rule__Boolean__BAlternatives_0"
-    // InternalRat.g:756:1: rule__Boolean__BAlternatives_0 : ( ( 'false' ) | ( 'true' ) );
-    public final void rule__Boolean__BAlternatives_0() throws RecognitionException {
+    // $ANTLR start "rule__Boolean__ValAlternatives_0"
+    // InternalRat.g:756:1: rule__Boolean__ValAlternatives_0 : ( ( 'false' ) | ( 'true' ) );
+    public final void rule__Boolean__ValAlternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2399,9 +2399,9 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
                     // InternalRat.g:761:2: ( 'false' )
                     // InternalRat.g:762:3: 'false'
                     {
-                     before(grammarAccess.getBooleanAccess().getBFalseKeyword_0_0()); 
+                     before(grammarAccess.getBooleanAccess().getValFalseKeyword_0_0()); 
                     match(input,14,FOLLOW_2); 
-                     after(grammarAccess.getBooleanAccess().getBFalseKeyword_0_0()); 
+                     after(grammarAccess.getBooleanAccess().getValFalseKeyword_0_0()); 
 
                     }
 
@@ -2414,9 +2414,9 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
                     // InternalRat.g:767:2: ( 'true' )
                     // InternalRat.g:768:3: 'true'
                     {
-                     before(grammarAccess.getBooleanAccess().getBTrueKeyword_0_1()); 
+                     before(grammarAccess.getBooleanAccess().getValTrueKeyword_0_1()); 
                     match(input,15,FOLLOW_2); 
-                     after(grammarAccess.getBooleanAccess().getBTrueKeyword_0_1()); 
+                     after(grammarAccess.getBooleanAccess().getValTrueKeyword_0_1()); 
 
                     }
 
@@ -2437,7 +2437,7 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Boolean__BAlternatives_0"
+    // $ANTLR end "rule__Boolean__ValAlternatives_0"
 
 
     // $ANTLR start "rule__Operande__OpAlternatives_0"
@@ -2697,21 +2697,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Prog__Group__1__Impl"
-    // InternalRat.g:849:1: rule__Prog__Group__1__Impl : ( RULE_ID ) ;
+    // InternalRat.g:849:1: rule__Prog__Group__1__Impl : ( ( rule__Prog__NomProgAssignment_1 ) ) ;
     public final void rule__Prog__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:853:1: ( ( RULE_ID ) )
-            // InternalRat.g:854:1: ( RULE_ID )
+            // InternalRat.g:853:1: ( ( ( rule__Prog__NomProgAssignment_1 ) ) )
+            // InternalRat.g:854:1: ( ( rule__Prog__NomProgAssignment_1 ) )
             {
-            // InternalRat.g:854:1: ( RULE_ID )
-            // InternalRat.g:855:2: RULE_ID
+            // InternalRat.g:854:1: ( ( rule__Prog__NomProgAssignment_1 ) )
+            // InternalRat.g:855:2: ( rule__Prog__NomProgAssignment_1 )
             {
-             before(grammarAccess.getProgAccess().getIDTerminalRuleCall_1()); 
-            match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getProgAccess().getIDTerminalRuleCall_1()); 
+             before(grammarAccess.getProgAccess().getNomProgAssignment_1()); 
+            // InternalRat.g:856:2: ( rule__Prog__NomProgAssignment_1 )
+            // InternalRat.g:856:3: rule__Prog__NomProgAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Prog__NomProgAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getProgAccess().getNomProgAssignment_1()); 
 
             }
 
@@ -2937,31 +2947,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fun__Group__1__Impl"
-    // InternalRat.g:930:1: rule__Fun__Group__1__Impl : ( ( rule__Fun__NomAssignment_1 ) ) ;
+    // InternalRat.g:930:1: rule__Fun__Group__1__Impl : ( ( rule__Fun__NomFunAssignment_1 ) ) ;
     public final void rule__Fun__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:934:1: ( ( ( rule__Fun__NomAssignment_1 ) ) )
-            // InternalRat.g:935:1: ( ( rule__Fun__NomAssignment_1 ) )
+            // InternalRat.g:934:1: ( ( ( rule__Fun__NomFunAssignment_1 ) ) )
+            // InternalRat.g:935:1: ( ( rule__Fun__NomFunAssignment_1 ) )
             {
-            // InternalRat.g:935:1: ( ( rule__Fun__NomAssignment_1 ) )
-            // InternalRat.g:936:2: ( rule__Fun__NomAssignment_1 )
+            // InternalRat.g:935:1: ( ( rule__Fun__NomFunAssignment_1 ) )
+            // InternalRat.g:936:2: ( rule__Fun__NomFunAssignment_1 )
             {
-             before(grammarAccess.getFunAccess().getNomAssignment_1()); 
-            // InternalRat.g:937:2: ( rule__Fun__NomAssignment_1 )
-            // InternalRat.g:937:3: rule__Fun__NomAssignment_1
+             before(grammarAccess.getFunAccess().getNomFunAssignment_1()); 
+            // InternalRat.g:937:2: ( rule__Fun__NomFunAssignment_1 )
+            // InternalRat.g:937:3: rule__Fun__NomFunAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Fun__NomAssignment_1();
+            rule__Fun__NomFunAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getFunAccess().getNomAssignment_1()); 
+             after(grammarAccess.getFunAccess().getNomFunAssignment_1()); 
 
             }
 
@@ -3528,31 +3538,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fun__Group__8__Impl"
-    // InternalRat.g:1119:1: rule__Fun__Group__8__Impl : ( ( rule__Fun__EAssignment_8 ) ) ;
+    // InternalRat.g:1119:1: rule__Fun__Group__8__Impl : ( ( rule__Fun__RetourAssignment_8 ) ) ;
     public final void rule__Fun__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1123:1: ( ( ( rule__Fun__EAssignment_8 ) ) )
-            // InternalRat.g:1124:1: ( ( rule__Fun__EAssignment_8 ) )
+            // InternalRat.g:1123:1: ( ( ( rule__Fun__RetourAssignment_8 ) ) )
+            // InternalRat.g:1124:1: ( ( rule__Fun__RetourAssignment_8 ) )
             {
-            // InternalRat.g:1124:1: ( ( rule__Fun__EAssignment_8 ) )
-            // InternalRat.g:1125:2: ( rule__Fun__EAssignment_8 )
+            // InternalRat.g:1124:1: ( ( rule__Fun__RetourAssignment_8 ) )
+            // InternalRat.g:1125:2: ( rule__Fun__RetourAssignment_8 )
             {
-             before(grammarAccess.getFunAccess().getEAssignment_8()); 
-            // InternalRat.g:1126:2: ( rule__Fun__EAssignment_8 )
-            // InternalRat.g:1126:3: rule__Fun__EAssignment_8
+             before(grammarAccess.getFunAccess().getRetourAssignment_8()); 
+            // InternalRat.g:1126:2: ( rule__Fun__RetourAssignment_8 )
+            // InternalRat.g:1126:3: rule__Fun__RetourAssignment_8
             {
             pushFollow(FOLLOW_2);
-            rule__Fun__EAssignment_8();
+            rule__Fun__RetourAssignment_8();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getFunAccess().getEAssignment_8()); 
+             after(grammarAccess.getFunAccess().getRetourAssignment_8()); 
 
             }
 
@@ -4166,31 +4176,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Declaration__Group__1__Impl"
-    // InternalRat.g:1335:1: rule__Declaration__Group__1__Impl : ( ( rule__Declaration__NomAssignment_1 ) ) ;
+    // InternalRat.g:1335:1: rule__Declaration__Group__1__Impl : ( ( rule__Declaration__NomDeclAssignment_1 ) ) ;
     public final void rule__Declaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1339:1: ( ( ( rule__Declaration__NomAssignment_1 ) ) )
-            // InternalRat.g:1340:1: ( ( rule__Declaration__NomAssignment_1 ) )
+            // InternalRat.g:1339:1: ( ( ( rule__Declaration__NomDeclAssignment_1 ) ) )
+            // InternalRat.g:1340:1: ( ( rule__Declaration__NomDeclAssignment_1 ) )
             {
-            // InternalRat.g:1340:1: ( ( rule__Declaration__NomAssignment_1 ) )
-            // InternalRat.g:1341:2: ( rule__Declaration__NomAssignment_1 )
+            // InternalRat.g:1340:1: ( ( rule__Declaration__NomDeclAssignment_1 ) )
+            // InternalRat.g:1341:2: ( rule__Declaration__NomDeclAssignment_1 )
             {
-             before(grammarAccess.getDeclarationAccess().getNomAssignment_1()); 
-            // InternalRat.g:1342:2: ( rule__Declaration__NomAssignment_1 )
-            // InternalRat.g:1342:3: rule__Declaration__NomAssignment_1
+             before(grammarAccess.getDeclarationAccess().getNomDeclAssignment_1()); 
+            // InternalRat.g:1342:2: ( rule__Declaration__NomDeclAssignment_1 )
+            // InternalRat.g:1342:3: rule__Declaration__NomDeclAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Declaration__NomAssignment_1();
+            rule__Declaration__NomDeclAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDeclarationAccess().getNomAssignment_1()); 
+             after(grammarAccess.getDeclarationAccess().getNomDeclAssignment_1()); 
 
             }
 
@@ -4481,31 +4491,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Affectation__Group__0__Impl"
-    // InternalRat.g:1443:1: rule__Affectation__Group__0__Impl : ( ( rule__Affectation__NomAssignment_0 ) ) ;
+    // InternalRat.g:1443:1: rule__Affectation__Group__0__Impl : ( ( rule__Affectation__NomAffAssignment_0 ) ) ;
     public final void rule__Affectation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1447:1: ( ( ( rule__Affectation__NomAssignment_0 ) ) )
-            // InternalRat.g:1448:1: ( ( rule__Affectation__NomAssignment_0 ) )
+            // InternalRat.g:1447:1: ( ( ( rule__Affectation__NomAffAssignment_0 ) ) )
+            // InternalRat.g:1448:1: ( ( rule__Affectation__NomAffAssignment_0 ) )
             {
-            // InternalRat.g:1448:1: ( ( rule__Affectation__NomAssignment_0 ) )
-            // InternalRat.g:1449:2: ( rule__Affectation__NomAssignment_0 )
+            // InternalRat.g:1448:1: ( ( rule__Affectation__NomAffAssignment_0 ) )
+            // InternalRat.g:1449:2: ( rule__Affectation__NomAffAssignment_0 )
             {
-             before(grammarAccess.getAffectationAccess().getNomAssignment_0()); 
-            // InternalRat.g:1450:2: ( rule__Affectation__NomAssignment_0 )
-            // InternalRat.g:1450:3: rule__Affectation__NomAssignment_0
+             before(grammarAccess.getAffectationAccess().getNomAffAssignment_0()); 
+            // InternalRat.g:1450:2: ( rule__Affectation__NomAffAssignment_0 )
+            // InternalRat.g:1450:3: rule__Affectation__NomAffAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__Affectation__NomAssignment_0();
+            rule__Affectation__NomAffAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getAffectationAccess().getNomAssignment_0()); 
+             after(grammarAccess.getAffectationAccess().getNomAffAssignment_0()); 
 
             }
 
@@ -4871,31 +4881,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constante__Group__1__Impl"
-    // InternalRat.g:1578:1: rule__Constante__Group__1__Impl : ( ( rule__Constante__NomAssignment_1 ) ) ;
+    // InternalRat.g:1578:1: rule__Constante__Group__1__Impl : ( ( rule__Constante__NomConstAssignment_1 ) ) ;
     public final void rule__Constante__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1582:1: ( ( ( rule__Constante__NomAssignment_1 ) ) )
-            // InternalRat.g:1583:1: ( ( rule__Constante__NomAssignment_1 ) )
+            // InternalRat.g:1582:1: ( ( ( rule__Constante__NomConstAssignment_1 ) ) )
+            // InternalRat.g:1583:1: ( ( rule__Constante__NomConstAssignment_1 ) )
             {
-            // InternalRat.g:1583:1: ( ( rule__Constante__NomAssignment_1 ) )
-            // InternalRat.g:1584:2: ( rule__Constante__NomAssignment_1 )
+            // InternalRat.g:1583:1: ( ( rule__Constante__NomConstAssignment_1 ) )
+            // InternalRat.g:1584:2: ( rule__Constante__NomConstAssignment_1 )
             {
-             before(grammarAccess.getConstanteAccess().getNomAssignment_1()); 
-            // InternalRat.g:1585:2: ( rule__Constante__NomAssignment_1 )
-            // InternalRat.g:1585:3: rule__Constante__NomAssignment_1
+             before(grammarAccess.getConstanteAccess().getNomConstAssignment_1()); 
+            // InternalRat.g:1585:2: ( rule__Constante__NomConstAssignment_1 )
+            // InternalRat.g:1585:3: rule__Constante__NomConstAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Constante__NomAssignment_1();
+            rule__Constante__NomConstAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getConstanteAccess().getNomAssignment_1()); 
+             after(grammarAccess.getConstanteAccess().getNomConstAssignment_1()); 
 
             }
 
@@ -5031,31 +5041,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constante__Group__3__Impl"
-    // InternalRat.g:1632:1: rule__Constante__Group__3__Impl : ( ( rule__Constante__EAssignment_3 ) ) ;
+    // InternalRat.g:1632:1: rule__Constante__Group__3__Impl : ( ( rule__Constante__ValAssignment_3 ) ) ;
     public final void rule__Constante__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1636:1: ( ( ( rule__Constante__EAssignment_3 ) ) )
-            // InternalRat.g:1637:1: ( ( rule__Constante__EAssignment_3 ) )
+            // InternalRat.g:1636:1: ( ( ( rule__Constante__ValAssignment_3 ) ) )
+            // InternalRat.g:1637:1: ( ( rule__Constante__ValAssignment_3 ) )
             {
-            // InternalRat.g:1637:1: ( ( rule__Constante__EAssignment_3 ) )
-            // InternalRat.g:1638:2: ( rule__Constante__EAssignment_3 )
+            // InternalRat.g:1637:1: ( ( rule__Constante__ValAssignment_3 ) )
+            // InternalRat.g:1638:2: ( rule__Constante__ValAssignment_3 )
             {
-             before(grammarAccess.getConstanteAccess().getEAssignment_3()); 
-            // InternalRat.g:1639:2: ( rule__Constante__EAssignment_3 )
-            // InternalRat.g:1639:3: rule__Constante__EAssignment_3
+             before(grammarAccess.getConstanteAccess().getValAssignment_3()); 
+            // InternalRat.g:1639:2: ( rule__Constante__ValAssignment_3 )
+            // InternalRat.g:1639:3: rule__Constante__ValAssignment_3
             {
             pushFollow(FOLLOW_2);
-            rule__Constante__EAssignment_3();
+            rule__Constante__ValAssignment_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getConstanteAccess().getEAssignment_3()); 
+             after(grammarAccess.getConstanteAccess().getValAssignment_3()); 
 
             }
 
@@ -5261,31 +5271,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Print__Group__1__Impl"
-    // InternalRat.g:1713:1: rule__Print__Group__1__Impl : ( ( rule__Print__EAssignment_1 ) ) ;
+    // InternalRat.g:1713:1: rule__Print__Group__1__Impl : ( ( rule__Print__ValAssignment_1 ) ) ;
     public final void rule__Print__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1717:1: ( ( ( rule__Print__EAssignment_1 ) ) )
-            // InternalRat.g:1718:1: ( ( rule__Print__EAssignment_1 ) )
+            // InternalRat.g:1717:1: ( ( ( rule__Print__ValAssignment_1 ) ) )
+            // InternalRat.g:1718:1: ( ( rule__Print__ValAssignment_1 ) )
             {
-            // InternalRat.g:1718:1: ( ( rule__Print__EAssignment_1 ) )
-            // InternalRat.g:1719:2: ( rule__Print__EAssignment_1 )
+            // InternalRat.g:1718:1: ( ( rule__Print__ValAssignment_1 ) )
+            // InternalRat.g:1719:2: ( rule__Print__ValAssignment_1 )
             {
-             before(grammarAccess.getPrintAccess().getEAssignment_1()); 
-            // InternalRat.g:1720:2: ( rule__Print__EAssignment_1 )
-            // InternalRat.g:1720:3: rule__Print__EAssignment_1
+             before(grammarAccess.getPrintAccess().getValAssignment_1()); 
+            // InternalRat.g:1720:2: ( rule__Print__ValAssignment_1 )
+            // InternalRat.g:1720:3: rule__Print__ValAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Print__EAssignment_1();
+            rule__Print__ValAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrintAccess().getEAssignment_1()); 
+             after(grammarAccess.getPrintAccess().getValAssignment_1()); 
 
             }
 
@@ -5491,31 +5501,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conditionnelle__Group__1__Impl"
-    // InternalRat.g:1794:1: rule__Conditionnelle__Group__1__Impl : ( ( rule__Conditionnelle__EAssignment_1 ) ) ;
+    // InternalRat.g:1794:1: rule__Conditionnelle__Group__1__Impl : ( ( rule__Conditionnelle__CondcAssignment_1 ) ) ;
     public final void rule__Conditionnelle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1798:1: ( ( ( rule__Conditionnelle__EAssignment_1 ) ) )
-            // InternalRat.g:1799:1: ( ( rule__Conditionnelle__EAssignment_1 ) )
+            // InternalRat.g:1798:1: ( ( ( rule__Conditionnelle__CondcAssignment_1 ) ) )
+            // InternalRat.g:1799:1: ( ( rule__Conditionnelle__CondcAssignment_1 ) )
             {
-            // InternalRat.g:1799:1: ( ( rule__Conditionnelle__EAssignment_1 ) )
-            // InternalRat.g:1800:2: ( rule__Conditionnelle__EAssignment_1 )
+            // InternalRat.g:1799:1: ( ( rule__Conditionnelle__CondcAssignment_1 ) )
+            // InternalRat.g:1800:2: ( rule__Conditionnelle__CondcAssignment_1 )
             {
-             before(grammarAccess.getConditionnelleAccess().getEAssignment_1()); 
-            // InternalRat.g:1801:2: ( rule__Conditionnelle__EAssignment_1 )
-            // InternalRat.g:1801:3: rule__Conditionnelle__EAssignment_1
+             before(grammarAccess.getConditionnelleAccess().getCondcAssignment_1()); 
+            // InternalRat.g:1801:2: ( rule__Conditionnelle__CondcAssignment_1 )
+            // InternalRat.g:1801:3: rule__Conditionnelle__CondcAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Conditionnelle__EAssignment_1();
+            rule__Conditionnelle__CondcAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getConditionnelleAccess().getEAssignment_1()); 
+             after(grammarAccess.getConditionnelleAccess().getCondcAssignment_1()); 
 
             }
 
@@ -5576,31 +5586,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conditionnelle__Group__2__Impl"
-    // InternalRat.g:1821:1: rule__Conditionnelle__Group__2__Impl : ( ( rule__Conditionnelle__Bloc1Assignment_2 ) ) ;
+    // InternalRat.g:1821:1: rule__Conditionnelle__Group__2__Impl : ( ( rule__Conditionnelle__Bloc1condAssignment_2 ) ) ;
     public final void rule__Conditionnelle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1825:1: ( ( ( rule__Conditionnelle__Bloc1Assignment_2 ) ) )
-            // InternalRat.g:1826:1: ( ( rule__Conditionnelle__Bloc1Assignment_2 ) )
+            // InternalRat.g:1825:1: ( ( ( rule__Conditionnelle__Bloc1condAssignment_2 ) ) )
+            // InternalRat.g:1826:1: ( ( rule__Conditionnelle__Bloc1condAssignment_2 ) )
             {
-            // InternalRat.g:1826:1: ( ( rule__Conditionnelle__Bloc1Assignment_2 ) )
-            // InternalRat.g:1827:2: ( rule__Conditionnelle__Bloc1Assignment_2 )
+            // InternalRat.g:1826:1: ( ( rule__Conditionnelle__Bloc1condAssignment_2 ) )
+            // InternalRat.g:1827:2: ( rule__Conditionnelle__Bloc1condAssignment_2 )
             {
-             before(grammarAccess.getConditionnelleAccess().getBloc1Assignment_2()); 
-            // InternalRat.g:1828:2: ( rule__Conditionnelle__Bloc1Assignment_2 )
-            // InternalRat.g:1828:3: rule__Conditionnelle__Bloc1Assignment_2
+             before(grammarAccess.getConditionnelleAccess().getBloc1condAssignment_2()); 
+            // InternalRat.g:1828:2: ( rule__Conditionnelle__Bloc1condAssignment_2 )
+            // InternalRat.g:1828:3: rule__Conditionnelle__Bloc1condAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__Conditionnelle__Bloc1Assignment_2();
+            rule__Conditionnelle__Bloc1condAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getConditionnelleAccess().getBloc1Assignment_2()); 
+             after(grammarAccess.getConditionnelleAccess().getBloc1condAssignment_2()); 
 
             }
 
@@ -5731,31 +5741,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conditionnelle__Group__4__Impl"
-    // InternalRat.g:1874:1: rule__Conditionnelle__Group__4__Impl : ( ( rule__Conditionnelle__Bloc2Assignment_4 ) ) ;
+    // InternalRat.g:1874:1: rule__Conditionnelle__Group__4__Impl : ( ( rule__Conditionnelle__Bloc2condAssignment_4 ) ) ;
     public final void rule__Conditionnelle__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1878:1: ( ( ( rule__Conditionnelle__Bloc2Assignment_4 ) ) )
-            // InternalRat.g:1879:1: ( ( rule__Conditionnelle__Bloc2Assignment_4 ) )
+            // InternalRat.g:1878:1: ( ( ( rule__Conditionnelle__Bloc2condAssignment_4 ) ) )
+            // InternalRat.g:1879:1: ( ( rule__Conditionnelle__Bloc2condAssignment_4 ) )
             {
-            // InternalRat.g:1879:1: ( ( rule__Conditionnelle__Bloc2Assignment_4 ) )
-            // InternalRat.g:1880:2: ( rule__Conditionnelle__Bloc2Assignment_4 )
+            // InternalRat.g:1879:1: ( ( rule__Conditionnelle__Bloc2condAssignment_4 ) )
+            // InternalRat.g:1880:2: ( rule__Conditionnelle__Bloc2condAssignment_4 )
             {
-             before(grammarAccess.getConditionnelleAccess().getBloc2Assignment_4()); 
-            // InternalRat.g:1881:2: ( rule__Conditionnelle__Bloc2Assignment_4 )
-            // InternalRat.g:1881:3: rule__Conditionnelle__Bloc2Assignment_4
+             before(grammarAccess.getConditionnelleAccess().getBloc2condAssignment_4()); 
+            // InternalRat.g:1881:2: ( rule__Conditionnelle__Bloc2condAssignment_4 )
+            // InternalRat.g:1881:3: rule__Conditionnelle__Bloc2condAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__Conditionnelle__Bloc2Assignment_4();
+            rule__Conditionnelle__Bloc2condAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getConditionnelleAccess().getBloc2Assignment_4()); 
+             after(grammarAccess.getConditionnelleAccess().getBloc2condAssignment_4()); 
 
             }
 
@@ -5891,31 +5901,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Tantque__Group__1__Impl"
-    // InternalRat.g:1929:1: rule__Tantque__Group__1__Impl : ( ( rule__Tantque__EAssignment_1 ) ) ;
+    // InternalRat.g:1929:1: rule__Tantque__Group__1__Impl : ( ( rule__Tantque__CondtAssignment_1 ) ) ;
     public final void rule__Tantque__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1933:1: ( ( ( rule__Tantque__EAssignment_1 ) ) )
-            // InternalRat.g:1934:1: ( ( rule__Tantque__EAssignment_1 ) )
+            // InternalRat.g:1933:1: ( ( ( rule__Tantque__CondtAssignment_1 ) ) )
+            // InternalRat.g:1934:1: ( ( rule__Tantque__CondtAssignment_1 ) )
             {
-            // InternalRat.g:1934:1: ( ( rule__Tantque__EAssignment_1 ) )
-            // InternalRat.g:1935:2: ( rule__Tantque__EAssignment_1 )
+            // InternalRat.g:1934:1: ( ( rule__Tantque__CondtAssignment_1 ) )
+            // InternalRat.g:1935:2: ( rule__Tantque__CondtAssignment_1 )
             {
-             before(grammarAccess.getTantqueAccess().getEAssignment_1()); 
-            // InternalRat.g:1936:2: ( rule__Tantque__EAssignment_1 )
-            // InternalRat.g:1936:3: rule__Tantque__EAssignment_1
+             before(grammarAccess.getTantqueAccess().getCondtAssignment_1()); 
+            // InternalRat.g:1936:2: ( rule__Tantque__CondtAssignment_1 )
+            // InternalRat.g:1936:3: rule__Tantque__CondtAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Tantque__EAssignment_1();
+            rule__Tantque__CondtAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTantqueAccess().getEAssignment_1()); 
+             after(grammarAccess.getTantqueAccess().getCondtAssignment_1()); 
 
             }
 
@@ -5971,31 +5981,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Tantque__Group__2__Impl"
-    // InternalRat.g:1955:1: rule__Tantque__Group__2__Impl : ( ( rule__Tantque__BlocAssignment_2 ) ) ;
+    // InternalRat.g:1955:1: rule__Tantque__Group__2__Impl : ( ( rule__Tantque__BoucleAssignment_2 ) ) ;
     public final void rule__Tantque__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:1959:1: ( ( ( rule__Tantque__BlocAssignment_2 ) ) )
-            // InternalRat.g:1960:1: ( ( rule__Tantque__BlocAssignment_2 ) )
+            // InternalRat.g:1959:1: ( ( ( rule__Tantque__BoucleAssignment_2 ) ) )
+            // InternalRat.g:1960:1: ( ( rule__Tantque__BoucleAssignment_2 ) )
             {
-            // InternalRat.g:1960:1: ( ( rule__Tantque__BlocAssignment_2 ) )
-            // InternalRat.g:1961:2: ( rule__Tantque__BlocAssignment_2 )
+            // InternalRat.g:1960:1: ( ( rule__Tantque__BoucleAssignment_2 ) )
+            // InternalRat.g:1961:2: ( rule__Tantque__BoucleAssignment_2 )
             {
-             before(grammarAccess.getTantqueAccess().getBlocAssignment_2()); 
-            // InternalRat.g:1962:2: ( rule__Tantque__BlocAssignment_2 )
-            // InternalRat.g:1962:3: rule__Tantque__BlocAssignment_2
+             before(grammarAccess.getTantqueAccess().getBoucleAssignment_2()); 
+            // InternalRat.g:1962:2: ( rule__Tantque__BoucleAssignment_2 )
+            // InternalRat.g:1962:3: rule__Tantque__BoucleAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__Tantque__BlocAssignment_2();
+            rule__Tantque__BoucleAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTantqueAccess().getBlocAssignment_2()); 
+             after(grammarAccess.getTantqueAccess().getBoucleAssignment_2()); 
 
             }
 
@@ -6469,31 +6479,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Appel__Group__1__Impl"
-    // InternalRat.g:2118:1: rule__Appel__Group__1__Impl : ( ( rule__Appel__NomAssignment_1 ) ) ;
+    // InternalRat.g:2118:1: rule__Appel__Group__1__Impl : ( ( rule__Appel__NomAppelAssignment_1 ) ) ;
     public final void rule__Appel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2122:1: ( ( ( rule__Appel__NomAssignment_1 ) ) )
-            // InternalRat.g:2123:1: ( ( rule__Appel__NomAssignment_1 ) )
+            // InternalRat.g:2122:1: ( ( ( rule__Appel__NomAppelAssignment_1 ) ) )
+            // InternalRat.g:2123:1: ( ( rule__Appel__NomAppelAssignment_1 ) )
             {
-            // InternalRat.g:2123:1: ( ( rule__Appel__NomAssignment_1 ) )
-            // InternalRat.g:2124:2: ( rule__Appel__NomAssignment_1 )
+            // InternalRat.g:2123:1: ( ( rule__Appel__NomAppelAssignment_1 ) )
+            // InternalRat.g:2124:2: ( rule__Appel__NomAppelAssignment_1 )
             {
-             before(grammarAccess.getAppelAccess().getNomAssignment_1()); 
-            // InternalRat.g:2125:2: ( rule__Appel__NomAssignment_1 )
-            // InternalRat.g:2125:3: rule__Appel__NomAssignment_1
+             before(grammarAccess.getAppelAccess().getNomAppelAssignment_1()); 
+            // InternalRat.g:2125:2: ( rule__Appel__NomAppelAssignment_1 )
+            // InternalRat.g:2125:3: rule__Appel__NomAppelAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Appel__NomAssignment_1();
+            rule__Appel__NomAppelAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getAppelAccess().getNomAssignment_1()); 
+             after(grammarAccess.getAppelAccess().getNomAppelAssignment_1()); 
 
             }
 
@@ -7244,31 +7254,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numerateur__Group__1__Impl"
-    // InternalRat.g:2387:1: rule__Numerateur__Group__1__Impl : ( ( rule__Numerateur__EAssignment_1 ) ) ;
+    // InternalRat.g:2387:1: rule__Numerateur__Group__1__Impl : ( ( rule__Numerateur__ValNumAssignment_1 ) ) ;
     public final void rule__Numerateur__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2391:1: ( ( ( rule__Numerateur__EAssignment_1 ) ) )
-            // InternalRat.g:2392:1: ( ( rule__Numerateur__EAssignment_1 ) )
+            // InternalRat.g:2391:1: ( ( ( rule__Numerateur__ValNumAssignment_1 ) ) )
+            // InternalRat.g:2392:1: ( ( rule__Numerateur__ValNumAssignment_1 ) )
             {
-            // InternalRat.g:2392:1: ( ( rule__Numerateur__EAssignment_1 ) )
-            // InternalRat.g:2393:2: ( rule__Numerateur__EAssignment_1 )
+            // InternalRat.g:2392:1: ( ( rule__Numerateur__ValNumAssignment_1 ) )
+            // InternalRat.g:2393:2: ( rule__Numerateur__ValNumAssignment_1 )
             {
-             before(grammarAccess.getNumerateurAccess().getEAssignment_1()); 
-            // InternalRat.g:2394:2: ( rule__Numerateur__EAssignment_1 )
-            // InternalRat.g:2394:3: rule__Numerateur__EAssignment_1
+             before(grammarAccess.getNumerateurAccess().getValNumAssignment_1()); 
+            // InternalRat.g:2394:2: ( rule__Numerateur__ValNumAssignment_1 )
+            // InternalRat.g:2394:3: rule__Numerateur__ValNumAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Numerateur__EAssignment_1();
+            rule__Numerateur__ValNumAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getNumerateurAccess().getEAssignment_1()); 
+             after(grammarAccess.getNumerateurAccess().getValNumAssignment_1()); 
 
             }
 
@@ -7399,31 +7409,31 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Denominateur__Group__1__Impl"
-    // InternalRat.g:2441:1: rule__Denominateur__Group__1__Impl : ( ( rule__Denominateur__EAssignment_1 ) ) ;
+    // InternalRat.g:2441:1: rule__Denominateur__Group__1__Impl : ( ( rule__Denominateur__ValDenumAssignment_1 ) ) ;
     public final void rule__Denominateur__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2445:1: ( ( ( rule__Denominateur__EAssignment_1 ) ) )
-            // InternalRat.g:2446:1: ( ( rule__Denominateur__EAssignment_1 ) )
+            // InternalRat.g:2445:1: ( ( ( rule__Denominateur__ValDenumAssignment_1 ) ) )
+            // InternalRat.g:2446:1: ( ( rule__Denominateur__ValDenumAssignment_1 ) )
             {
-            // InternalRat.g:2446:1: ( ( rule__Denominateur__EAssignment_1 ) )
-            // InternalRat.g:2447:2: ( rule__Denominateur__EAssignment_1 )
+            // InternalRat.g:2446:1: ( ( rule__Denominateur__ValDenumAssignment_1 ) )
+            // InternalRat.g:2447:2: ( rule__Denominateur__ValDenumAssignment_1 )
             {
-             before(grammarAccess.getDenominateurAccess().getEAssignment_1()); 
-            // InternalRat.g:2448:2: ( rule__Denominateur__EAssignment_1 )
-            // InternalRat.g:2448:3: rule__Denominateur__EAssignment_1
+             before(grammarAccess.getDenominateurAccess().getValDenumAssignment_1()); 
+            // InternalRat.g:2448:2: ( rule__Denominateur__ValDenumAssignment_1 )
+            // InternalRat.g:2448:3: rule__Denominateur__ValDenumAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Denominateur__EAssignment_1();
+            rule__Denominateur__ValDenumAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDenominateurAccess().getEAssignment_1()); 
+             after(grammarAccess.getDenominateurAccess().getValDenumAssignment_1()); 
 
             }
 
@@ -7886,18 +7896,55 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Prog__FunAssignment_0"
 
 
+    // $ANTLR start "rule__Prog__NomProgAssignment_1"
+    // InternalRat.g:2607:1: rule__Prog__NomProgAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Prog__NomProgAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRat.g:2611:1: ( ( RULE_ID ) )
+            // InternalRat.g:2612:2: ( RULE_ID )
+            {
+            // InternalRat.g:2612:2: ( RULE_ID )
+            // InternalRat.g:2613:3: RULE_ID
+            {
+             before(grammarAccess.getProgAccess().getNomProgIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getProgAccess().getNomProgIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Prog__NomProgAssignment_1"
+
+
     // $ANTLR start "rule__Prog__BlocAssignment_2"
-    // InternalRat.g:2607:1: rule__Prog__BlocAssignment_2 : ( ruleBloc ) ;
+    // InternalRat.g:2622:1: rule__Prog__BlocAssignment_2 : ( ruleBloc ) ;
     public final void rule__Prog__BlocAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2611:1: ( ( ruleBloc ) )
-            // InternalRat.g:2612:2: ( ruleBloc )
+            // InternalRat.g:2626:1: ( ( ruleBloc ) )
+            // InternalRat.g:2627:2: ( ruleBloc )
             {
-            // InternalRat.g:2612:2: ( ruleBloc )
-            // InternalRat.g:2613:3: ruleBloc
+            // InternalRat.g:2627:2: ( ruleBloc )
+            // InternalRat.g:2628:3: ruleBloc
             {
              before(grammarAccess.getProgAccess().getBlocBlocParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -7928,17 +7975,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fun__TypeAssignment_0"
-    // InternalRat.g:2622:1: rule__Fun__TypeAssignment_0 : ( ruleType ) ;
+    // InternalRat.g:2637:1: rule__Fun__TypeAssignment_0 : ( ruleType ) ;
     public final void rule__Fun__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2626:1: ( ( ruleType ) )
-            // InternalRat.g:2627:2: ( ruleType )
+            // InternalRat.g:2641:1: ( ( ruleType ) )
+            // InternalRat.g:2642:2: ( ruleType )
             {
-            // InternalRat.g:2627:2: ( ruleType )
-            // InternalRat.g:2628:3: ruleType
+            // InternalRat.g:2642:2: ( ruleType )
+            // InternalRat.g:2643:3: ruleType
             {
              before(grammarAccess.getFunAccess().getTypeTypeParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -7968,22 +8015,22 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Fun__TypeAssignment_0"
 
 
-    // $ANTLR start "rule__Fun__NomAssignment_1"
-    // InternalRat.g:2637:1: rule__Fun__NomAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Fun__NomAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Fun__NomFunAssignment_1"
+    // InternalRat.g:2652:1: rule__Fun__NomFunAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Fun__NomFunAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2641:1: ( ( RULE_ID ) )
-            // InternalRat.g:2642:2: ( RULE_ID )
+            // InternalRat.g:2656:1: ( ( RULE_ID ) )
+            // InternalRat.g:2657:2: ( RULE_ID )
             {
-            // InternalRat.g:2642:2: ( RULE_ID )
-            // InternalRat.g:2643:3: RULE_ID
+            // InternalRat.g:2657:2: ( RULE_ID )
+            // InternalRat.g:2658:3: RULE_ID
             {
-             before(grammarAccess.getFunAccess().getNomIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getFunAccess().getNomFunIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getFunAccess().getNomIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getFunAccess().getNomFunIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -8002,21 +8049,21 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Fun__NomAssignment_1"
+    // $ANTLR end "rule__Fun__NomFunAssignment_1"
 
 
     // $ANTLR start "rule__Fun__ParamAssignment_3"
-    // InternalRat.g:2652:1: rule__Fun__ParamAssignment_3 : ( ruleDP ) ;
+    // InternalRat.g:2667:1: rule__Fun__ParamAssignment_3 : ( ruleDP ) ;
     public final void rule__Fun__ParamAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2656:1: ( ( ruleDP ) )
-            // InternalRat.g:2657:2: ( ruleDP )
+            // InternalRat.g:2671:1: ( ( ruleDP ) )
+            // InternalRat.g:2672:2: ( ruleDP )
             {
-            // InternalRat.g:2657:2: ( ruleDP )
-            // InternalRat.g:2658:3: ruleDP
+            // InternalRat.g:2672:2: ( ruleDP )
+            // InternalRat.g:2673:3: ruleDP
             {
              before(grammarAccess.getFunAccess().getParamDPParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -8047,17 +8094,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fun__IsAssignment_6"
-    // InternalRat.g:2667:1: rule__Fun__IsAssignment_6 : ( ruleI ) ;
+    // InternalRat.g:2682:1: rule__Fun__IsAssignment_6 : ( ruleI ) ;
     public final void rule__Fun__IsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2671:1: ( ( ruleI ) )
-            // InternalRat.g:2672:2: ( ruleI )
+            // InternalRat.g:2686:1: ( ( ruleI ) )
+            // InternalRat.g:2687:2: ( ruleI )
             {
-            // InternalRat.g:2672:2: ( ruleI )
-            // InternalRat.g:2673:3: ruleI
+            // InternalRat.g:2687:2: ( ruleI )
+            // InternalRat.g:2688:3: ruleI
             {
              before(grammarAccess.getFunAccess().getIsIParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -8087,26 +8134,26 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Fun__IsAssignment_6"
 
 
-    // $ANTLR start "rule__Fun__EAssignment_8"
-    // InternalRat.g:2682:1: rule__Fun__EAssignment_8 : ( ruleE ) ;
-    public final void rule__Fun__EAssignment_8() throws RecognitionException {
+    // $ANTLR start "rule__Fun__RetourAssignment_8"
+    // InternalRat.g:2697:1: rule__Fun__RetourAssignment_8 : ( ruleE ) ;
+    public final void rule__Fun__RetourAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2686:1: ( ( ruleE ) )
-            // InternalRat.g:2687:2: ( ruleE )
+            // InternalRat.g:2701:1: ( ( ruleE ) )
+            // InternalRat.g:2702:2: ( ruleE )
             {
-            // InternalRat.g:2687:2: ( ruleE )
-            // InternalRat.g:2688:3: ruleE
+            // InternalRat.g:2702:2: ( ruleE )
+            // InternalRat.g:2703:3: ruleE
             {
-             before(grammarAccess.getFunAccess().getEEParserRuleCall_8_0()); 
+             before(grammarAccess.getFunAccess().getRetourEParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
             ruleE();
 
             state._fsp--;
 
-             after(grammarAccess.getFunAccess().getEEParserRuleCall_8_0()); 
+             after(grammarAccess.getFunAccess().getRetourEParserRuleCall_8_0()); 
 
             }
 
@@ -8125,21 +8172,21 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Fun__EAssignment_8"
+    // $ANTLR end "rule__Fun__RetourAssignment_8"
 
 
     // $ANTLR start "rule__Bloc__IsAssignment_2"
-    // InternalRat.g:2697:1: rule__Bloc__IsAssignment_2 : ( ruleI ) ;
+    // InternalRat.g:2712:1: rule__Bloc__IsAssignment_2 : ( ruleI ) ;
     public final void rule__Bloc__IsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2701:1: ( ( ruleI ) )
-            // InternalRat.g:2702:2: ( ruleI )
+            // InternalRat.g:2716:1: ( ( ruleI ) )
+            // InternalRat.g:2717:2: ( ruleI )
             {
-            // InternalRat.g:2702:2: ( ruleI )
-            // InternalRat.g:2703:3: ruleI
+            // InternalRat.g:2717:2: ( ruleI )
+            // InternalRat.g:2718:3: ruleI
             {
              before(grammarAccess.getBlocAccess().getIsIParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -8170,17 +8217,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Declaration__TypeAssignment_0"
-    // InternalRat.g:2712:1: rule__Declaration__TypeAssignment_0 : ( ruleType ) ;
+    // InternalRat.g:2727:1: rule__Declaration__TypeAssignment_0 : ( ruleType ) ;
     public final void rule__Declaration__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2716:1: ( ( ruleType ) )
-            // InternalRat.g:2717:2: ( ruleType )
+            // InternalRat.g:2731:1: ( ( ruleType ) )
+            // InternalRat.g:2732:2: ( ruleType )
             {
-            // InternalRat.g:2717:2: ( ruleType )
-            // InternalRat.g:2718:3: ruleType
+            // InternalRat.g:2732:2: ( ruleType )
+            // InternalRat.g:2733:3: ruleType
             {
              before(grammarAccess.getDeclarationAccess().getTypeTypeParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -8210,22 +8257,22 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Declaration__TypeAssignment_0"
 
 
-    // $ANTLR start "rule__Declaration__NomAssignment_1"
-    // InternalRat.g:2727:1: rule__Declaration__NomAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Declaration__NomAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Declaration__NomDeclAssignment_1"
+    // InternalRat.g:2742:1: rule__Declaration__NomDeclAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Declaration__NomDeclAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2731:1: ( ( RULE_ID ) )
-            // InternalRat.g:2732:2: ( RULE_ID )
+            // InternalRat.g:2746:1: ( ( RULE_ID ) )
+            // InternalRat.g:2747:2: ( RULE_ID )
             {
-            // InternalRat.g:2732:2: ( RULE_ID )
-            // InternalRat.g:2733:3: RULE_ID
+            // InternalRat.g:2747:2: ( RULE_ID )
+            // InternalRat.g:2748:3: RULE_ID
             {
-             before(grammarAccess.getDeclarationAccess().getNomIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getDeclarationAccess().getNomDeclIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getDeclarationAccess().getNomIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getDeclarationAccess().getNomDeclIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -8244,21 +8291,21 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Declaration__NomAssignment_1"
+    // $ANTLR end "rule__Declaration__NomDeclAssignment_1"
 
 
     // $ANTLR start "rule__Declaration__EAssignment_3"
-    // InternalRat.g:2742:1: rule__Declaration__EAssignment_3 : ( ruleE ) ;
+    // InternalRat.g:2757:1: rule__Declaration__EAssignment_3 : ( ruleE ) ;
     public final void rule__Declaration__EAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2746:1: ( ( ruleE ) )
-            // InternalRat.g:2747:2: ( ruleE )
+            // InternalRat.g:2761:1: ( ( ruleE ) )
+            // InternalRat.g:2762:2: ( ruleE )
             {
-            // InternalRat.g:2747:2: ( ruleE )
-            // InternalRat.g:2748:3: ruleE
+            // InternalRat.g:2762:2: ( ruleE )
+            // InternalRat.g:2763:3: ruleE
             {
              before(grammarAccess.getDeclarationAccess().getEEParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -8288,22 +8335,22 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Declaration__EAssignment_3"
 
 
-    // $ANTLR start "rule__Affectation__NomAssignment_0"
-    // InternalRat.g:2757:1: rule__Affectation__NomAssignment_0 : ( RULE_ID ) ;
-    public final void rule__Affectation__NomAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Affectation__NomAffAssignment_0"
+    // InternalRat.g:2772:1: rule__Affectation__NomAffAssignment_0 : ( RULE_ID ) ;
+    public final void rule__Affectation__NomAffAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2761:1: ( ( RULE_ID ) )
-            // InternalRat.g:2762:2: ( RULE_ID )
+            // InternalRat.g:2776:1: ( ( RULE_ID ) )
+            // InternalRat.g:2777:2: ( RULE_ID )
             {
-            // InternalRat.g:2762:2: ( RULE_ID )
-            // InternalRat.g:2763:3: RULE_ID
+            // InternalRat.g:2777:2: ( RULE_ID )
+            // InternalRat.g:2778:3: RULE_ID
             {
-             before(grammarAccess.getAffectationAccess().getNomIDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getAffectationAccess().getNomAffIDTerminalRuleCall_0_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getAffectationAccess().getNomIDTerminalRuleCall_0_0()); 
+             after(grammarAccess.getAffectationAccess().getNomAffIDTerminalRuleCall_0_0()); 
 
             }
 
@@ -8322,21 +8369,21 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Affectation__NomAssignment_0"
+    // $ANTLR end "rule__Affectation__NomAffAssignment_0"
 
 
     // $ANTLR start "rule__Affectation__EAssignment_2"
-    // InternalRat.g:2772:1: rule__Affectation__EAssignment_2 : ( ruleE ) ;
+    // InternalRat.g:2787:1: rule__Affectation__EAssignment_2 : ( ruleE ) ;
     public final void rule__Affectation__EAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2776:1: ( ( ruleE ) )
-            // InternalRat.g:2777:2: ( ruleE )
+            // InternalRat.g:2791:1: ( ( ruleE ) )
+            // InternalRat.g:2792:2: ( ruleE )
             {
-            // InternalRat.g:2777:2: ( ruleE )
-            // InternalRat.g:2778:3: ruleE
+            // InternalRat.g:2792:2: ( ruleE )
+            // InternalRat.g:2793:3: ruleE
             {
              before(grammarAccess.getAffectationAccess().getEEParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -8366,22 +8413,22 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Affectation__EAssignment_2"
 
 
-    // $ANTLR start "rule__Constante__NomAssignment_1"
-    // InternalRat.g:2787:1: rule__Constante__NomAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Constante__NomAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Constante__NomConstAssignment_1"
+    // InternalRat.g:2802:1: rule__Constante__NomConstAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Constante__NomConstAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2791:1: ( ( RULE_ID ) )
-            // InternalRat.g:2792:2: ( RULE_ID )
+            // InternalRat.g:2806:1: ( ( RULE_ID ) )
+            // InternalRat.g:2807:2: ( RULE_ID )
             {
-            // InternalRat.g:2792:2: ( RULE_ID )
-            // InternalRat.g:2793:3: RULE_ID
+            // InternalRat.g:2807:2: ( RULE_ID )
+            // InternalRat.g:2808:3: RULE_ID
             {
-             before(grammarAccess.getConstanteAccess().getNomIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getConstanteAccess().getNomConstIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getConstanteAccess().getNomIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getConstanteAccess().getNomConstIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -8400,25 +8447,25 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Constante__NomAssignment_1"
+    // $ANTLR end "rule__Constante__NomConstAssignment_1"
 
 
-    // $ANTLR start "rule__Constante__EAssignment_3"
-    // InternalRat.g:2802:1: rule__Constante__EAssignment_3 : ( RULE_INT ) ;
-    public final void rule__Constante__EAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Constante__ValAssignment_3"
+    // InternalRat.g:2817:1: rule__Constante__ValAssignment_3 : ( RULE_INT ) ;
+    public final void rule__Constante__ValAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2806:1: ( ( RULE_INT ) )
-            // InternalRat.g:2807:2: ( RULE_INT )
+            // InternalRat.g:2821:1: ( ( RULE_INT ) )
+            // InternalRat.g:2822:2: ( RULE_INT )
             {
-            // InternalRat.g:2807:2: ( RULE_INT )
-            // InternalRat.g:2808:3: RULE_INT
+            // InternalRat.g:2822:2: ( RULE_INT )
+            // InternalRat.g:2823:3: RULE_INT
             {
-             before(grammarAccess.getConstanteAccess().getEINTTerminalRuleCall_3_0()); 
+             before(grammarAccess.getConstanteAccess().getValINTTerminalRuleCall_3_0()); 
             match(input,RULE_INT,FOLLOW_2); 
-             after(grammarAccess.getConstanteAccess().getEINTTerminalRuleCall_3_0()); 
+             after(grammarAccess.getConstanteAccess().getValINTTerminalRuleCall_3_0()); 
 
             }
 
@@ -8437,53 +8484,12 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Constante__EAssignment_3"
+    // $ANTLR end "rule__Constante__ValAssignment_3"
 
 
-    // $ANTLR start "rule__Print__EAssignment_1"
-    // InternalRat.g:2817:1: rule__Print__EAssignment_1 : ( ruleE ) ;
-    public final void rule__Print__EAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRat.g:2821:1: ( ( ruleE ) )
-            // InternalRat.g:2822:2: ( ruleE )
-            {
-            // InternalRat.g:2822:2: ( ruleE )
-            // InternalRat.g:2823:3: ruleE
-            {
-             before(grammarAccess.getPrintAccess().getEEParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleE();
-
-            state._fsp--;
-
-             after(grammarAccess.getPrintAccess().getEEParserRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Print__EAssignment_1"
-
-
-    // $ANTLR start "rule__Conditionnelle__EAssignment_1"
-    // InternalRat.g:2832:1: rule__Conditionnelle__EAssignment_1 : ( ruleE ) ;
-    public final void rule__Conditionnelle__EAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Print__ValAssignment_1"
+    // InternalRat.g:2832:1: rule__Print__ValAssignment_1 : ( ruleE ) ;
+    public final void rule__Print__ValAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8494,13 +8500,13 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
             // InternalRat.g:2837:2: ( ruleE )
             // InternalRat.g:2838:3: ruleE
             {
-             before(grammarAccess.getConditionnelleAccess().getEEParserRuleCall_1_0()); 
+             before(grammarAccess.getPrintAccess().getValEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
             ruleE();
 
             state._fsp--;
 
-             after(grammarAccess.getConditionnelleAccess().getEEParserRuleCall_1_0()); 
+             after(grammarAccess.getPrintAccess().getValEParserRuleCall_1_0()); 
 
             }
 
@@ -8519,29 +8525,29 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Conditionnelle__EAssignment_1"
+    // $ANTLR end "rule__Print__ValAssignment_1"
 
 
-    // $ANTLR start "rule__Conditionnelle__Bloc1Assignment_2"
-    // InternalRat.g:2847:1: rule__Conditionnelle__Bloc1Assignment_2 : ( ruleBloc ) ;
-    public final void rule__Conditionnelle__Bloc1Assignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Conditionnelle__CondcAssignment_1"
+    // InternalRat.g:2847:1: rule__Conditionnelle__CondcAssignment_1 : ( ruleE ) ;
+    public final void rule__Conditionnelle__CondcAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2851:1: ( ( ruleBloc ) )
-            // InternalRat.g:2852:2: ( ruleBloc )
+            // InternalRat.g:2851:1: ( ( ruleE ) )
+            // InternalRat.g:2852:2: ( ruleE )
             {
-            // InternalRat.g:2852:2: ( ruleBloc )
-            // InternalRat.g:2853:3: ruleBloc
+            // InternalRat.g:2852:2: ( ruleE )
+            // InternalRat.g:2853:3: ruleE
             {
-             before(grammarAccess.getConditionnelleAccess().getBloc1BlocParserRuleCall_2_0()); 
+             before(grammarAccess.getConditionnelleAccess().getCondcEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
-            ruleBloc();
+            ruleE();
 
             state._fsp--;
 
-             after(grammarAccess.getConditionnelleAccess().getBloc1BlocParserRuleCall_2_0()); 
+             after(grammarAccess.getConditionnelleAccess().getCondcEParserRuleCall_1_0()); 
 
             }
 
@@ -8560,12 +8566,12 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Conditionnelle__Bloc1Assignment_2"
+    // $ANTLR end "rule__Conditionnelle__CondcAssignment_1"
 
 
-    // $ANTLR start "rule__Conditionnelle__Bloc2Assignment_4"
-    // InternalRat.g:2862:1: rule__Conditionnelle__Bloc2Assignment_4 : ( ruleBloc ) ;
-    public final void rule__Conditionnelle__Bloc2Assignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Conditionnelle__Bloc1condAssignment_2"
+    // InternalRat.g:2862:1: rule__Conditionnelle__Bloc1condAssignment_2 : ( ruleBloc ) ;
+    public final void rule__Conditionnelle__Bloc1condAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8576,13 +8582,13 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
             // InternalRat.g:2867:2: ( ruleBloc )
             // InternalRat.g:2868:3: ruleBloc
             {
-             before(grammarAccess.getConditionnelleAccess().getBloc2BlocParserRuleCall_4_0()); 
+             before(grammarAccess.getConditionnelleAccess().getBloc1condBlocParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleBloc();
 
             state._fsp--;
 
-             after(grammarAccess.getConditionnelleAccess().getBloc2BlocParserRuleCall_4_0()); 
+             after(grammarAccess.getConditionnelleAccess().getBloc1condBlocParserRuleCall_2_0()); 
 
             }
 
@@ -8601,29 +8607,70 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Conditionnelle__Bloc2Assignment_4"
+    // $ANTLR end "rule__Conditionnelle__Bloc1condAssignment_2"
 
 
-    // $ANTLR start "rule__Tantque__EAssignment_1"
-    // InternalRat.g:2877:1: rule__Tantque__EAssignment_1 : ( ruleE ) ;
-    public final void rule__Tantque__EAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Conditionnelle__Bloc2condAssignment_4"
+    // InternalRat.g:2877:1: rule__Conditionnelle__Bloc2condAssignment_4 : ( ruleBloc ) ;
+    public final void rule__Conditionnelle__Bloc2condAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2881:1: ( ( ruleE ) )
-            // InternalRat.g:2882:2: ( ruleE )
+            // InternalRat.g:2881:1: ( ( ruleBloc ) )
+            // InternalRat.g:2882:2: ( ruleBloc )
             {
-            // InternalRat.g:2882:2: ( ruleE )
-            // InternalRat.g:2883:3: ruleE
+            // InternalRat.g:2882:2: ( ruleBloc )
+            // InternalRat.g:2883:3: ruleBloc
             {
-             before(grammarAccess.getTantqueAccess().getEEParserRuleCall_1_0()); 
+             before(grammarAccess.getConditionnelleAccess().getBloc2condBlocParserRuleCall_4_0()); 
+            pushFollow(FOLLOW_2);
+            ruleBloc();
+
+            state._fsp--;
+
+             after(grammarAccess.getConditionnelleAccess().getBloc2condBlocParserRuleCall_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Conditionnelle__Bloc2condAssignment_4"
+
+
+    // $ANTLR start "rule__Tantque__CondtAssignment_1"
+    // InternalRat.g:2892:1: rule__Tantque__CondtAssignment_1 : ( ruleE ) ;
+    public final void rule__Tantque__CondtAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRat.g:2896:1: ( ( ruleE ) )
+            // InternalRat.g:2897:2: ( ruleE )
+            {
+            // InternalRat.g:2897:2: ( ruleE )
+            // InternalRat.g:2898:3: ruleE
+            {
+             before(grammarAccess.getTantqueAccess().getCondtEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
             ruleE();
 
             state._fsp--;
 
-             after(grammarAccess.getTantqueAccess().getEEParserRuleCall_1_0()); 
+             after(grammarAccess.getTantqueAccess().getCondtEParserRuleCall_1_0()); 
 
             }
 
@@ -8642,29 +8689,29 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Tantque__EAssignment_1"
+    // $ANTLR end "rule__Tantque__CondtAssignment_1"
 
 
-    // $ANTLR start "rule__Tantque__BlocAssignment_2"
-    // InternalRat.g:2892:1: rule__Tantque__BlocAssignment_2 : ( ruleBloc ) ;
-    public final void rule__Tantque__BlocAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Tantque__BoucleAssignment_2"
+    // InternalRat.g:2907:1: rule__Tantque__BoucleAssignment_2 : ( ruleBloc ) ;
+    public final void rule__Tantque__BoucleAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2896:1: ( ( ruleBloc ) )
-            // InternalRat.g:2897:2: ( ruleBloc )
+            // InternalRat.g:2911:1: ( ( ruleBloc ) )
+            // InternalRat.g:2912:2: ( ruleBloc )
             {
-            // InternalRat.g:2897:2: ( ruleBloc )
-            // InternalRat.g:2898:3: ruleBloc
+            // InternalRat.g:2912:2: ( ruleBloc )
+            // InternalRat.g:2913:3: ruleBloc
             {
-             before(grammarAccess.getTantqueAccess().getBlocBlocParserRuleCall_2_0()); 
+             before(grammarAccess.getTantqueAccess().getBoucleBlocParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleBloc();
 
             state._fsp--;
 
-             after(grammarAccess.getTantqueAccess().getBlocBlocParserRuleCall_2_0()); 
+             after(grammarAccess.getTantqueAccess().getBoucleBlocParserRuleCall_2_0()); 
 
             }
 
@@ -8683,21 +8730,21 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Tantque__BlocAssignment_2"
+    // $ANTLR end "rule__Tantque__BoucleAssignment_2"
 
 
     // $ANTLR start "rule__DP__TypeAssignment_0"
-    // InternalRat.g:2907:1: rule__DP__TypeAssignment_0 : ( ruleType ) ;
+    // InternalRat.g:2922:1: rule__DP__TypeAssignment_0 : ( ruleType ) ;
     public final void rule__DP__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2911:1: ( ( ruleType ) )
-            // InternalRat.g:2912:2: ( ruleType )
+            // InternalRat.g:2926:1: ( ( ruleType ) )
+            // InternalRat.g:2927:2: ( ruleType )
             {
-            // InternalRat.g:2912:2: ( ruleType )
-            // InternalRat.g:2913:3: ruleType
+            // InternalRat.g:2927:2: ( ruleType )
+            // InternalRat.g:2928:3: ruleType
             {
              before(grammarAccess.getDPAccess().getTypeTypeParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -8728,17 +8775,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DP__IdAssignment_1"
-    // InternalRat.g:2922:1: rule__DP__IdAssignment_1 : ( RULE_ID ) ;
+    // InternalRat.g:2937:1: rule__DP__IdAssignment_1 : ( RULE_ID ) ;
     public final void rule__DP__IdAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2926:1: ( ( RULE_ID ) )
-            // InternalRat.g:2927:2: ( RULE_ID )
+            // InternalRat.g:2941:1: ( ( RULE_ID ) )
+            // InternalRat.g:2942:2: ( RULE_ID )
             {
-            // InternalRat.g:2927:2: ( RULE_ID )
-            // InternalRat.g:2928:3: RULE_ID
+            // InternalRat.g:2942:2: ( RULE_ID )
+            // InternalRat.g:2943:3: RULE_ID
             {
              before(grammarAccess.getDPAccess().getIdIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -8765,21 +8812,21 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Type__TAssignment"
-    // InternalRat.g:2937:1: rule__Type__TAssignment : ( ( rule__Type__TAlternatives_0 ) ) ;
+    // InternalRat.g:2952:1: rule__Type__TAssignment : ( ( rule__Type__TAlternatives_0 ) ) ;
     public final void rule__Type__TAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2941:1: ( ( ( rule__Type__TAlternatives_0 ) ) )
-            // InternalRat.g:2942:2: ( ( rule__Type__TAlternatives_0 ) )
+            // InternalRat.g:2956:1: ( ( ( rule__Type__TAlternatives_0 ) ) )
+            // InternalRat.g:2957:2: ( ( rule__Type__TAlternatives_0 ) )
             {
-            // InternalRat.g:2942:2: ( ( rule__Type__TAlternatives_0 ) )
-            // InternalRat.g:2943:3: ( rule__Type__TAlternatives_0 )
+            // InternalRat.g:2957:2: ( ( rule__Type__TAlternatives_0 ) )
+            // InternalRat.g:2958:3: ( rule__Type__TAlternatives_0 )
             {
              before(grammarAccess.getTypeAccess().getTAlternatives_0()); 
-            // InternalRat.g:2944:3: ( rule__Type__TAlternatives_0 )
-            // InternalRat.g:2944:4: rule__Type__TAlternatives_0
+            // InternalRat.g:2959:3: ( rule__Type__TAlternatives_0 )
+            // InternalRat.g:2959:4: rule__Type__TAlternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__Type__TAlternatives_0();
@@ -8812,17 +8859,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CP__EAssignment_1"
-    // InternalRat.g:2952:1: rule__CP__EAssignment_1 : ( ruleE ) ;
+    // InternalRat.g:2967:1: rule__CP__EAssignment_1 : ( ruleE ) ;
     public final void rule__CP__EAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2956:1: ( ( ruleE ) )
-            // InternalRat.g:2957:2: ( ruleE )
+            // InternalRat.g:2971:1: ( ( ruleE ) )
+            // InternalRat.g:2972:2: ( ruleE )
             {
-            // InternalRat.g:2957:2: ( ruleE )
-            // InternalRat.g:2958:3: ruleE
+            // InternalRat.g:2972:2: ( ruleE )
+            // InternalRat.g:2973:3: ruleE
             {
              before(grammarAccess.getCPAccess().getEEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8852,22 +8899,22 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__CP__EAssignment_1"
 
 
-    // $ANTLR start "rule__Appel__NomAssignment_1"
-    // InternalRat.g:2967:1: rule__Appel__NomAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Appel__NomAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Appel__NomAppelAssignment_1"
+    // InternalRat.g:2982:1: rule__Appel__NomAppelAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Appel__NomAppelAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2971:1: ( ( RULE_ID ) )
-            // InternalRat.g:2972:2: ( RULE_ID )
+            // InternalRat.g:2986:1: ( ( RULE_ID ) )
+            // InternalRat.g:2987:2: ( RULE_ID )
             {
-            // InternalRat.g:2972:2: ( RULE_ID )
-            // InternalRat.g:2973:3: RULE_ID
+            // InternalRat.g:2987:2: ( RULE_ID )
+            // InternalRat.g:2988:3: RULE_ID
             {
-             before(grammarAccess.getAppelAccess().getNomIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getAppelAccess().getNomAppelIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getAppelAccess().getNomIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getAppelAccess().getNomAppelIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -8886,21 +8933,21 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Appel__NomAssignment_1"
+    // $ANTLR end "rule__Appel__NomAppelAssignment_1"
 
 
     // $ANTLR start "rule__Appel__ParamAssignment_3"
-    // InternalRat.g:2982:1: rule__Appel__ParamAssignment_3 : ( ruleCP ) ;
+    // InternalRat.g:2997:1: rule__Appel__ParamAssignment_3 : ( ruleCP ) ;
     public final void rule__Appel__ParamAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:2986:1: ( ( ruleCP ) )
-            // InternalRat.g:2987:2: ( ruleCP )
+            // InternalRat.g:3001:1: ( ( ruleCP ) )
+            // InternalRat.g:3002:2: ( ruleCP )
             {
-            // InternalRat.g:2987:2: ( ruleCP )
-            // InternalRat.g:2988:3: ruleCP
+            // InternalRat.g:3002:2: ( ruleCP )
+            // InternalRat.g:3003:3: ruleCP
             {
              before(grammarAccess.getAppelAccess().getParamCPParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -8931,17 +8978,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rationnel__E1Assignment_1"
-    // InternalRat.g:2997:1: rule__Rationnel__E1Assignment_1 : ( ruleE ) ;
+    // InternalRat.g:3012:1: rule__Rationnel__E1Assignment_1 : ( ruleE ) ;
     public final void rule__Rationnel__E1Assignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:3001:1: ( ( ruleE ) )
-            // InternalRat.g:3002:2: ( ruleE )
+            // InternalRat.g:3016:1: ( ( ruleE ) )
+            // InternalRat.g:3017:2: ( ruleE )
             {
-            // InternalRat.g:3002:2: ( ruleE )
-            // InternalRat.g:3003:3: ruleE
+            // InternalRat.g:3017:2: ( ruleE )
+            // InternalRat.g:3018:3: ruleE
             {
              before(grammarAccess.getRationnelAccess().getE1EParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8972,17 +9019,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rationnel__E2Assignment_3"
-    // InternalRat.g:3012:1: rule__Rationnel__E2Assignment_3 : ( ruleE ) ;
+    // InternalRat.g:3027:1: rule__Rationnel__E2Assignment_3 : ( ruleE ) ;
     public final void rule__Rationnel__E2Assignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:3016:1: ( ( ruleE ) )
-            // InternalRat.g:3017:2: ( ruleE )
+            // InternalRat.g:3031:1: ( ( ruleE ) )
+            // InternalRat.g:3032:2: ( ruleE )
             {
-            // InternalRat.g:3017:2: ( ruleE )
-            // InternalRat.g:3018:3: ruleE
+            // InternalRat.g:3032:2: ( ruleE )
+            // InternalRat.g:3033:3: ruleE
             {
              before(grammarAccess.getRationnelAccess().getE2EParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -9012,50 +9059,9 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Rationnel__E2Assignment_3"
 
 
-    // $ANTLR start "rule__Numerateur__EAssignment_1"
-    // InternalRat.g:3027:1: rule__Numerateur__EAssignment_1 : ( ruleE ) ;
-    public final void rule__Numerateur__EAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRat.g:3031:1: ( ( ruleE ) )
-            // InternalRat.g:3032:2: ( ruleE )
-            {
-            // InternalRat.g:3032:2: ( ruleE )
-            // InternalRat.g:3033:3: ruleE
-            {
-             before(grammarAccess.getNumerateurAccess().getEEParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleE();
-
-            state._fsp--;
-
-             after(grammarAccess.getNumerateurAccess().getEEParserRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Numerateur__EAssignment_1"
-
-
-    // $ANTLR start "rule__Denominateur__EAssignment_1"
-    // InternalRat.g:3042:1: rule__Denominateur__EAssignment_1 : ( ruleE ) ;
-    public final void rule__Denominateur__EAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Numerateur__ValNumAssignment_1"
+    // InternalRat.g:3042:1: rule__Numerateur__ValNumAssignment_1 : ( ruleE ) ;
+    public final void rule__Numerateur__ValNumAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9066,13 +9072,13 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
             // InternalRat.g:3047:2: ( ruleE )
             // InternalRat.g:3048:3: ruleE
             {
-             before(grammarAccess.getDenominateurAccess().getEEParserRuleCall_1_0()); 
+             before(grammarAccess.getNumerateurAccess().getValNumEParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
             ruleE();
 
             state._fsp--;
 
-             after(grammarAccess.getDenominateurAccess().getEEParserRuleCall_1_0()); 
+             after(grammarAccess.getNumerateurAccess().getValNumEParserRuleCall_1_0()); 
 
             }
 
@@ -9091,21 +9097,62 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Denominateur__EAssignment_1"
+    // $ANTLR end "rule__Numerateur__ValNumAssignment_1"
+
+
+    // $ANTLR start "rule__Denominateur__ValDenumAssignment_1"
+    // InternalRat.g:3057:1: rule__Denominateur__ValDenumAssignment_1 : ( ruleE ) ;
+    public final void rule__Denominateur__ValDenumAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRat.g:3061:1: ( ( ruleE ) )
+            // InternalRat.g:3062:2: ( ruleE )
+            {
+            // InternalRat.g:3062:2: ( ruleE )
+            // InternalRat.g:3063:3: ruleE
+            {
+             before(grammarAccess.getDenominateurAccess().getValDenumEParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_2);
+            ruleE();
+
+            state._fsp--;
+
+             after(grammarAccess.getDenominateurAccess().getValDenumEParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Denominateur__ValDenumAssignment_1"
 
 
     // $ANTLR start "rule__Identificateur__IdAssignment"
-    // InternalRat.g:3057:1: rule__Identificateur__IdAssignment : ( RULE_ID ) ;
+    // InternalRat.g:3072:1: rule__Identificateur__IdAssignment : ( RULE_ID ) ;
     public final void rule__Identificateur__IdAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:3061:1: ( ( RULE_ID ) )
-            // InternalRat.g:3062:2: ( RULE_ID )
+            // InternalRat.g:3076:1: ( ( RULE_ID ) )
+            // InternalRat.g:3077:2: ( RULE_ID )
             {
-            // InternalRat.g:3062:2: ( RULE_ID )
-            // InternalRat.g:3063:3: RULE_ID
+            // InternalRat.g:3077:2: ( RULE_ID )
+            // InternalRat.g:3078:3: RULE_ID
             {
              before(grammarAccess.getIdentificateurAccess().getIdIDTerminalRuleCall_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -9131,32 +9178,32 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Identificateur__IdAssignment"
 
 
-    // $ANTLR start "rule__Boolean__BAssignment"
-    // InternalRat.g:3072:1: rule__Boolean__BAssignment : ( ( rule__Boolean__BAlternatives_0 ) ) ;
-    public final void rule__Boolean__BAssignment() throws RecognitionException {
+    // $ANTLR start "rule__Boolean__ValAssignment"
+    // InternalRat.g:3087:1: rule__Boolean__ValAssignment : ( ( rule__Boolean__ValAlternatives_0 ) ) ;
+    public final void rule__Boolean__ValAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:3076:1: ( ( ( rule__Boolean__BAlternatives_0 ) ) )
-            // InternalRat.g:3077:2: ( ( rule__Boolean__BAlternatives_0 ) )
+            // InternalRat.g:3091:1: ( ( ( rule__Boolean__ValAlternatives_0 ) ) )
+            // InternalRat.g:3092:2: ( ( rule__Boolean__ValAlternatives_0 ) )
             {
-            // InternalRat.g:3077:2: ( ( rule__Boolean__BAlternatives_0 ) )
-            // InternalRat.g:3078:3: ( rule__Boolean__BAlternatives_0 )
+            // InternalRat.g:3092:2: ( ( rule__Boolean__ValAlternatives_0 ) )
+            // InternalRat.g:3093:3: ( rule__Boolean__ValAlternatives_0 )
             {
-             before(grammarAccess.getBooleanAccess().getBAlternatives_0()); 
-            // InternalRat.g:3079:3: ( rule__Boolean__BAlternatives_0 )
-            // InternalRat.g:3079:4: rule__Boolean__BAlternatives_0
+             before(grammarAccess.getBooleanAccess().getValAlternatives_0()); 
+            // InternalRat.g:3094:3: ( rule__Boolean__ValAlternatives_0 )
+            // InternalRat.g:3094:4: rule__Boolean__ValAlternatives_0
             {
             pushFollow(FOLLOW_2);
-            rule__Boolean__BAlternatives_0();
+            rule__Boolean__ValAlternatives_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBooleanAccess().getBAlternatives_0()); 
+             after(grammarAccess.getBooleanAccess().getValAlternatives_0()); 
 
             }
 
@@ -9175,21 +9222,21 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Boolean__BAssignment"
+    // $ANTLR end "rule__Boolean__ValAssignment"
 
 
     // $ANTLR start "rule__Entier__IntAssignment"
-    // InternalRat.g:3087:1: rule__Entier__IntAssignment : ( RULE_INT ) ;
+    // InternalRat.g:3102:1: rule__Entier__IntAssignment : ( RULE_INT ) ;
     public final void rule__Entier__IntAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:3091:1: ( ( RULE_INT ) )
-            // InternalRat.g:3092:2: ( RULE_INT )
+            // InternalRat.g:3106:1: ( ( RULE_INT ) )
+            // InternalRat.g:3107:2: ( RULE_INT )
             {
-            // InternalRat.g:3092:2: ( RULE_INT )
-            // InternalRat.g:3093:3: RULE_INT
+            // InternalRat.g:3107:2: ( RULE_INT )
+            // InternalRat.g:3108:3: RULE_INT
             {
              before(grammarAccess.getEntierAccess().getIntINTTerminalRuleCall_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -9216,17 +9263,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OpBin__E1Assignment_1"
-    // InternalRat.g:3102:1: rule__OpBin__E1Assignment_1 : ( ruleE ) ;
+    // InternalRat.g:3117:1: rule__OpBin__E1Assignment_1 : ( ruleE ) ;
     public final void rule__OpBin__E1Assignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:3106:1: ( ( ruleE ) )
-            // InternalRat.g:3107:2: ( ruleE )
+            // InternalRat.g:3121:1: ( ( ruleE ) )
+            // InternalRat.g:3122:2: ( ruleE )
             {
-            // InternalRat.g:3107:2: ( ruleE )
-            // InternalRat.g:3108:3: ruleE
+            // InternalRat.g:3122:2: ( ruleE )
+            // InternalRat.g:3123:3: ruleE
             {
              before(grammarAccess.getOpBinAccess().getE1EParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -9257,17 +9304,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OpBin__OpAssignment_2"
-    // InternalRat.g:3117:1: rule__OpBin__OpAssignment_2 : ( ruleOperande ) ;
+    // InternalRat.g:3132:1: rule__OpBin__OpAssignment_2 : ( ruleOperande ) ;
     public final void rule__OpBin__OpAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:3121:1: ( ( ruleOperande ) )
-            // InternalRat.g:3122:2: ( ruleOperande )
+            // InternalRat.g:3136:1: ( ( ruleOperande ) )
+            // InternalRat.g:3137:2: ( ruleOperande )
             {
-            // InternalRat.g:3122:2: ( ruleOperande )
-            // InternalRat.g:3123:3: ruleOperande
+            // InternalRat.g:3137:2: ( ruleOperande )
+            // InternalRat.g:3138:3: ruleOperande
             {
              before(grammarAccess.getOpBinAccess().getOpOperandeParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -9298,17 +9345,17 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OpBin__E2Assignment_3"
-    // InternalRat.g:3132:1: rule__OpBin__E2Assignment_3 : ( ruleE ) ;
+    // InternalRat.g:3147:1: rule__OpBin__E2Assignment_3 : ( ruleE ) ;
     public final void rule__OpBin__E2Assignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:3136:1: ( ( ruleE ) )
-            // InternalRat.g:3137:2: ( ruleE )
+            // InternalRat.g:3151:1: ( ( ruleE ) )
+            // InternalRat.g:3152:2: ( ruleE )
             {
-            // InternalRat.g:3137:2: ( ruleE )
-            // InternalRat.g:3138:3: ruleE
+            // InternalRat.g:3152:2: ( ruleE )
+            // InternalRat.g:3153:3: ruleE
             {
              before(grammarAccess.getOpBinAccess().getE2EParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -9339,21 +9386,21 @@ public class InternalRatParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operande__OpAssignment"
-    // InternalRat.g:3147:1: rule__Operande__OpAssignment : ( ( rule__Operande__OpAlternatives_0 ) ) ;
+    // InternalRat.g:3162:1: rule__Operande__OpAssignment : ( ( rule__Operande__OpAlternatives_0 ) ) ;
     public final void rule__Operande__OpAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRat.g:3151:1: ( ( ( rule__Operande__OpAlternatives_0 ) ) )
-            // InternalRat.g:3152:2: ( ( rule__Operande__OpAlternatives_0 ) )
+            // InternalRat.g:3166:1: ( ( ( rule__Operande__OpAlternatives_0 ) ) )
+            // InternalRat.g:3167:2: ( ( rule__Operande__OpAlternatives_0 ) )
             {
-            // InternalRat.g:3152:2: ( ( rule__Operande__OpAlternatives_0 ) )
-            // InternalRat.g:3153:3: ( rule__Operande__OpAlternatives_0 )
+            // InternalRat.g:3167:2: ( ( rule__Operande__OpAlternatives_0 ) )
+            // InternalRat.g:3168:3: ( rule__Operande__OpAlternatives_0 )
             {
              before(grammarAccess.getOperandeAccess().getOpAlternatives_0()); 
-            // InternalRat.g:3154:3: ( rule__Operande__OpAlternatives_0 )
-            // InternalRat.g:3154:4: rule__Operande__OpAlternatives_0
+            // InternalRat.g:3169:3: ( rule__Operande__OpAlternatives_0 )
+            // InternalRat.g:3169:4: rule__Operande__OpAlternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__Operande__OpAlternatives_0();

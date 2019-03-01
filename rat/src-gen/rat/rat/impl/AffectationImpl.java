@@ -23,7 +23,7 @@ import rat.rat.RatPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.impl.AffectationImpl#getNom <em>Nom</em>}</li>
+ *   <li>{@link rat.rat.impl.AffectationImpl#getNomAff <em>Nom Aff</em>}</li>
  *   <li>{@link rat.rat.impl.AffectationImpl#getE <em>E</em>}</li>
  * </ul>
  *
@@ -32,24 +32,24 @@ import rat.rat.RatPackage;
 public class AffectationImpl extends IImpl implements Affectation
 {
   /**
-   * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The default value of the '{@link #getNomAff() <em>Nom Aff</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomAff()
    * @generated
    * @ordered
    */
-  protected static final String NOM_EDEFAULT = null;
+  protected static final String NOM_AFF_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The cached value of the '{@link #getNomAff() <em>Nom Aff</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getNomAff()
    * @generated
    * @ordered
    */
-  protected String nom = NOM_EDEFAULT;
+  protected String nomAff = NOM_AFF_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
@@ -87,9 +87,9 @@ public class AffectationImpl extends IImpl implements Affectation
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNom()
+  public String getNomAff()
   {
-    return nom;
+    return nomAff;
   }
 
   /**
@@ -97,12 +97,12 @@ public class AffectationImpl extends IImpl implements Affectation
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNom(String newNom)
+  public void setNomAff(String newNomAff)
   {
-    String oldNom = nom;
-    nom = newNom;
+    String oldNomAff = nomAff;
+    nomAff = newNomAff;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.AFFECTATION__NOM, oldNom, nom));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.AFFECTATION__NOM_AFF, oldNomAff, nomAff));
   }
 
   /**
@@ -179,8 +179,8 @@ public class AffectationImpl extends IImpl implements Affectation
   {
     switch (featureID)
     {
-      case RatPackage.AFFECTATION__NOM:
-        return getNom();
+      case RatPackage.AFFECTATION__NOM_AFF:
+        return getNomAff();
       case RatPackage.AFFECTATION__E:
         return getE();
     }
@@ -197,8 +197,8 @@ public class AffectationImpl extends IImpl implements Affectation
   {
     switch (featureID)
     {
-      case RatPackage.AFFECTATION__NOM:
-        setNom((String)newValue);
+      case RatPackage.AFFECTATION__NOM_AFF:
+        setNomAff((String)newValue);
         return;
       case RatPackage.AFFECTATION__E:
         setE((E)newValue);
@@ -217,8 +217,8 @@ public class AffectationImpl extends IImpl implements Affectation
   {
     switch (featureID)
     {
-      case RatPackage.AFFECTATION__NOM:
-        setNom(NOM_EDEFAULT);
+      case RatPackage.AFFECTATION__NOM_AFF:
+        setNomAff(NOM_AFF_EDEFAULT);
         return;
       case RatPackage.AFFECTATION__E:
         setE((E)null);
@@ -237,8 +237,8 @@ public class AffectationImpl extends IImpl implements Affectation
   {
     switch (featureID)
     {
-      case RatPackage.AFFECTATION__NOM:
-        return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
+      case RatPackage.AFFECTATION__NOM_AFF:
+        return NOM_AFF_EDEFAULT == null ? nomAff != null : !NOM_AFF_EDEFAULT.equals(nomAff);
       case RatPackage.AFFECTATION__E:
         return e != null;
     }
@@ -256,8 +256,8 @@ public class AffectationImpl extends IImpl implements Affectation
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nom: ");
-    result.append(nom);
+    result.append(" (nomAff: ");
+    result.append(nomAff);
     result.append(')');
     return result.toString();
   }

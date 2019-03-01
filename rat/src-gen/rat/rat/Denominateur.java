@@ -13,7 +13,7 @@ package rat.rat;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.Denominateur#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.Denominateur#getValDenum <em>Val Denum</em>}</li>
  * </ul>
  *
  * @see rat.rat.RatPackage#getDenominateur()
@@ -23,29 +23,29 @@ package rat.rat;
 public interface Denominateur extends E
 {
   /**
-   * Returns the value of the '<em><b>E</b></em>' containment reference.
+   * Returns the value of the '<em><b>Val Denum</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>E</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Val Denum</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>E</em>' containment reference.
-   * @see #setE(E)
-   * @see rat.rat.RatPackage#getDenominateur_E()
+   * @return the value of the '<em>Val Denum</em>' containment reference.
+   * @see #setValDenum(E)
+   * @see rat.rat.RatPackage#getDenominateur_ValDenum()
    * @model containment="true"
    * @generated
    */
-  E getE();
+  E getValDenum();
 
   /**
-   * Sets the value of the '{@link rat.rat.Denominateur#getE <em>E</em>}' containment reference.
+   * Sets the value of the '{@link rat.rat.Denominateur#getValDenum <em>Val Denum</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>E</em>' containment reference.
-   * @see #getE()
+   * @param value the new value of the '<em>Val Denum</em>' containment reference.
+   * @see #getValDenum()
    * @generated
    */
-  void setE(E value);
+  void setValDenum(E value);
 
 } // Denominateur

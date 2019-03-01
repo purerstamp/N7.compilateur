@@ -4,16 +4,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="Prog">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fun" upperBound="-1" eType="#//Fun"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomProg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bloc" eType="#//Bloc" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fun">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomFun" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="param" upperBound="-1"
         eType="#//DP" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="is" upperBound="-1" eType="#//I"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//E" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="retour" eType="#//E" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Bloc">
     <eStructuralFeatures xsi:type="ecore:EReference" name="is" upperBound="-1" eType="#//I"
@@ -22,30 +23,31 @@
   <eClassifiers xsi:type="ecore:EClass" name="I"/>
   <eClassifiers xsi:type="ecore:EClass" name="Declaration" eSuperTypes="#//I">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomDecl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//E" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Affectation" eSuperTypes="#//I">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomAff" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//E" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Constante" eSuperTypes="#//I">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="e" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomConst" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Print" eSuperTypes="#//I">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//E" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="val" eType="#//E" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Conditionnelle" eSuperTypes="#//I">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//E" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bloc1" eType="#//Bloc"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condc" eType="#//E" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bloc1cond" eType="#//Bloc"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bloc2" eType="#//Bloc"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bloc2cond" eType="#//Bloc"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tantque" eSuperTypes="#//I">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//E" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bloc" eType="#//Bloc" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condt" eType="#//E" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boucle" eType="#//Bloc"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DP">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
@@ -60,7 +62,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="E"/>
   <eClassifiers xsi:type="ecore:EClass" name="Appel" eSuperTypes="#//E">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomAppel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="param" upperBound="-1"
         eType="#//CP" containment="true"/>
   </eClassifiers>
@@ -69,16 +71,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="e2" eType="#//E" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Numerateur" eSuperTypes="#//E">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//E" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valNum" eType="#//E" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Denominateur" eSuperTypes="#//E">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//E" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valDenum" eType="#//E"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Identificateur" eSuperTypes="#//E">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Boolean" eSuperTypes="#//E">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="b" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entier" eSuperTypes="#//E">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="int" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

@@ -17,10 +17,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link rat.rat.Fun#getType <em>Type</em>}</li>
- *   <li>{@link rat.rat.Fun#getNom <em>Nom</em>}</li>
+ *   <li>{@link rat.rat.Fun#getNomFun <em>Nom Fun</em>}</li>
  *   <li>{@link rat.rat.Fun#getParam <em>Param</em>}</li>
  *   <li>{@link rat.rat.Fun#getIs <em>Is</em>}</li>
- *   <li>{@link rat.rat.Fun#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.Fun#getRetour <em>Retour</em>}</li>
  * </ul>
  *
  * @see rat.rat.RatPackage#getFun()
@@ -56,30 +56,30 @@ public interface Fun extends EObject
   void setType(Type value);
 
   /**
-   * Returns the value of the '<em><b>Nom</b></em>' attribute.
+   * Returns the value of the '<em><b>Nom Fun</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nom</em>' attribute isn't clear,
+   * If the meaning of the '<em>Nom Fun</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nom</em>' attribute.
-   * @see #setNom(String)
-   * @see rat.rat.RatPackage#getFun_Nom()
+   * @return the value of the '<em>Nom Fun</em>' attribute.
+   * @see #setNomFun(String)
+   * @see rat.rat.RatPackage#getFun_NomFun()
    * @model
    * @generated
    */
-  String getNom();
+  String getNomFun();
 
   /**
-   * Sets the value of the '{@link rat.rat.Fun#getNom <em>Nom</em>}' attribute.
+   * Sets the value of the '{@link rat.rat.Fun#getNomFun <em>Nom Fun</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nom</em>' attribute.
-   * @see #getNom()
+   * @param value the new value of the '<em>Nom Fun</em>' attribute.
+   * @see #getNomFun()
    * @generated
    */
-  void setNom(String value);
+  void setNomFun(String value);
 
   /**
    * Returns the value of the '<em><b>Param</b></em>' containment reference list.
@@ -114,29 +114,29 @@ public interface Fun extends EObject
   EList<I> getIs();
 
   /**
-   * Returns the value of the '<em><b>E</b></em>' containment reference.
+   * Returns the value of the '<em><b>Retour</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>E</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Retour</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>E</em>' containment reference.
-   * @see #setE(E)
-   * @see rat.rat.RatPackage#getFun_E()
+   * @return the value of the '<em>Retour</em>' containment reference.
+   * @see #setRetour(E)
+   * @see rat.rat.RatPackage#getFun_Retour()
    * @model containment="true"
    * @generated
    */
-  E getE();
+  E getRetour();
 
   /**
-   * Sets the value of the '{@link rat.rat.Fun#getE <em>E</em>}' containment reference.
+   * Sets the value of the '{@link rat.rat.Fun#getRetour <em>Retour</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>E</em>' containment reference.
-   * @see #getE()
+   * @param value the new value of the '<em>Retour</em>' containment reference.
+   * @see #getRetour()
    * @generated
    */
-  void setE(E value);
+  void setRetour(E value);
 
 } // Fun

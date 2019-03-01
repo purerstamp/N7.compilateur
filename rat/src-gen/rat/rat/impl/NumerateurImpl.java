@@ -23,7 +23,7 @@ import rat.rat.RatPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.impl.NumerateurImpl#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.impl.NumerateurImpl#getValNum <em>Val Num</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,14 +31,14 @@ import rat.rat.RatPackage;
 public class NumerateurImpl extends EImpl implements Numerateur
 {
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
+   * The cached value of the '{@link #getValNum() <em>Val Num</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getValNum()
    * @generated
    * @ordered
    */
-  protected E e;
+  protected E valNum;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,9 +66,9 @@ public class NumerateurImpl extends EImpl implements Numerateur
    * <!-- end-user-doc -->
    * @generated
    */
-  public E getE()
+  public E getValNum()
   {
-    return e;
+    return valNum;
   }
 
   /**
@@ -76,13 +76,13 @@ public class NumerateurImpl extends EImpl implements Numerateur
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE(E newE, NotificationChain msgs)
+  public NotificationChain basicSetValNum(E newValNum, NotificationChain msgs)
   {
-    E oldE = e;
-    e = newE;
+    E oldValNum = valNum;
+    valNum = newValNum;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.NUMERATEUR__E, oldE, newE);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.NUMERATEUR__VAL_NUM, oldValNum, newValNum);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -93,20 +93,20 @@ public class NumerateurImpl extends EImpl implements Numerateur
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE(E newE)
+  public void setValNum(E newValNum)
   {
-    if (newE != e)
+    if (newValNum != valNum)
     {
       NotificationChain msgs = null;
-      if (e != null)
-        msgs = ((InternalEObject)e).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.NUMERATEUR__E, null, msgs);
-      if (newE != null)
-        msgs = ((InternalEObject)newE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.NUMERATEUR__E, null, msgs);
-      msgs = basicSetE(newE, msgs);
+      if (valNum != null)
+        msgs = ((InternalEObject)valNum).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.NUMERATEUR__VAL_NUM, null, msgs);
+      if (newValNum != null)
+        msgs = ((InternalEObject)newValNum).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.NUMERATEUR__VAL_NUM, null, msgs);
+      msgs = basicSetValNum(newValNum, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.NUMERATEUR__E, newE, newE));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.NUMERATEUR__VAL_NUM, newValNum, newValNum));
   }
 
   /**
@@ -119,8 +119,8 @@ public class NumerateurImpl extends EImpl implements Numerateur
   {
     switch (featureID)
     {
-      case RatPackage.NUMERATEUR__E:
-        return basicSetE(null, msgs);
+      case RatPackage.NUMERATEUR__VAL_NUM:
+        return basicSetValNum(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,8 +135,8 @@ public class NumerateurImpl extends EImpl implements Numerateur
   {
     switch (featureID)
     {
-      case RatPackage.NUMERATEUR__E:
-        return getE();
+      case RatPackage.NUMERATEUR__VAL_NUM:
+        return getValNum();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,8 +151,8 @@ public class NumerateurImpl extends EImpl implements Numerateur
   {
     switch (featureID)
     {
-      case RatPackage.NUMERATEUR__E:
-        setE((E)newValue);
+      case RatPackage.NUMERATEUR__VAL_NUM:
+        setValNum((E)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +168,8 @@ public class NumerateurImpl extends EImpl implements Numerateur
   {
     switch (featureID)
     {
-      case RatPackage.NUMERATEUR__E:
-        setE((E)null);
+      case RatPackage.NUMERATEUR__VAL_NUM:
+        setValNum((E)null);
         return;
     }
     super.eUnset(featureID);
@@ -185,8 +185,8 @@ public class NumerateurImpl extends EImpl implements Numerateur
   {
     switch (featureID)
     {
-      case RatPackage.NUMERATEUR__E:
-        return e != null;
+      case RatPackage.NUMERATEUR__VAL_NUM:
+        return valNum != null;
     }
     return super.eIsSet(featureID);
   }

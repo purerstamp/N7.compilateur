@@ -8,14 +8,15 @@
       ecorePackage="Rat.ecore#/">
     <genClasses ecoreClass="Rat.ecore#//Prog">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Prog/fun"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Prog/nomProg"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Prog/bloc"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Fun">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Fun/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Fun/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Fun/nomFun"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Fun/param"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Fun/is"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Fun/e"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Fun/retour"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Bloc">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Bloc/is"/>
@@ -23,28 +24,28 @@
     <genClasses ecoreClass="Rat.ecore#//I"/>
     <genClasses ecoreClass="Rat.ecore#//Declaration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Declaration/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Declaration/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Declaration/nomDecl"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Declaration/e"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Affectation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Affectation/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Affectation/nomAff"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Affectation/e"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Constante">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Constante/nom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Constante/e"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Constante/nomConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Constante/val"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Print">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Print/e"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Print/val"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Conditionnelle">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Conditionnelle/e"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Conditionnelle/bloc1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Conditionnelle/bloc2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Conditionnelle/condc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Conditionnelle/bloc1cond"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Conditionnelle/bloc2cond"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Tantque">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Tantque/e"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Tantque/bloc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Tantque/condt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Tantque/boucle"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//DP">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//DP/type"/>
@@ -58,7 +59,7 @@
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//E"/>
     <genClasses ecoreClass="Rat.ecore#//Appel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Appel/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Appel/nomAppel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Appel/param"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Rationnel">
@@ -66,16 +67,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Rationnel/e2"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Numerateur">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Numerateur/e"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Numerateur/valNum"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Denominateur">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Denominateur/e"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rat.ecore#//Denominateur/valDenum"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Identificateur">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Identificateur/id"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Boolean">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Boolean/b"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Boolean/val"/>
     </genClasses>
     <genClasses ecoreClass="Rat.ecore#//Entier">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rat.ecore#//Entier/int"/>

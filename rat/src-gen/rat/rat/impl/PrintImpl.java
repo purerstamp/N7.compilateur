@@ -23,7 +23,7 @@ import rat.rat.RatPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.impl.PrintImpl#getE <em>E</em>}</li>
+ *   <li>{@link rat.rat.impl.PrintImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,14 +31,14 @@ import rat.rat.RatPackage;
 public class PrintImpl extends IImpl implements Print
 {
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
+   * The cached value of the '{@link #getVal() <em>Val</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected E e;
+  protected E val;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,9 +66,9 @@ public class PrintImpl extends IImpl implements Print
    * <!-- end-user-doc -->
    * @generated
    */
-  public E getE()
+  public E getVal()
   {
-    return e;
+    return val;
   }
 
   /**
@@ -76,13 +76,13 @@ public class PrintImpl extends IImpl implements Print
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE(E newE, NotificationChain msgs)
+  public NotificationChain basicSetVal(E newVal, NotificationChain msgs)
   {
-    E oldE = e;
-    e = newE;
+    E oldVal = val;
+    val = newVal;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.PRINT__E, oldE, newE);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RatPackage.PRINT__VAL, oldVal, newVal);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -93,20 +93,20 @@ public class PrintImpl extends IImpl implements Print
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE(E newE)
+  public void setVal(E newVal)
   {
-    if (newE != e)
+    if (newVal != val)
     {
       NotificationChain msgs = null;
-      if (e != null)
-        msgs = ((InternalEObject)e).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.PRINT__E, null, msgs);
-      if (newE != null)
-        msgs = ((InternalEObject)newE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.PRINT__E, null, msgs);
-      msgs = basicSetE(newE, msgs);
+      if (val != null)
+        msgs = ((InternalEObject)val).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RatPackage.PRINT__VAL, null, msgs);
+      if (newVal != null)
+        msgs = ((InternalEObject)newVal).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RatPackage.PRINT__VAL, null, msgs);
+      msgs = basicSetVal(newVal, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.PRINT__E, newE, newE));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.PRINT__VAL, newVal, newVal));
   }
 
   /**
@@ -119,8 +119,8 @@ public class PrintImpl extends IImpl implements Print
   {
     switch (featureID)
     {
-      case RatPackage.PRINT__E:
-        return basicSetE(null, msgs);
+      case RatPackage.PRINT__VAL:
+        return basicSetVal(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,8 +135,8 @@ public class PrintImpl extends IImpl implements Print
   {
     switch (featureID)
     {
-      case RatPackage.PRINT__E:
-        return getE();
+      case RatPackage.PRINT__VAL:
+        return getVal();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,8 +151,8 @@ public class PrintImpl extends IImpl implements Print
   {
     switch (featureID)
     {
-      case RatPackage.PRINT__E:
-        setE((E)newValue);
+      case RatPackage.PRINT__VAL:
+        setVal((E)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +168,8 @@ public class PrintImpl extends IImpl implements Print
   {
     switch (featureID)
     {
-      case RatPackage.PRINT__E:
-        setE((E)null);
+      case RatPackage.PRINT__VAL:
+        setVal((E)null);
         return;
     }
     super.eUnset(featureID);
@@ -185,8 +185,8 @@ public class PrintImpl extends IImpl implements Print
   {
     switch (featureID)
     {
-      case RatPackage.PRINT__E:
-        return e != null;
+      case RatPackage.PRINT__VAL:
+        return val != null;
     }
     return super.eIsSet(featureID);
   }

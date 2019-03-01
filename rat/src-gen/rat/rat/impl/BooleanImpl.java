@@ -19,7 +19,7 @@ import rat.rat.RatPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rat.rat.impl.BooleanImpl#getB <em>B</em>}</li>
+ *   <li>{@link rat.rat.impl.BooleanImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @generated
@@ -27,24 +27,24 @@ import rat.rat.RatPackage;
 public class BooleanImpl extends EImpl implements rat.rat.Boolean
 {
   /**
-   * The default value of the '{@link #getB() <em>B</em>}' attribute.
+   * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getB()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected static final String B_EDEFAULT = null;
+  protected static final String VAL_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getB() <em>B</em>}' attribute.
+   * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getB()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected String b = B_EDEFAULT;
+  protected String val = VAL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,9 +72,9 @@ public class BooleanImpl extends EImpl implements rat.rat.Boolean
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getB()
+  public String getVal()
   {
-    return b;
+    return val;
   }
 
   /**
@@ -82,12 +82,12 @@ public class BooleanImpl extends EImpl implements rat.rat.Boolean
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setB(String newB)
+  public void setVal(String newVal)
   {
-    String oldB = b;
-    b = newB;
+    String oldVal = val;
+    val = newVal;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.BOOLEAN__B, oldB, b));
+      eNotify(new ENotificationImpl(this, Notification.SET, RatPackage.BOOLEAN__VAL, oldVal, val));
   }
 
   /**
@@ -100,8 +100,8 @@ public class BooleanImpl extends EImpl implements rat.rat.Boolean
   {
     switch (featureID)
     {
-      case RatPackage.BOOLEAN__B:
-        return getB();
+      case RatPackage.BOOLEAN__VAL:
+        return getVal();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +116,8 @@ public class BooleanImpl extends EImpl implements rat.rat.Boolean
   {
     switch (featureID)
     {
-      case RatPackage.BOOLEAN__B:
-        setB((String)newValue);
+      case RatPackage.BOOLEAN__VAL:
+        setVal((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +133,8 @@ public class BooleanImpl extends EImpl implements rat.rat.Boolean
   {
     switch (featureID)
     {
-      case RatPackage.BOOLEAN__B:
-        setB(B_EDEFAULT);
+      case RatPackage.BOOLEAN__VAL:
+        setVal(VAL_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -150,8 +150,8 @@ public class BooleanImpl extends EImpl implements rat.rat.Boolean
   {
     switch (featureID)
     {
-      case RatPackage.BOOLEAN__B:
-        return B_EDEFAULT == null ? b != null : !B_EDEFAULT.equals(b);
+      case RatPackage.BOOLEAN__VAL:
+        return VAL_EDEFAULT == null ? val != null : !VAL_EDEFAULT.equals(val);
     }
     return super.eIsSet(featureID);
   }
@@ -167,8 +167,8 @@ public class BooleanImpl extends EImpl implements rat.rat.Boolean
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (b: ");
-    result.append(b);
+    result.append(" (val: ");
+    result.append(val);
     result.append(')');
     return result.toString();
   }
