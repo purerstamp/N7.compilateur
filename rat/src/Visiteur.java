@@ -1,13 +1,9 @@
-import java.beans.Expression;
 import java.util.Collections;
 import java.util.Vector;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
-
-import com.google.common.base.Function;
-
 import attributs.Info;
 import attributs.InfoConst;
 import attributs.InfoFun;
@@ -33,10 +29,8 @@ import rat.rat.Rationnel;
 import rat.rat.Identificateur;
 import rat.rat.Conditionnelle;
 import rat.rat.I;
-import rat.rat.E;
 import rat.rat.Numerateur;
 import rat.rat.OpBin;
-import rat.rat.Operande;
 import rat.rat.Print;
 import rat.rat.Prog;
 import rat.rat.Type;
@@ -58,7 +52,7 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		base = "SB";
 		deplacement = 0;
 	}
-	
+
 	public Visiteur (TDS tds, String base, int deplacement) {
 		super();
 		this.tds = tds;
