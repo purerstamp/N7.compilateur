@@ -434,31 +434,16 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		return new ReturnType(TypeDeBase.ENTIER,val);
 	}
 
-	
-	
 	@Override
-	public ReturnType caseI(I object) {
-		// TODO Auto-generated method stub
-		return super.caseI(object);
-	}
-
-	@Override
-	public ReturnType caseCP(CP object) {
-		// TODO Auto-generated method stub
-		return super.caseCP(object);
-	}
-
-	@Override
-	public ReturnType caseE(E object) {
-		// TODO Auto-generated method stub
-		return super.caseE(object);
-	}
-
-	@Override
-	public ReturnType caseOperande(Operande object) {
-		// TODO Auto-generated method stub
-		return super.caseOperande(object);
-	}
+	public ReturnType caseCP(CP cp) {
+		//TODO
+		String code = "";
+		for(E expr : cp.getE()) {
+			ReturnType ret = this.doSwitch(expr);
+			this.deplacement += ret.getSize();
+			code += ret.getCode();
+		}
+		return new ReturnType(TypeDeBase.VOID ,code);	}
 
 	@Override
 	public ReturnType caseAppel(Appel appel) {
