@@ -56,15 +56,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="t" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CP">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="e" upperBound="-1" eType="#//E"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="E"/>
   <eClassifiers xsi:type="ecore:EClass" name="Appel" eSuperTypes="#//E">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomAppel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="param" upperBound="-1"
-        eType="#//CP" containment="true"/>
+        eType="#//E" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rationnel" eSuperTypes="#//E">
     <eStructuralFeatures xsi:type="ecore:EReference" name="e1" eType="#//E" containment="true"/>

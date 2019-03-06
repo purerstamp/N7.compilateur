@@ -37,7 +37,6 @@ import rat.rat.Print;
 import rat.rat.Prog;
 import rat.rat.Type;
 import rat.rat.Tantque;
-import rat.rat.CP;
 import rat.rat.util.RatSwitch;
 
 public class Visiteur extends RatSwitch<ReturnType> {
@@ -435,17 +434,6 @@ public class Visiteur extends RatSwitch<ReturnType> {
 	}
 
 	@Override
-	public ReturnType caseCP(CP cp) {
-		//TODO
-		String code = "";
-		for(E expr : cp.getE()) {
-			ReturnType ret = this.doSwitch(expr);
-			this.deplacement += ret.getSize();
-			code += ret.getCode();
-		}
-		return new ReturnType(TypeDeBase.VOID ,code);	}
-
-	@Override
 	public ReturnType caseAppel(Appel appel) {
 		String nom = appel.getNomAppel();
 		Info resultat = tds.chercherGlobalement(nom);
@@ -457,11 +445,9 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		}
 		Vector<TypeDeBase> vArgs = new Vector<TypeDeBase>();
 		String code = "";
-		for(CP param : appel.getParam()) {
+		for(E param : appel.getParam()) {
 			ReturnType rArg = this.doSwitch(param);
-			System.out.println("test :");
 			rArg.getType();
-			System.out.println("type de base :");
 			TypeDeBase tArg = (TypeDeBase) rArg.getType();
 			vArgs.add(tArg);
 			code += rArg.getCode();

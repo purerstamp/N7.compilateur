@@ -55,10 +55,6 @@ Type :
 	)
 ;
 
-CP :
-	{CP}(e+=E)* 
-;
-
 E :
 	Appel
 	| Rationnel
@@ -71,7 +67,7 @@ E :
 ;
 
 Appel :
-	'call' nomAppel=ID '(' param+=CP ')'
+	'call' nomAppel=ID '(' (param+=E)* ')'
 ;
 
 Rationnel :
