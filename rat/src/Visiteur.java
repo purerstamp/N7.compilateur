@@ -23,6 +23,7 @@ import rat.rat.Appel;
 import rat.rat.Constante;
 import rat.rat.Declaration;
 import rat.rat.Denominateur;
+import rat.rat.E;
 import rat.rat.Entier;
 import rat.rat.Fun;
 import rat.rat.Rationnel;
@@ -31,6 +32,7 @@ import rat.rat.Conditionnelle;
 import rat.rat.I;
 import rat.rat.Numerateur;
 import rat.rat.OpBin;
+import rat.rat.Operande;
 import rat.rat.Print;
 import rat.rat.Prog;
 import rat.rat.Type;
@@ -432,6 +434,32 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		return new ReturnType(TypeDeBase.ENTIER,val);
 	}
 
+	
+	
+	@Override
+	public ReturnType caseI(I object) {
+		// TODO Auto-generated method stub
+		return super.caseI(object);
+	}
+
+	@Override
+	public ReturnType caseCP(CP object) {
+		// TODO Auto-generated method stub
+		return super.caseCP(object);
+	}
+
+	@Override
+	public ReturnType caseE(E object) {
+		// TODO Auto-generated method stub
+		return super.caseE(object);
+	}
+
+	@Override
+	public ReturnType caseOperande(Operande object) {
+		// TODO Auto-generated method stub
+		return super.caseOperande(object);
+	}
+
 	@Override
 	public ReturnType caseAppel(Appel appel) {
 		String nom = appel.getNomAppel();
@@ -446,6 +474,9 @@ public class Visiteur extends RatSwitch<ReturnType> {
 		String code = "";
 		for(CP param : appel.getParam()) {
 			ReturnType rArg = this.doSwitch(param);
+			System.out.println("test :");
+			rArg.getType();
+			System.out.println("type de base :");
 			TypeDeBase tArg = (TypeDeBase) rArg.getType();
 			vArgs.add(tArg);
 			code += rArg.getCode();
